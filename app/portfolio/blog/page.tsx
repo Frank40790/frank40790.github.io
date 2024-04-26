@@ -45,7 +45,7 @@ const posts: Post[] = [
 function Post({ post }: { post: Post }) {
   return (
     <Link href={`/blog/${post.id}`}>
-      <div className="mb-8 bg-gray-200 rounded-lg p-6">
+      <div className="mb-8 bg-gray-200 rounded-lg p-6 hover:scale-110 transition duration-300">
         <div className="text-lg font-bold">{post.title}</div>
         <div className="text-gray-600">{post.content}</div>
         <div className="text-gray-500">Posted on {post.date}</div>
