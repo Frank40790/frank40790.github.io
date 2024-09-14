@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function Blog() {
   return (
@@ -46,17 +47,40 @@ const posts: Post[] = [
     date: "2022-02-01",
     url: "blog_3",
   },
+  {
+    id: 4,
+    title: "Post 4",
+    description: "This is the third post",
+    date: "2022-03-01",
+    url: "blog_4",
+  },
 ];
 
 function Post({ post }: { post: Post }) {
   const pathname = usePathname();
   return (
-    <Link href={`${pathname}/${post.url}`}>
-      <div className="mb-8 bg-gray-200 rounded-lg p-6 hover:scale-110 transition duration-300">
-        <div className="text-lg font-bold">{post.title}</div>
-        <div className="text-gray-600">{post.description}</div>
-        <div className="text-gray-500">Posted on {post.date}</div>
-      </div>
-    </Link>
+    <motion.div
+      initial={{ scale: 0 }}
+      animate={{ rotate: 0, scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+    >
+      <Link href={`${pathname}/${post.url}`}>
+        <div className="mb-8 rounded-lg p-6 hover:scale-110 transition duration-300 bg-gray-200 dark:bg-gray-500">
+          <div className="text-lg font-bold text-gray-600 dark:text-gray-200">
+            {post.title}
+          </div>
+          <div className="text-gray-600 dark:text-gray-200">
+            {post.description}
+          </div>
+          <div className="text-gray-500 dark:text-gray-400">
+            Posted on {post.date}
+          </div>
+        </div>
+      </Link>
+    </motion.div>
   );
 }
