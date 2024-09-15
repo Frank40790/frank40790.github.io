@@ -19,6 +19,8 @@ node_modules
 # misc
 .DS_Store
 *.pem
+*.zip
+*.txt
 .history/
 .vscode/
 database/
@@ -37,5 +39,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-*.zip
-*.txt
+
