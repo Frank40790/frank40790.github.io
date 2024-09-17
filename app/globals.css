@@ -14,6 +14,9 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+  .svg-item {
+    stroke: #000;
+  }
 }
 
 @layer utilities {
@@ -37,7 +40,7 @@
 .svg-item {
   width: 56%;
   overflow: visible;
-  stroke: #fff;
+  stroke: #4d555d;
   stroke-width: 2;
   stroke-linejoin: round;
   stroke-linecap: round;

@@ -10,6 +10,7 @@ import {
   IconList,
 } from "./components/page_block";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 export default function Home() {
   const pathname = usePathname();
@@ -23,7 +24,14 @@ export default function Home() {
     { icon: "devicon:php", name: "PHP" },
     { icon: "devicon:bash", name: "Bash" },
 
+    { icon: "devicon:html5", name: "HTML" },
+    { icon: "devicon:css3", name: "CSS" },
+    { icon: "devicon:javascript", name: "Javascript" },
+    { icon: "skill-icons:nodejs-dark", name: "Node.js" },
+    { icon: "devicon:nextjs", name: "Next.js" },
+
     { icon: "devicon:pandas", name: "Pandas" },
+    { icon: "devicon:numpy", name: "NumPy" },
     { icon: "devicon:selenium", name: "Selenium" },
     { icon: "skill-icons:flask-dark", name: "Flask" },
     { icon: "devicon-plain:django", name: "Django" },
@@ -42,11 +50,6 @@ export default function Home() {
     { icon: "devicon:matlab", name: "Matlab" },
     { icon: "skill-icons:autocad-dark", name: "AutoCAD" },
     { icon: "skill-icons:arduino", name: "Arduino" },
-
-    { icon: "devicon:html5", name: "HTML" },
-    { icon: "devicon:css3", name: "CSS" },
-    { icon: "devicon:javascript", name: "Javascript" },
-    { icon: "devicon:nextjs", name: "Next.js" },
   ];
   return (
     <>
@@ -54,35 +57,104 @@ export default function Home() {
 
       <Banner textComponent={"I'm Frank, A Enthusiastic Programmer!"} />
 
-      <FullTextHeaders
-        headers="A little about me"
-        textComponent={<p>This is a test paragraph</p>}
-      />
+      <FullTextHeaders headers="About me" textComponent="" />
       <LeftPicRightText
-        image_src="/portfolio/timeline/event_2/unimelb-icon.jpg"
+        image_src="/portfolio/unimelb-front.png"
         alt_text="icon"
-        textComponent={<p>This is a test paragraph</p>}
+        textComponent={
+          <div className="text-xl">
+            I am currently a undergraduate student studying at University of
+            Melbourne, planning to major in Computer Science. It is always
+            enjoyable to learn and explore different areas of computing.
+          </div>
+        }
       />
       <RightPicLeftText
-        image_src="/portfolio/timeline/event_2/unimelb-icon.jpg"
+        image_src="/portfolio/unimelb-building.png"
         alt_text="icon"
-        textComponent={<p>This is a test paragraph</p>}
+        textComponent={
+          <div className="text-xl">
+            I also enjoy casually walking around the campus, exploring around.
+            Oftentimes, finding some native Australian wildlife that fascinates
+            me ~~
+          </div>
+        }
       />
       <FullTextHeaders
         headers="Skill Set"
         textComponent={
-          <div>
-            I enjoy trying out different technologies! In my free time, I
-            explore around different fields of computing.
-          </div>
+          <>
+            <div className="text-xl">
+              I enjoy trying out different technologies! In my free time, I
+              explore around different fields of computing. My skill set spans
+              across different field, including web design, AI / ML, graphics
+              and much more!
+            </div>
+          </>
         }
       />
-      <IconList icons={icons} />
+      <IconList icons={icons} reverse={false} />
 
       <FullTextHeaders
         headers="Future Vision"
-        textComponent={<p>This is a test paragraph</p>}
+        textComponent={
+          <>
+            <div className="text-xl">
+              As artificial intelligence integrates to our life bit by bit, it
+              is important to understand the inner workings of those new
+              technologies. I would like to improve myself so that in the
+              future, I can build a technology that benifits humanity.
+            </div>
+            <div className="text-xl">
+              Another part of computer science that interest me is
+              cybersecurity. Thousands of cyberthreats are circulating the
+              internet. I am passionate about cybersecurity and want to learn
+              more about it in the future, hopefully developing technology that
+              can prevent cyberthreats effectively.
+            </div>
+          </>
+        }
       />
+
+      <FullTextHeaders
+        headers="Contact Me"
+        textComponent={
+          <>
+            <div className="flex space-x-4 justify-center mt-8">
+              <Link
+                href="https://www.linkedin.com/in/frank40790"
+                aria-label="LinkedIn Profile"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="transition-transform transform hover:scale-110"
+                >
+                  <Icon icon="brandico:linkedin-rect" width={80} height={80} />
+                </motion.div>
+              </Link>
+              <Link
+                href="https://github.com/Frank40790"
+                aria-label="GitHub Profile"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: -10 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="transition-transform transform hover:scale-110"
+                >
+                  <Icon
+                    icon="skill-icons:github-light"
+                    width={80}
+                    height={80}
+                  />
+                </motion.div>
+              </Link>
+            </div>
+          </>
+        }
+      />
+
+      <div className="p-10" />
     </>
   );
 }

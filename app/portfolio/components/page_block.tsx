@@ -39,7 +39,7 @@ export function LeftPicRightText({
         />
       </motion.div>
       <motion.div
-        className="w-full md:w-3/5 p-4"
+        className="w-full md:w-3/5 p-4 text-lg"
         initial="hidden"
         animate="visible"
         variants={fadeIn}
@@ -182,10 +182,14 @@ export interface IconFlowItem {
 
 interface IconFlowProps {
   icons: IconFlowItem[];
+  reverse: boolean;
 }
 
-export function IconList({ icons }: IconFlowProps) {
+export function IconList({ icons, reverse }: IconFlowProps) {
   const duplicated = [...icons, ...icons];
+  const x_dir = reverse === false ? ["0%", "-100%"] : ["-100%", "0%"];
+  console.log(reverse);
+  console.log(x_dir);
   return (
     <div className="relative h-full overflow-hidden py-12 mx-auto">
       <div className="absolute inset-0 z-20 before:absolute before:left-0 "></div>
@@ -193,7 +197,7 @@ export function IconList({ icons }: IconFlowProps) {
       <motion.div
         className="flex"
         animate={{
-          x: ["0%", "-100%"],
+          x: x_dir,
           transition: {
             ease: "linear",
             duration: 50,

@@ -13,12 +13,12 @@ const back = {
   hidden: {
     opacity: 0,
     pathLength: 0,
-    fill: "rgba(255, 255, 255, 0)",
+    fill: "rgba(77, 85, 93, 0)",
   },
   visible: {
     opacity: 1,
     pathLength: 1,
-    fill: "rgba(255, 255, 255, 1)",
+    fill: "rgba(77, 85, 93, 1)",
   },
 };
 
@@ -36,7 +36,7 @@ export default function NotFound() {
         >
           Oops! The page does not exist!
         </motion.h1>
-        <Link href="/">
+        <Link href="/portfolio">
           <div className="svg-container">
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
