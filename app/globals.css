@@ -21,3 +21,24 @@
     text-wrap: balance;
   }
 }
+
+
+
+
+.svg-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  place-content: center;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.svg-item {
+  width: 56%;
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
