@@ -14,10 +14,34 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+  .svg-item {
+    stroke: #000;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+
+
+.svg-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  place-content: center;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.svg-item {
+  width: 56%;
+  overflow: visible;
+  stroke: #4d555d;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }
