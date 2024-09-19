@@ -32,7 +32,6 @@ export function LeftPicRightText({
         <Image
           src={image_src}
           alt={alt_text}
-          layout="responsive"
           width={700}
           height={400}
           className="object-cover rounded-lg"
@@ -87,7 +86,6 @@ export function RightPicLeftText({
         <Image
           src={image_src}
           alt={alt_text}
-          layout="responsive"
           width={700}
           height={400}
           className="object-cover rounded-lg"
@@ -181,7 +179,6 @@ export function LeftRightImage({
         <Image
           src={leftImageSrc}
           alt={leftAltText}
-          layout="responsive"
           width={700}
           height={400}
           className="object-cover rounded-lg max-w-full"
@@ -198,7 +195,6 @@ export function LeftRightImage({
         <Image
           src={rightImageSrc}
           alt={rightAltText}
-          layout="responsive"
           width={700}
           height={400}
           className="object-cover rounded-lg max-w-full"
@@ -219,7 +215,7 @@ export function FullImage({ imageSrc, altText }: FullImageProps) {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-32 pr-32">
+    <div className="flex flex-col md:flex-row items-center max-w-[90%] mx-auto">
       <motion.div
         className="flex-shrink-0 w-full p-4 md:p-10"
         initial="hidden"
@@ -230,7 +226,6 @@ export function FullImage({ imageSrc, altText }: FullImageProps) {
         <Image
           src={imageSrc}
           alt={altText}
-          layout="responsive"
           width={700}
           height={400}
           className="object-cover rounded-lg max-w-full"
