@@ -215,7 +215,7 @@ export function FullImage({ imageSrc, altText }: FullImageProps) {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-32 pr-32">
+    <div className="flex flex-col md:flex-row items-center max-w-[90%] mx-auto">
       <motion.div
         className="flex-shrink-0 w-full p-4 md:p-10"
         initial="hidden"
