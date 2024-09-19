@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import {
   FullTextHeaders,
   Banner,
@@ -7,6 +6,7 @@ import {
   FullImage,
 } from "../../components/page_block";
 import { usePathname } from "next/navigation";
+import { basePath } from "@/app/base_path";
 
 export default function Blog() {
   const pathname = usePathname();
@@ -22,7 +22,7 @@ export default function Blog() {
     <>
       <Banner textComponent={"First Website"} />
       <FullImage
-        imageSrc={`${pathname}/homepage.png`}
+        imageSrc={`${basePath}/${pathname}/homepage.png`}
         altText="Website Home Page"
       />
       <FullTextHeaders

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { basePath } from "@/app/base_path";
 
 export default function Projects() {
   return (
@@ -91,7 +92,7 @@ function Node({ event }: { event: Event }) {
                   }}
                 >
                   <Image
-                    src={`${pathname}/${event.url}/${event.icon}`}
+                    src={`${basePath}/${pathname}/${event.url}/${event.icon}`}
                     alt={`${event.icon}`}
                     fill
                     className="object-cover"
@@ -128,7 +129,7 @@ function Node({ event }: { event: Event }) {
                   }}
                 >
                   <Image
-                    src={`${pathname}/${event.url}/${event.icon}`}
+                    src={`${basePath}/${pathname}/${event.url}/${event.icon}`}
                     alt={`${event.icon}`}
                     fill
                     className="object-cover"
