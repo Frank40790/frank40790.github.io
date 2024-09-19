@@ -44,7 +44,6 @@ export default function Home() {
       fill: "rgba(77, 85, 93, 1)",
     },
   };
-  console.log(pathname);
   return (
     <>
       <title>Home</title>
