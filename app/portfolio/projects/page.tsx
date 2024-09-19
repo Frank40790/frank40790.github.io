@@ -92,7 +92,7 @@ function Node({ event }: { event: Event }) {
                   }}
                 >
                   <Image
-                    src={`${basePath}/${pathname}/${event.url}/${event.icon}`}
+                    src={`${basePath}${pathname}/${event.url}/${event.icon}`}
                     alt={`${event.icon}`}
                     fill
                     className="object-cover"
@@ -129,7 +129,7 @@ function Node({ event }: { event: Event }) {
                   }}
                 >
                   <Image
-                    src={`${basePath}/${pathname}/${event.url}/${event.icon}`}
+                    src={`${basePath}${pathname}/${event.url}/${event.icon}`}
                     alt={`${event.icon}`}
                     fill
                     className="object-cover"
