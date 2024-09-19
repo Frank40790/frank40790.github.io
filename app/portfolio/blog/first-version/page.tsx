@@ -1,14 +1,9 @@
 "use client";
 import Head from "next/head";
 import {
-  LeftPicRightText,
-  RightPicLeftText,
-  FullText,
   FullTextHeaders,
   Banner,
-  IconList,
   IconListStatic,
-  LeftRightImage,
   FullImage,
 } from "../../components/page_block";
 import { usePathname } from "next/navigation";

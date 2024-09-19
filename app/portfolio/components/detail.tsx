@@ -27,6 +27,10 @@ export const skills = [
   { icon: "devicon:pytorch", name: "PyTorch" },
 
   { icon: "devicon:linux", name: "Linux" },
+  { icon: "devicon:kalilinux", name: "Kali Linux" },
+  { icon: "devicon:debian", name: "Debian" },
+  { icon: "logos:ubuntu", name: "Ubuntu" },
+
   { icon: "devicon:nginx", name: "Nginx" },
   { icon: "devicon:mysql", name: "MySQL" },
   { icon: "devicon:sqlite", name: "SQLite" },

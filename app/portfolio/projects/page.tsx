@@ -9,6 +9,7 @@ export default function Projects() {
     <>
       <title>Timeline</title>
       <div className="max-w-2xl mx-auto p-4 pt-6 min-h-screen">
+        <h1 className="text-3xl font-bold mb-4">Projects</h1>
         {events
           .sort((a, b) => b.id - a.id)
           .map((event) => (
@@ -55,7 +56,7 @@ const events: Event[] = [
   },
 ];
 
-export function Node({ event }: { event: Event }) {
+function Node({ event }: { event: Event }) {
   const pathname = usePathname();
 
   if (event.type === "hidden") {

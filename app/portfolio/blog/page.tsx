@@ -37,7 +37,7 @@ const posts: Post[] = [
   },
 ];
 
-export function Post({ post }: { post: Post }) {
+function Post({ post }: { post: Post }) {
   const pathname = usePathname();
 
   if (post.type === "hidden") {

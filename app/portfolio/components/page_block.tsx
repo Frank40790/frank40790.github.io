@@ -263,6 +263,37 @@ export function Banner({ textComponent }: BannerProps) {
   );
 }
 
+interface BannerTypewriterProps {
+  textComponent: string;
+}
+
+const sentenceVariants = {
+  hidden: {},
+  visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
+};
+
+const letterVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.0001 } },
+};
+
+export function BannerTypewriter({ textComponent }: BannerTypewriterProps) {
+  return (
+    <motion.h1
+      className="text-center text-5xl font-bold p-4 pt-60 pb-60 pl-10 pr-10"
+      initial="hidden"
+      animate="visible"
+      variants={sentenceVariants}
+    >
+      {textComponent.split("").map((char, i) => (
+        <motion.span key={`${char}-${i}`} variants={letterVariants}>
+          {char}
+        </motion.span>
+      ))}
+    </motion.h1>
+  );
+}
+
 export interface IconFlowItem {
   icon: string;
   name: string;

@@ -1,11 +1,8 @@
 "use client";
 import {
-  LeftPicRightText,
   RightPicLeftText,
-  FullText,
   FullTextHeaders,
   Banner,
-  IconList,
   IconListStatic,
   LeftRightImage,
 } from "../../components/page_block";
@@ -115,7 +112,7 @@ export default function Project() {
           <div>
             Doing this project, I consolidate my understanding of python,
             successfully building a application out of it. Durring this project,
-            because this is the first time using GitHub, I've also learnt how to
+            because this is the first time using GitHub, I&apos;ve also learnt how to
             do version management, pull request, branches and forks using the
             GitHub Desktop app. This project provides me some valueable
             experience of developing a software.

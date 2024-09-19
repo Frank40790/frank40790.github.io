@@ -1,13 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 import {
   LeftPicRightText,
   RightPicLeftText,
-  FullText,
   FullTextHeaders,
-  Banner,
   IconList,
+  BannerTypewriter,
 } from "./components/page_block";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -15,9 +13,7 @@ import Contact from "./components/contact";
 import { name, skills } from "./components/detail";
 
 export default function Home() {
-  const pathname = usePathname();
-
-  // set to make the link page show
+  // set link show
   const [showLink, setShowLink] = useState(false);
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
@@ -49,7 +45,7 @@ export default function Home() {
   return (
     <>
       <title>Home</title>
-
+      {/* Popup link */}
       {showLink && (
         <>
           <motion.div
@@ -118,7 +114,9 @@ export default function Home() {
         </>
       )}
 
-      <Banner textComponent={`I'm ${name}, A Enthusiastic Programmer!`} />
+      <BannerTypewriter
+        textComponent={`I'm ${name}, A Enthusiastic Programmer!`}
+      />
 
       <FullTextHeaders headers="About me" textComponent="" />
       <LeftPicRightText
