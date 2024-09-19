@@ -52,22 +52,6 @@ export default function Navbar() {
           <motion.div
             initial={{ scale: 1 }}
             animate={{
-              scale: pathname === "/portfolio/blog" ? magnify_max : magnify_min,
-              transition: { duration: magnify_duration },
-            }}
-          >
-            <Link
-              href="/portfolio/blog"
-              className={`flex justify-center p-3 text-gray-600 dark:text-white ${
-                pathname === "/portfolio/blog" ? selected_item_css : ""
-              }`}
-            >
-              Blog
-            </Link>
-          </motion.div>
-          <motion.div
-            initial={{ scale: 1 }}
-            animate={{
               scale:
                 pathname === "/portfolio/projects" ? magnify_max : magnify_min,
               transition: { duration: magnify_duration },
@@ -80,6 +64,23 @@ export default function Navbar() {
               }`}
             >
               Projects
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ scale: 1 }}
+            animate={{
+              scale: pathname === "/portfolio/blog" ? magnify_max : magnify_min,
+              transition: { duration: magnify_duration },
+            }}
+          >
+            <Link
+              href="/portfolio/blog"
+              className={`flex justify-center p-3 text-gray-600 dark:text-white ${
+                pathname === "/portfolio/blog" ? selected_item_css : ""
+              }`}
+            >
+              Blog
             </Link>
           </motion.div>
         </div>
