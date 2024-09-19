@@ -11,8 +11,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Contact from "./components/contact";
 import { name, skills } from "./components/detail";
+import { basePath } from "@/app/base_path";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
+  const pathname = usePathname();
   // set link show
   const [showLink, setShowLink] = useState(false);
   useEffect(() => {
@@ -41,7 +44,7 @@ export default function Home() {
       fill: "rgba(77, 85, 93, 1)",
     },
   };
-
+  console.log(pathname);
   return (
     <>
       <title>Home</title>
@@ -120,7 +123,7 @@ export default function Home() {
 
       <FullTextHeaders headers="About me" textComponent="" />
       <LeftPicRightText
-        image_src="/portfolio/unimelb-front.png"
+        image_src={`${basePath}${pathname}/unimelb-front.png`}
         alt_text="icon"
         textComponent={
           <div className="text-xl">
@@ -131,7 +134,7 @@ export default function Home() {
         }
       />
       <RightPicLeftText
-        image_src="/portfolio/unimelb-building.png"
+        image_src={`${basePath}${pathname}/unimelb-building.png`}
         alt_text="icon"
         textComponent={
           <div className="text-xl">

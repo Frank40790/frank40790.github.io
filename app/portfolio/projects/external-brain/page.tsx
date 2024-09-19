@@ -40,14 +40,14 @@ export default function Project() {
         }
       />
       <LeftRightImage
-        leftImageSrc={`${basePath}/${pathname}/model-selection.png`}
+        leftImageSrc={`${basePath}${pathname}/model-selection.png`}
         leftAltText="Model Selection Window"
-        rightImageSrc={`${basePath}/${pathname}/record-transcribe-summarize.png`}
+        rightImageSrc={`${basePath}${pathname}/record-transcribe-summarize.png`}
         rightAltText="GUI Window"
       />
       <FullTextHeaders headers="Journey" textComponent="" />
       <RightPicLeftText
-        image_src={`${basePath}/${pathname}/external-brain.png`}
+        image_src={`${basePath}${pathname}/external-brain.png`}
         alt_text="External Brain Picture"
         textComponent={
           <>

@@ -22,7 +22,7 @@ export default function Blog() {
     <>
       <Banner textComponent={"First Website"} />
       <FullImage
-        imageSrc={`${basePath}/${pathname}/homepage.png`}
+        imageSrc={`${basePath}${pathname}/homepage.png`}
         altText="Website Home Page"
       />
       <FullTextHeaders
