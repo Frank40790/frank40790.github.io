@@ -17,9 +17,11 @@ export default function Project() {
     { icon: "logos:meta-icon", name: "LLaMa" },
     { icon: "carbon:gui", name: "Tk / Custom Tk" },
   ];
+
   const pathname = usePathname();
   return (
     <>
+      <title>External Brain</title>
       <Banner textComponent="External Brain" />
       <FullTextHeaders
         headers="What does this do?"
@@ -113,9 +115,9 @@ export default function Project() {
           <div>
             Doing this project, I consolidate my understanding of python,
             successfully building a application out of it. Durring this project,
-            because this is the first time using GitHub, I&apos;ve also learnt how to
-            do version management, pull request, branches and forks using the
-            GitHub Desktop app. This project provides me some valueable
+            because this is the first time using GitHub, I&apos;ve also learnt
+            how to do version management, pull request, branches and forks using
+            the GitHub Desktop app. This project provides me some valueable
             experience of developing a software.
           </div>
         }
