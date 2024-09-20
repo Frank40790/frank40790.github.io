@@ -20,6 +20,7 @@ export default function Blog() {
 
   return (
     <>
+      <title>First Website</title>
       <Banner textComponent={"First Website"} />
       <FullImage
         imageSrc={`${basePath}${pathname}/homepage.png`}
