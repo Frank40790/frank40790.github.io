@@ -8,7 +8,7 @@ import { basePath } from "@/app/base_path";
 export default function Projects() {
   return (
     <>
-      <title>Timeline</title>
+      <title>Projects</title>
       <div className="max-w-2xl mx-auto p-4 pt-6 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">Projects</h1>
         {events
