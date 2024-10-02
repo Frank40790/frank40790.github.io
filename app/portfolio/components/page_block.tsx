@@ -215,9 +215,9 @@ export function FullImage({ imageSrc, altText }: FullImageProps) {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center max-w-[90%] mx-auto">
+    <div className="flex flex-col md:flex-row items-center justify-center max-w-[90%] mx-auto">
       <motion.div
-        className="flex-shrink-0 w-full p-4 md:p-10"
+        className="flex-shrink-0 w-full p-4 md:p-10 flex justify-center"
         initial="hidden"
         animate="visible"
         variants={fadeIn}
