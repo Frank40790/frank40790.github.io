@@ -31,7 +31,7 @@ const posts: Post[] = [
     id: 1,
     title: "The first version of my website!",
     description: "Took some time to build...",
-    date: "2024-09-",
+    date: "2024-09-20",
     url: "first-version",
     type: "prod",
   },
