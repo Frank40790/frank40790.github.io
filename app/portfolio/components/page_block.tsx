@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import React, { useState } from "react";
 
 interface LeftPicRightTextProps {
   image_src: string;
@@ -372,5 +372,67 @@ export function IconListStatic({ icons }: IconStaticProps) {
         ))}
       </div>
     </div>
+  );
+}
+
+interface DownloadProps {
+  url: string;
+}
+
+export function Download({ url }: DownloadProps) {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(true);
+  };
+
+  return (
+    <>
+      <FullTextHeaders headers="Downloads" textComponent={""} />
+      <div className="flex justify-center items-center">
+        <motion.a
+          href={url}
+          download
+          className="text-center"
+          onClick={handleClick}
+          whileTap={{ scale: 0.9 }}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+            className="flex items-center justify-center"
+          >
+            {/* Code icon */}
+            {!isClicked && (
+              <motion.div
+                key="code-icon"
+                initial={{ opacity: 1 }}
+                animate={{ opacity: isClicked ? 0 : 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Icon icon="mingcute:code-fill" width="10vw" height="10vw" />
+              </motion.div>
+            )}
+
+            {/* Download icon */}
+            {isClicked && (
+              <motion.div
+                key="download-icon"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isClicked ? 1 : 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Icon icon="line-md:download-loop" width="10vw" height="10vw" />
+              </motion.div>
+            )}
+          </motion.div>
+        </motion.a>
+      </div>
+    </>
   );
 }

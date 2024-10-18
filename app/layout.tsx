@@ -3,10 +3,7 @@ import { Providers } from "./providers";
 import "./globals.css";
 import { Comfortaa, Inter } from "next/font/google";
 
-const comfortaa = Comfortaa({
-  subsets: ["latin"],
-  display: "swap",
-});
+const comfortaa = Comfortaa({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
