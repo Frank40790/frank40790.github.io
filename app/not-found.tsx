@@ -14,7 +14,7 @@ export default function NotFound() {
     <>
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-black">
         <motion.h1
-          className="text-4xl font-bold text-black dark:text-white mb-6"
+          className="text-4xl font-bold text-black dark:text-white mb-6 text-center"
           initial="hidden"
           animate="visible"
           exit="exit"
