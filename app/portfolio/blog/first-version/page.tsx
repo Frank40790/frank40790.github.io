@@ -6,7 +6,6 @@ import {
   FullImage,
 } from "../../components/page_block";
 import { usePathname } from "next/navigation";
-import { basePath } from "@/app/base_path";
 
 export default function Blog() {
   const pathname = usePathname();
@@ -23,7 +22,7 @@ export default function Blog() {
       <title>First Website</title>
       <Banner textComponent={"First Website"} />
       <FullImage
-        imageSrc={`${basePath}${pathname}/homepage.png`}
+        imageSrc={`${pathname}/homepage.png`}
         altText="Website Home Page"
       />
       <FullTextHeaders

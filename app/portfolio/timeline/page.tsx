@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { basePath } from "@/app/base_path";
 
 export default function Timeline() {
   return (
@@ -96,6 +95,14 @@ const events: Event[] = [
     icon: "unimelb-icon.jpg",
     type: "hidden",
   },
+  {
+    title: "OpenGL Projection",
+    description: "Using linear algebra projection to project a shape",
+    date: "14 Oct 2024",
+    url: "opengl-projection",
+    icon: "shape_2.png",
+    type: "prod",
+  },
 ];
 
 function Node({ event }: { event: Event }) {
@@ -133,7 +140,7 @@ function Node({ event }: { event: Event }) {
                   }}
                 >
                   <Image
-                    src={`${basePath}${pathname}/${event.url}/${event.icon}`}
+                    src={`${pathname}/${event.url}/${event.icon}`}
                     alt={`${event.icon}`}
                     fill
                     className="object-cover"
@@ -171,7 +178,7 @@ function Node({ event }: { event: Event }) {
                   }}
                 >
                   <Image
-                    src={`${basePath}${pathname}/${event.url}/${event.icon}`}
+                    src={`${pathname}/${event.url}/${event.icon}`}
                     alt={`${event.icon}`}
                     fill
                     className="object-cover"
