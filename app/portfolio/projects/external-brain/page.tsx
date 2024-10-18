@@ -7,7 +7,6 @@ import {
   LeftRightImage,
 } from "../../components/page_block";
 import { usePathname } from "next/navigation";
-import { basePath } from "@/app/base_path";
 
 export default function Project() {
   const icons = [
@@ -42,14 +41,14 @@ export default function Project() {
         }
       />
       <LeftRightImage
-        leftImageSrc={`${basePath}${pathname}/model-selection.png`}
+        leftImageSrc={`${pathname}/model-selection.png`}
         leftAltText="Model Selection Window"
-        rightImageSrc={`${basePath}${pathname}/record-transcribe-summarize.png`}
+        rightImageSrc={`${pathname}/record-transcribe-summarize.png`}
         rightAltText="GUI Window"
       />
       <FullTextHeaders headers="Journey" textComponent="" />
       <RightPicLeftText
-        image_src={`${basePath}${pathname}/external-brain.png`}
+        image_src={`${pathname}/external-brain.png`}
         alt_text="External Brain Picture"
         textComponent={
           <>

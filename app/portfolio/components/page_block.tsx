@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import React, { useState } from "react";
 
 interface LeftPicRightTextProps {
   image_src: string;
@@ -332,10 +332,11 @@ export function IconList({ icons, reverse }: IconFlowProps) {
                 style={{
                   width: "calc(10vw + 100px)",
                   height: "calc(10vh + 100px)",
+                  minWidth: "150px",
+                  minHeight: "150px",
                 }}
               >
                 <Icon icon={item.icon} width="10vw" height="10vw" />
-
                 <span className="mt-2 text-lg font-semibold hidden sm:block">
                   {item.name}
                 </span>
@@ -362,8 +363,8 @@ export function IconListStatic({ icons }: IconStaticProps) {
           <div key={index} className="flex-shrink-0">
             <div className="flex items-center justify-center h-full">
               <div className="p-4 flex flex-col items-center">
-                <Icon icon={item.icon} width="10vw" height="10vw" />
-                <span className="mt-2 text-lg font-semibold text-center max-w-[10vw] hidden sm:block">
+                <Icon icon={item.icon} className="w-24 h-24 sm:w-32 sm:h-32" />
+                <span className="mt-2 text-lg font-semibold text-center max-w-[10rem]">
                   {item.name}
                 </span>
               </div>
@@ -374,3 +375,105 @@ export function IconListStatic({ icons }: IconStaticProps) {
     </div>
   );
 }
+
+interface CodeLinkBlockProps {
+  header: string;
+  links: { name: string; url: string }[];
+}
+
+export function CodeLinkBlock({ header, links }: CodeLinkBlockProps) {
+  return (
+    <>
+      <FullTextHeaders headers={header} textComponent={""} />
+      <div className="flex flex-wrap justify-center items-center">
+        {links.map((links, index) => (
+          <CodeLink key={index} name={links.name} url={links.url} />
+        ))}
+      </div>
+    </>
+  );
+}
+
+interface CodeLinkProps {
+  name: string;
+  url: string;
+}
+
+function CodeLink({ name, url }: CodeLinkProps) {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(true);
+  };
+
+  return (
+    <div className="flex flex-col items-center m-4">
+      <motion.a
+        href={url}
+        download
+        className="text-center"
+        onClick={handleClick}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      >
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.3 }}
+          className="flex items-center justify-center"
+        >
+          {/* Code icon */}
+          {!isClicked && (
+            <motion.div
+              key="code-icon"
+              initial={{ opacity: 1 }}
+              animate={{ opacity: isClicked ? 0 : 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Icon icon="mingcute:code-fill" width="8vw" height="8vw" />
+            </motion.div>
+          )}
+
+          {/* Download icon */}
+          {isClicked && (
+            <motion.div
+              key="download-icon"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isClicked ? 1 : 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Icon icon="line-md:download-loop" width="8vw" height="8vw" />
+            </motion.div>
+          )}
+        </motion.div>
+      </motion.a>
+      <span className="mt-2 text-sm">{name}</span>
+    </div>
+  );
+}
+
+interface VideoLoopBlockProps {
+  videoSrc: string;
+  poster?: string;
+}
+
+export const VideoLoopBlock: React.FC<VideoLoopBlockProps> = ({ videoSrc, poster }) => {
+  return (
+    <div className="flex justify-center items-center my-4">
+      <video
+        className="rounded-lg shadow-lg w-1/2 h-auto"
+        src={videoSrc}
+        poster={poster}
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+};

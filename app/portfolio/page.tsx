@@ -11,7 +11,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Contact from "./components/contact";
 import { name, skills } from "./components/detail";
-import { basePath } from "@/app/base_path";
 import { usePathname } from "next/navigation";
 
 export default function Home() {
@@ -122,7 +121,7 @@ export default function Home() {
 
       <FullTextHeaders headers="About me" textComponent="" />
       <LeftPicRightText
-        image_src={`${basePath}${pathname}/unimelb-front.png`}
+        image_src={`${pathname}/unimelb-front.png`}
         alt_text="icon"
         textComponent={
           <div className="text-xl">
@@ -133,7 +132,7 @@ export default function Home() {
         }
       />
       <RightPicLeftText
-        image_src={`${basePath}${pathname}/unimelb-building.png`}
+        image_src={`${pathname}/unimelb-building.png`}
         alt_text="icon"
         textComponent={
           <div className="text-xl">

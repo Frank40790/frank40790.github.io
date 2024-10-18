@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { basePath } from "@/app/base_path";
 
 export default function Projects() {
   return (
@@ -12,9 +11,10 @@ export default function Projects() {
       <div className="max-w-2xl mx-auto p-4 pt-6 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">Projects</h1>
         {events
-          .sort((a, b) => b.id - a.id)
-          .map((event) => (
-            <Node event={event} key={event.id} />
+          .slice()
+          .reverse()
+          .map((event, index) => (
+            <Node event={event} key={index} />
           ))}
       </div>
     </>
@@ -22,7 +22,6 @@ export default function Projects() {
 }
 
 interface Event {
-  id: number;
   title: string;
   description: string;
   url: string;
@@ -32,7 +31,6 @@ interface Event {
 
 const events: Event[] = [
   {
-    id: 1,
     title: "External Brain",
     description: "A app that transforms note taking",
     url: "external-brain",
@@ -40,7 +38,6 @@ const events: Event[] = [
     type: "prod",
   },
   {
-    id: 2,
     title: "Dev Diversify",
     description: "A toolbox for programmers",
     url: "dev-diversify",
@@ -48,7 +45,6 @@ const events: Event[] = [
     type: "disabled",
   },
   {
-    id: 3,
     title: "Semantic Spotlight",
     description: "Scemantic search",
     url: "semantic-spotlight",
@@ -92,7 +88,7 @@ function Node({ event }: { event: Event }) {
                   }}
                 >
                   <Image
-                    src={`${basePath}${pathname}/${event.url}/${event.icon}`}
+                    src={`${pathname}/${event.url}/${event.icon}`}
                     alt={`${event.icon}`}
                     fill
                     className="object-cover"
@@ -129,7 +125,7 @@ function Node({ event }: { event: Event }) {
                   }}
                 >
                   <Image
-                    src={`${basePath}${pathname}/${event.url}/${event.icon}`}
+                    src={`${pathname}/${event.url}/${event.icon}`}
                     alt={`${event.icon}`}
                     fill
                     className="object-cover"

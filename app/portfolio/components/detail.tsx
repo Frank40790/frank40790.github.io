@@ -3,6 +3,7 @@ export const linkedin = "https://www.linkedin.com/in/frank40790";
 export const github = "https://github.com/Frank40790";
 
 export const skills = [
+  { icon: "devicon:figma", name: "Figma" },
   { icon: "devicon:blender", name: "Blender" },
 
   { icon: "devicon:c", name: "C" },

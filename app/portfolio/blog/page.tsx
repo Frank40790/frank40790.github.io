@@ -18,7 +18,6 @@ export default function Blog() {
 }
 
 interface Post {
-  id: number;
   title: string;
   description: string;
   date: string;
@@ -28,7 +27,6 @@ interface Post {
 
 const posts: Post[] = [
   {
-    id: 1,
     title: "The first version of my website!",
     description: "Took some time to build...",
     date: "2024-09-20",
