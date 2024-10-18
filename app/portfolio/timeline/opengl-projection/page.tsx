@@ -31,8 +31,8 @@ export default function Event() {
         textComponent={
           <>
             <div>
-              This is just a small experiment that I've done in a bit of time.
-              Using the projection in linear algebra on computer graphics
+              This is just a small experiment that I&apos;ve done in a bit of
+              time. Using the projection in linear algebra on computer graphics
               (OpenGL)
             </div>
           </>
@@ -73,12 +73,12 @@ export default function Event() {
             </div>
             <strong>Starting version 2.</strong>
             <div>
-              In version 1, it is mainly used for doing a "proof of concept", so
-              the I did not consider anything about dynamic memory management.
-              Therefore, in version 2, I refined some code to use structs and
-              dynamic memory, where the memory used are freed. This time,
-              function pointers are also used for selecting between different
-              matrix multiplication method.
+              In version 1, it is mainly used for doing a &quot;proof of
+              concept&quot;, so the I did not consider anything about dynamic
+              memory management. Therefore, in version 2, I refined some code to
+              use structs and dynamic memory, where the memory used are freed.
+              This time, function pointers are also used for selecting between
+              different matrix multiplication method.
             </div>
           </>
         }
@@ -100,8 +100,9 @@ export default function Event() {
         textComponent={
           <>
             <div>
-              I've applied some of my knowledge in linear algebra and C and
-              build a rotating shape in OpenGL. On the way, I've learnt how to
+              I&apos;ve applied some of my knowledge in linear algebra and C and
+              build a rotating shape in OpenGL. On the way, I&apos;ve learnt how
+              to
             </div>
             <ul className="list-none pl-4">
               <li className="relative before:content-['>'] before:absolute before:left-[-1em]">
