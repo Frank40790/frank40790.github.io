@@ -1,15 +1,11 @@
 "use client";
 import {
-  LeftPicRightText,
-  RightPicLeftText,
   FullText,
   FullTextHeaders,
   Banner,
-  IconList,
   CodeLinkBlock,
   IconListStatic,
   LeftRightImage,
-  FullImage,
   VideoLoopBlock,
 } from "../../components/page_block";
 import { github } from "../../components/detail";
@@ -128,7 +124,6 @@ export default function Event() {
             name: "draw_v2.c",
             url: `${github}/DevDiversify/blob/main/openglexperiment/draw_v2.c`,
           },
-          // Add more files as needed
         ]}
       />
     </>

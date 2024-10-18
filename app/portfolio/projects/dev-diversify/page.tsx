@@ -1,26 +1,61 @@
 "use client";
 import {
-  LeftPicRightText,
-  RightPicLeftText,
-  FullText,
   FullTextHeaders,
+  FullImage,
   Banner,
-  IconList,
+  IconListStatic,
+  CodeLinkBlock,
 } from "../../components/page_block";
 import { usePathname } from "next/navigation";
+import { github } from "../../components/detail";
 
 export default function Event() {
   const icons = [
     { icon: "devicon:python", name: "Python" },
-    { icon: "devicon:poetry", name: "Poetry" },
-    { icon: "simple-icons:openai", name: "Whisper" },
-    { icon: "logos:meta-icon", name: "LLaMa" },
-    { icon: "carbon:gui", name: "Tk / Custom Tk" },
+    { icon: "devicon:c", name: "C" },
+    { icon: "devicon:html5", name: "HTML" },
   ];
   const pathname = usePathname();
   return (
     <>
+      <title>Dev Diversify</title>
       <Banner textComponent="Dev Diversify" />
+      <FullTextHeaders
+        headers="What does this do?"
+        textComponent={
+          <>
+            <div>
+              This is a codebase that contains lots of different code, including
+              code snippits, project&quot;s code etc...
+            </div>
+          </>
+        }
+      />
+      <FullImage
+        imageSrc={`${pathname}/dev-diversify-github.png`}
+        altText="DevDiversify GitHub Page"
+      />
+      <FullTextHeaders
+        headers="Programming Languages?"
+        textComponent={
+          <>
+            <div>
+              The codebase mainly has these languages, but could expand in the
+              future
+            </div>
+          </>
+        }
+      />
+      <IconListStatic icons={icons} />
+      <CodeLinkBlock
+        header="Code"
+        links={[
+          {
+            name: "DevDiversify.c",
+            url: `${github}/DevDiversify/`,
+          },
+        ]}
+      />
     </>
   );
 }

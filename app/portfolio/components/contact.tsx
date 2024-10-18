@@ -11,7 +11,7 @@ export default function Contact() {
           <motion.div
             whileHover={{ scale: 1.1, rotate: 10 }}
             whileTap={{ scale: 0.9 }}
-            className="transition-transform transform hover:scale-110"
+            className="transition-transform transform hover:scale-110 flex items-center justify-center"
           >
             <Icon icon="brandico:linkedin-rect" width={80} height={80} />
           </motion.div>
@@ -20,7 +20,7 @@ export default function Contact() {
           <motion.div
             whileHover={{ scale: 1.1, rotate: -10 }}
             whileTap={{ scale: 0.9 }}
-            className="transition-transform transform hover:scale-110"
+            className="transition-transform transform hover:scale-110 flex items-center justify-center"
           >
             <Icon icon="mdi:github" width={80} height={80} />
           </motion.div>
