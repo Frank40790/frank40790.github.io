@@ -53,8 +53,8 @@ export default function Event() {
             <strong>This is where I begin version 1.</strong>
             <div>
               When developing version 1, I am just using some basic C to make it
-              work. I start by building the array in Stack and transfer it into
-              Heap by a function.
+              work. I start by building the array in Stack memory and transfer it into
+              Heap memory by a function.
             </div>
             <div>
               Then I construct the transformation matrix where I can alter the
