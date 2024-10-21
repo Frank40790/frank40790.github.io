@@ -42,7 +42,7 @@ const events: Event[] = [
     description: "A toolbox for programmers",
     url: "dev-diversify",
     icon: "dev-diversify.png",
-    type: "disabled",
+    type: "prod",
   },
   {
     title: "Semantic Spotlight",

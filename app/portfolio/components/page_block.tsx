@@ -459,8 +459,7 @@ interface VideoLoopBlockProps {
   videoSrc: string;
   poster?: string;
 }
-
-export const VideoLoopBlock: React.FC<VideoLoopBlockProps> = ({ videoSrc, poster }) => {
+export function VideoLoopBlock({ videoSrc, poster }: VideoLoopBlockProps) {
   return (
     <div className="flex justify-center items-center my-4">
       <video
@@ -476,4 +475,4 @@ export const VideoLoopBlock: React.FC<VideoLoopBlockProps> = ({ videoSrc, poster
       </video>
     </div>
   );
-};
+}

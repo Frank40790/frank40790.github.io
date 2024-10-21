@@ -25,9 +25,6 @@
   }
 }
 
-
-
-
 .svg-container {
   width: 100px;
   height: 100px;
@@ -40,8 +37,11 @@
 .svg-item {
   width: 56%;
   overflow: visible;
-  stroke: #4d555d;
   stroke-width: 2;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+.lock-scroll {
+  overflow: hidden;
 }
