@@ -51,7 +51,7 @@ export default function Event() {
         header="Code"
         links={[
           {
-            name: "DevDiversify.c",
+            name: "DevDiversify",
             url: `${github}/DevDiversify/`,
           },
         ]}
