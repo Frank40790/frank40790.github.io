@@ -12,6 +12,27 @@ import Contact from "./components/contact";
 import { name, skills } from "./components/detail";
 import { usePathname } from "next/navigation";
 
+interface PopupContentProps {
+  showLink: boolean;
+}
+
+function PopupContent({ showLink }: PopupContentProps) {
+  return (
+    <motion.div
+      initial={{ scale: 0.8 }}
+      animate={{ scale: showLink ? 1 : 0.8 }}
+      exit={{ scale: 0.8 }}
+      className="p-8 rounded-lg shadow-lg w-96 h-96 flex flex-col items-center justify-center bg-opacity-50 backdrop-blur-md  border border-black dark:border-white"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="text-3xl font-bold text-center mb-5 text-black dark:text-white">
+        Contact Me
+      </div>
+      <Contact />
+    </motion.div>
+  );
+}
+
 export default function Home() {
   const pathname = usePathname();
   // set link show
@@ -48,23 +69,12 @@ export default function Home() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: showLink ? 1 : 0, y: showLink ? 0 : -50 }}
           exit={{ opacity: 0, y: -50 }}
-          className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 transition-opacity ${
+          className={`fixed inset-0 flex items-center justify-center bg-opacity-50 transition-opacity ${
             showLink ? "block" : "hidden"
           }`}
           onClick={handleClosePopup}
         >
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: showLink ? 1 : 0.8 }}
-            exit={{ scale: 0.8 }}
-            className="p-8 rounded-lg shadow-lg w-96 h-96 flex flex-col items-center justify-center bg-white dark:bg-slate-400"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="text-3xl font-bold text-center mb-5 text-black dark:text-white">
-              Contact Me
-            </div>
-            <Contact />
-          </motion.div>
+          <PopupContent showLink={showLink} />
         </motion.div>
       )}
 

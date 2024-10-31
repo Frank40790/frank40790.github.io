@@ -47,14 +47,14 @@ export default function Navbar() {
   );
 
   return (
-    <header className="h-16 flex items-center justify-center bg-gray-200 dark:bg-gray-600 px-4 md:px-8">
+    <header className="h-16 flex items-center justify-center px-4 md:px-8 border-b border-black dark:border-white">
       {/* Desktop Menu */}
       <div className="hidden md:flex centered flex-row space-x-4">
         {links.map(renderLink)}
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="flex md:hidden">
+      <div className="flex md:hidden ">
         <button
           className="text-gray-600 dark:text-white focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -74,7 +74,7 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="absolute top-16 left-0 right-0 bg-gray-200 dark:bg-gray-600 z-50 md:hidden rounded-b-xl"
+            className="absolute top-16 left-0 right-0 bg-gray-200 bg-opacity-50 backdrop-blur-md dark:bg-zinc-900 dark:bg-opacity-50 z-50 md:hidden rounded-b-xl border-l border-r border-black dark:border-white"
           >
             <div className="flex flex-col items-center space-y-2">
               {links.map(renderLink)}
