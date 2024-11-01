@@ -1,5 +1,5 @@
 "use client";
-import {
+import FetchCode, {
   FullText,
   FullTextHeaders,
   Banner,
@@ -7,9 +7,11 @@ import {
   IconListStatic,
   LeftRightImage,
   VideoLoopBlock,
+  CodeBlock,
 } from "../../components/page_block";
 import { github } from "../../components/detail";
 import { usePathname } from "next/navigation";
+import { fetchContent } from "../../components/utils";
 
 export default function Event() {
   const icons = [
@@ -17,6 +19,7 @@ export default function Event() {
     { icon: "devicon:opengl", name: "OpenGL" },
   ];
   const pathname = usePathname();
+
   return (
     <>
       <title>OpenGL Projection</title>

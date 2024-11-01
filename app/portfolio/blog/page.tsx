@@ -2,6 +2,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { DisabledPost, EnabledPost } from "../components/blog/blog_block";
+import { posts } from "../components/blog/blog_db";
+import { PostProps } from "../components/blog/blog_interface";
 
 export default function Blog() {
   return (
@@ -17,25 +20,7 @@ export default function Blog() {
   );
 }
 
-interface Post {
-  title: string;
-  description: string;
-  date: string;
-  url: string;
-  type: string;
-}
-
-const posts: Post[] = [
-  {
-    title: "The first version of my website!",
-    description: "Took some time to build...",
-    date: "2024-09-20",
-    url: "first-version",
-    type: "prod",
-  },
-];
-
-function Post({ post }: { post: Post }) {
+function Post({ post }: { post: PostProps }) {
   const pathname = usePathname();
 
   if (post.type === "hidden") {
@@ -58,31 +43,11 @@ function Post({ post }: { post: Post }) {
     >
       {isDisabled ? (
         // Disabled
-        <div className="mb-8 rounded-lg p-6 bg-gray-200 dark:bg-gray-500">
-          <div className="text-lg font-bold text-gray-600 dark:text-gray-200">
-            {post.title}
-          </div>
-          <div className="text-gray-600 dark:text-gray-400">
-            {post.description}
-          </div>
-          <div className="text-gray-500 dark:text-gray-400">
-            Posted on {post.date}
-          </div>
-        </div>
+        <DisabledPost post={post} />
       ) : (
-        // Not disabled
+        // Enabled
         <Link href={`${pathname}/${post.url}`}>
-          <div className="mb-8 rounded-lg p-6 hover:scale-110 transition duration-300 bg-gray-200 dark:bg-gray-500">
-            <div className="text-lg font-bold text-gray-600 dark:text-gray-200">
-              {post.title}
-            </div>
-            <div className="text-gray-600 dark:text-gray-400">
-              {post.description}
-            </div>
-            <div className="text-gray-500 dark:text-gray-400">
-              Posted on {post.date}
-            </div>
-          </div>
+          <EnabledPost post={post} />
         </Link>
       )}
     </motion.div>

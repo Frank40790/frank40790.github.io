@@ -2,7 +2,15 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import rehypeHighlight from "rehype-highlight";
+import "katex/dist/katex.min.css"; // latex style
+import "highlight.js/styles/atom-one-dark.css"; // code style
+import "../components/styles/code_block.css"; // additional code style
+import { fetchContent } from "./utils";
 
 interface LeftPicRightTextProps {
   image_src: string;
@@ -474,5 +482,146 @@ export function VideoLoopBlock({ videoSrc, poster }: VideoLoopBlockProps) {
         Your browser does not support the video tag.
       </video>
     </div>
+  );
+}
+
+interface URLLinkBlockProps {
+  header: string;
+  links: { name: string; url: string }[];
+}
+
+export function URLLinkBlock({ header, links }: URLLinkBlockProps) {
+  return (
+    <>
+      <FullTextHeaders headers={header} textComponent={""} />
+      <div className="flex flex-wrap justify-center items-center">
+        {links.map((links, index) => (
+          <URLLink key={index} name={links.name} url={links.url} />
+        ))}
+      </div>
+    </>
+  );
+}
+
+interface URLLinkProps {
+  name: string;
+  url: string;
+}
+
+function URLLink({ name, url }: URLLinkProps) {
+  return (
+    <div className="flex flex-col items-center m-4">
+      <motion.a
+        href={url}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.3 }}
+        className="flex items-center justify-center"
+      >
+        <Icon icon="material-symbols:link" width="8vw" height="8vw" />
+      </motion.a>
+      <span className="mt-2 text-sm">{name}</span>
+    </div>
+  );
+}
+
+interface MarkdownBlockProps {
+  content: string;
+}
+
+export function MarkdownBlock({ content }: MarkdownBlockProps) {
+  return (
+    <div className="pl-16 pr-16">
+      <ReactMarkdown
+        remarkPlugins={[remarkMath]}
+        rehypePlugins={[rehypeKatex, rehypeHighlight]}
+      >
+        {content}
+      </ReactMarkdown>
+    </div>
+  );
+}
+
+interface CodeBlockProps {
+  filename: string;
+  code: string;
+}
+
+export function CodeBlock({ filename, code }: CodeBlockProps) {
+  const [codeType, setCodeType] = useState("");
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const codeBlockMatch = code.match(/```(\w+)/);
+    setCodeType(codeBlockMatch ? codeBlockMatch[1] : "");
+  }, [code]);
+
+  const cleanCode = code
+    .replace(/```.*?\n/g, "")
+    .replace(/\n```/g, "")
+    .trim();
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(cleanCode).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  return (
+    <div className="pl-14 pr-14">
+      <div className="relative p-4 border rounded-md border-gray-300">
+        <span className="absolute top-2 left-5 text-sm font-bold text-gray-600">
+          {codeType}
+        </span>
+        <span className="absolute top-2 left-1/2 transform -translate-x-1/2 text-sm text-gray-600">
+          {filename}
+        </span>
+        <button
+          onClick={copyToClipboard}
+          className="absolute top-2 right-2 px-3 py-1 text-sm rounded focus:outline-none text-black dark:text-white"
+        >
+          {copied ? "Copied!" : "Copy"}
+        </button>
+        <br />
+        <ReactMarkdown rehypePlugins={[rehypeHighlight]}>{code}</ReactMarkdown>
+      </div>
+    </div>
+  );
+}
+
+interface FetchCodeProps {
+  url: string;
+}
+
+export default function FetchCode({ url }: FetchCodeProps) {
+  const [content, setContent] = useState<string>("");
+
+  const filename = url.split("/").pop() || "";
+  const extension = filename.split(".").pop() || "";
+  const extensionMapping = {
+    py: "python",
+    java: "java",
+    c: "c",
+    cpp: "cpp",
+    html: "html",
+    css: "css",
+    js: "javascript",
+  };
+  const codeType =
+    extensionMapping[extension as keyof typeof extensionMapping] || "code";
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchContent(url);
+      setContent(data);
+    };
+    fetchData();
+  }, [url]);
+
+  return (
+    <CodeBlock
+      filename={filename}
+      code={`\`\`\`${codeType}\n${content}\n\`\`\``}
+    />
   );
 }
