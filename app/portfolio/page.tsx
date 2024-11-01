@@ -6,6 +6,8 @@ import {
   FullTextHeaders,
   IconList,
   BannerTypewriter,
+  MarkdownBlock,
+  CodeBlock,
 } from "./components/page_block";
 import { useEffect, useState } from "react";
 import Contact from "./components/contact";
@@ -77,11 +79,9 @@ export default function Home() {
           <PopupContent showLink={showLink} />
         </motion.div>
       )}
-
       <BannerTypewriter
         textComponent={`I'm ${name}, A Enthusiastic Programmer!`}
       />
-
       <FullTextHeaders headers="About me" textComponent="" />
       <LeftPicRightText
         image_src={`${pathname}/unimelb-front.png`}
