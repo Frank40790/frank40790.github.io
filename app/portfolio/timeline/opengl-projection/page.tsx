@@ -1,5 +1,5 @@
 "use client";
-import FetchCode, {
+import {
   FullText,
   FullTextHeaders,
   Banner,
@@ -11,7 +11,6 @@ import FetchCode, {
 } from "../../components/page_block";
 import { github } from "../../components/detail";
 import { usePathname } from "next/navigation";
-import { fetchContent } from "../../components/utils";
 
 export default function Event() {
   const icons = [

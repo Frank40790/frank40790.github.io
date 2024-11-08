@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import React, { useState, useEffect } from "react";
+import { ParallaxBanner, Parallax } from "react-scroll-parallax";
 import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
@@ -268,6 +269,7 @@ export function Banner({ textComponent }: BannerProps) {
 
 interface BannerTypewriterProps {
   textComponent: string;
+  fontSize: string;
 }
 
 const sentenceVariants = {
@@ -280,10 +282,13 @@ const letterVariants = {
   visible: { opacity: 1, transition: { duration: 0.0001 } },
 };
 
-export function BannerTypewriter({ textComponent }: BannerTypewriterProps) {
+export function BannerTypewriter({
+  textComponent,
+  fontSize,
+}: BannerTypewriterProps) {
   return (
     <motion.h1
-      className="text-center text-5xl font-bold p-4 pt-60 pb-60 pl-10 pr-10"
+      className={`text-center ${fontSize} p-4 pt-60 pb-60 pl-10 pr-10`}
       initial="hidden"
       animate="visible"
       variants={sentenceVariants}
@@ -593,7 +598,7 @@ interface FetchCodeProps {
   url: string;
 }
 
-export default function FetchCode({ url }: FetchCodeProps) {
+export function FetchCode({ url }: FetchCodeProps) {
   const [content, setContent] = useState<string>("");
 
   const filename = url.split("/").pop() || "";
@@ -623,5 +628,43 @@ export default function FetchCode({ url }: FetchCodeProps) {
       filename={filename}
       code={`\`\`\`${codeType}\n${content}\n\`\`\``}
     />
+  );
+}
+
+interface ParallaxBlockProps {
+  textComponent: React.ReactNode;
+  foreground: string;
+  background: string;
+}
+
+export function ParallaxBlock({
+  textComponent,
+  foreground,
+  background,
+}: ParallaxBlockProps) {
+  return (
+    <div className="min-h-screen">
+      <ParallaxBanner
+        layers={[
+          {
+            image: background,
+            speed: -30,
+          },
+          {
+            speed: -30,
+            children: (
+              <div className="absolute inset-0 flex items-center justify-center">
+                {textComponent}
+              </div>
+            ),
+          },
+          {
+            image: foreground,
+            speed: -10,
+          },
+        ]}
+        className="w-full aspect-[16/9] min-h-[600px]"
+      />
+    </div>
   );
 }
