@@ -1,0 +1,17 @@
+
+* {
+  cursor: none;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  top: -8px;
+  left: -8px;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}

@@ -6,15 +6,12 @@ import {
   FullTextHeaders,
   IconList,
   BannerTypewriter,
-  MarkdownBlock,
-  CodeBlock,
   ParallaxBlock,
 } from "./components/page_block";
 import { useEffect, useState } from "react";
 import Contact from "./components/contact";
 import { name, skills } from "./components/detail";
 import { usePathname } from "next/navigation";
-import { Icon } from "@iconify/react/dist/iconify.js";
 
 interface PopupContentProps {
   showLink: boolean;
@@ -121,6 +118,7 @@ export default function Home() {
           <div className="pb-96 hidden md:block">
             <BannerTypewriter
               fontSize="text-5xl"
+              fontColor="auto"
               textComponent={`Ich heiße ${name}, ein begeisterter Programmierer! Ich bin zurzeit Student an der Universität Melbourne und plane, im Fachbereich Informatik zu studieren. Es macht mir immer Freude, verschiedene Bereiche der Informatik zu lernen und zu erkunden.`}
             />
           </div>
@@ -138,6 +136,7 @@ export default function Home() {
           textComponent={
             <BannerTypewriter
               fontSize="text-6xl"
+              fontColor="text-white"
               textComponent={`I'm ${name}, A Enthusiastic Programmer!`}
             />
           }

@@ -270,6 +270,7 @@ export function Banner({ textComponent }: BannerProps) {
 interface BannerTypewriterProps {
   textComponent: string;
   fontSize: string;
+  fontColor: string;
 }
 
 const sentenceVariants = {
@@ -285,10 +286,14 @@ const letterVariants = {
 export function BannerTypewriter({
   textComponent,
   fontSize,
+  fontColor,
 }: BannerTypewriterProps) {
+  if (fontColor === "auto") {
+    fontColor = "text-black dark:text-white";
+  }
   return (
     <motion.h1
-      className={`text-center ${fontSize} p-4 pt-60 pb-60 pl-10 pr-10`}
+      className={`text-center ${fontSize} ${fontColor} p-4 pt-60 pb-60 pl-10 pr-10`}
       initial="hidden"
       animate="visible"
       variants={sentenceVariants}
