@@ -4,7 +4,6 @@ import "./globals.css";
 import { Comfortaa, Inter } from "next/font/google";
 
 const comfortaa = Comfortaa({ subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio Site",

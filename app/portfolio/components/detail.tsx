@@ -42,5 +42,6 @@ export const skills = [
 
   { icon: "devicon:matlab", name: "Matlab" },
   { icon: "skill-icons:autocad-dark", name: "AutoCAD" },
+  { icon: "tabler:file-3d", name: "SolidWorks" },
   { icon: "skill-icons:arduino", name: "Arduino" },
 ];
