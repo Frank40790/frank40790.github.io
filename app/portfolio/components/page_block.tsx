@@ -14,14 +14,14 @@ import "../components/styles/code_block.css"; // additional code style
 import { fetchContent } from "./utils";
 
 interface LeftPicRightTextProps {
-  image_src: string;
-  alt_text: string;
+  imageSrc: string;
+  altText: string;
   textComponent: React.ReactNode;
 }
 
 export function LeftPicRightText({
-  image_src,
-  alt_text,
+  imageSrc,
+  altText,
   textComponent,
 }: LeftPicRightTextProps) {
   const fadeIn = {
@@ -39,8 +39,8 @@ export function LeftPicRightText({
         transition={{ duration: 0.3 }}
       >
         <Image
-          src={image_src}
-          alt={alt_text}
+          src={imageSrc}
+          alt={altText}
           width={700}
           height={400}
           className="object-cover rounded-lg"
@@ -59,14 +59,14 @@ export function LeftPicRightText({
   );
 }
 interface RightPicLeftTextProps {
-  image_src: string;
-  alt_text: string;
+  imageSrc: string;
+  altText: string;
   textComponent: React.ReactNode;
 }
 
 export function RightPicLeftText({
-  image_src,
-  alt_text,
+  imageSrc,
+  altText,
   textComponent,
 }: RightPicLeftTextProps) {
   const fadeIn = {
@@ -93,8 +93,8 @@ export function RightPicLeftText({
         transition={{ duration: 0.3 }}
       >
         <Image
-          src={image_src}
-          alt={alt_text}
+          src={imageSrc}
+          alt={altText}
           width={700}
           height={400}
           className="object-cover rounded-lg"
@@ -270,6 +270,7 @@ export function Banner({ textComponent }: BannerProps) {
 interface BannerTypewriterProps {
   textComponent: string;
   fontSize: string;
+  fontColor: string;
 }
 
 const sentenceVariants = {
@@ -285,10 +286,14 @@ const letterVariants = {
 export function BannerTypewriter({
   textComponent,
   fontSize,
+  fontColor,
 }: BannerTypewriterProps) {
+  if (fontColor === "auto") {
+    fontColor = "text-black dark:text-white";
+  }
   return (
     <motion.h1
-      className={`text-center ${fontSize} p-4 pt-60 pb-60 pl-10 pr-10`}
+      className={`text-center ${fontSize} ${fontColor} p-4 pt-60 pb-60 pl-10 pr-10`}
       initial="hidden"
       animate="visible"
       variants={sentenceVariants}
@@ -425,7 +430,6 @@ function CodeLink({ name, url }: CodeLinkProps) {
         href={url}
         download
         className="text-center"
-        onClick={handleClick}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
@@ -437,30 +441,15 @@ function CodeLink({ name, url }: CodeLinkProps) {
           className="flex items-center justify-center"
         >
           {/* Code icon */}
-          {!isClicked && (
-            <motion.div
-              key="code-icon"
-              initial={{ opacity: 1 }}
-              animate={{ opacity: isClicked ? 0 : 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Icon icon="mingcute:code-fill" width="8vw" height="8vw" />
-            </motion.div>
-          )}
-
-          {/* Download icon */}
-          {isClicked && (
-            <motion.div
-              key="download-icon"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: isClicked ? 1 : 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Icon icon="line-md:download-loop" width="8vw" height="8vw" />
-            </motion.div>
-          )}
+          <motion.div
+            key="code-icon"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: isClicked ? 0 : 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Icon icon="mingcute:code-fill" width="8vw" height="8vw" />
+          </motion.div>
         </motion.div>
       </motion.a>
       <span className="mt-2 text-sm">{name}</span>
@@ -552,12 +541,12 @@ interface CodeBlockProps {
 }
 
 export function CodeBlock({ filename, code }: CodeBlockProps) {
-  const [codeType, setCodeType] = useState("");
-  const [copied, setCopied] = useState(false);
+  const [codeType, setCodeType] = useState<string>("");
+  const [copied, setCopied] = useState<boolean>(false);
 
   useEffect(() => {
     const codeBlockMatch = code.match(/```(\w+)/);
-    setCodeType(codeBlockMatch ? codeBlockMatch[1] : "");
+    setCodeType(codeBlockMatch ? codeBlockMatch[1] : "plaintext");
   }, [code]);
 
   const cleanCode = code
@@ -573,7 +562,7 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
   };
 
   return (
-    <div className="pl-14 pr-14">
+    <div className="pl-5 pr-5">
       <div className="relative p-4 border rounded-md border-gray-300">
         <span className="absolute top-2 left-5 text-sm font-bold text-gray-600">
           {codeType}

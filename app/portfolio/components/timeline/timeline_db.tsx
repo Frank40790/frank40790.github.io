@@ -7,7 +7,7 @@ export const timelines: TimelineProps[] = [
     date: "04 Apr 2024 ~ 07 Apr 2024",
     url: "cissa-codebrew-hackathon-2024",
     icon: "codebrew-icon.svg",
-    type: "disabled",
+    type: "hidden",
   },
   {
     title: "Foundation of Computing Project 1",
@@ -31,7 +31,7 @@ export const timelines: TimelineProps[] = [
     date: "09 Aug 2024 ~ 18 Aug 2024",
     url: "vichack-2024",
     icon: "vichack.png",
-    type: "disabled",
+    type: "hidden",
   },
   {
     title: "Foundation of Algorithm Project 1",
@@ -50,12 +50,12 @@ export const timelines: TimelineProps[] = [
     type: "hidden",
   },
   {
-    title: "Engineering Line Following Project",
+    title: "Engineering Modelling and Design : Autonomous Robot Project",
     description: "Implementing line following algorithm and PID control",
     date: "26 Jul 2024 ~ 18 Oct 2024",
     url: "emd-project",
     icon: "unimelb-icon.jpg",
-    type: "hidden",
+    type: "disabled",
   },
   {
     title: "Interaction Design Project",
@@ -63,7 +63,7 @@ export const timelines: TimelineProps[] = [
     date: "23 Jul 2024 ~ 28 Oct 2024",
     url: "interaction-design-project",
     icon: "unimelb-icon.jpg",
-    type: "hidden",
+    type: "disabled",
   },
   {
     title: "OpenGL Projection",
@@ -72,5 +72,21 @@ export const timelines: TimelineProps[] = [
     url: "opengl-projection",
     icon: "shape_2.png",
     type: "enabled",
+  },
+  {
+    title: "Text Generation",
+    description: "Writing a small decoder only transformer language model",
+    date: "21 May 2024 ~",
+    url: "text-generation",
+    icon: "transformer.png",
+    type: "enabled",
+  },
+  {
+    title: "Image Generation UNet",
+    description: "Writing a small UNet diffusion model (DDPM)",
+    date: "7 Jun 2024 ~",
+    url: "image-generation-unet",
+    icon: "diffusion.png",
+    type: "hidden",
   },
 ];

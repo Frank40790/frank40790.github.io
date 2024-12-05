@@ -48,8 +48,8 @@ export default function Project() {
       />
       <FullTextHeaders headers="Journey" textComponent="" />
       <RightPicLeftText
-        image_src={`${pathname}/external-brain.png`}
-        alt_text="External Brain Picture"
+        imageSrc={`${pathname}/external-brain.png`}
+        altText="External Brain Picture"
         textComponent={
           <>
             <div>
