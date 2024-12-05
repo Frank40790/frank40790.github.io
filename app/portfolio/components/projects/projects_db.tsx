@@ -20,6 +20,6 @@ export const projects: ProjectsProps[] = [
     description: "Scemantic search",
     url: "semantic-spotlight",
     icon: "semantic-spotlight.png",
-    type: "disabled",
+    type: "hidden",
   },
 ];
