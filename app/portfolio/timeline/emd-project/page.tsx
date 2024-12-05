@@ -36,8 +36,8 @@ export default function Event() {
 
       <FullTextHeaders headers="Hardware" textComponent="" />
       <RightPicLeftText
-        image_src={`${pathname}/robot.png`}
-        alt_text="Arduino Robot"
+        imageSrc={`${pathname}/robot.png`}
+        altText="Arduino Robot"
         textComponent={
           <div>
             In this project, we used shield bot for arduino. Using jumper wire

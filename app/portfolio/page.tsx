@@ -147,8 +147,8 @@ export default function Home() {
 
       <FullTextHeaders headers="About me" textComponent="" />
       <LeftPicRightText
-        image_src={`${pathname}/unimelb-front.png`}
-        alt_text="icon"
+        imageSrc={`${pathname}/unimelb-front.png`}
+        altText="icon"
         textComponent={
           <div className="text-xl">
             I am currently a undergraduate student studying at University of
@@ -158,8 +158,8 @@ export default function Home() {
         }
       />
       <RightPicLeftText
-        image_src={`${pathname}/unimelb-building.png`}
-        alt_text="icon"
+        imageSrc={`${pathname}/unimelb-building.png`}
+        altText="icon"
         textComponent={
           <div className="text-xl">
             Random, but I also enjoy casually walking around the campus,
