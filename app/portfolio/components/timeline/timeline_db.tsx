@@ -87,6 +87,6 @@ export const timelines: TimelineProps[] = [
     date: "7 Jun 2024 ~",
     url: "image-generation-unet",
     icon: "diffusion.png",
-    type: "enabled",
+    type: "hidden",
   },
 ];
