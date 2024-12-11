@@ -7,5 +7,6 @@ export const posts: PostProps[] = [
     date: "2024-09-20",
     url: "first-version",
     type: "enabled",
+    tags: ["website", "nextjs"],
   },
 ];

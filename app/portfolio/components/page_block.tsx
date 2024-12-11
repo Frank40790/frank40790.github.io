@@ -30,7 +30,7 @@ export function LeftPicRightText({
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-10 pr-10">
+    <div className="flex flex-col md:flex-row items-center pl-0 pr-0 md:pl-10 md:pr-10">
       <motion.div
         className="flex-shrink-0 w-full md:w-2/5 p-4"
         initial="hidden"
@@ -75,7 +75,7 @@ export function RightPicLeftText({
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-10 pr-10">
+    <div className="flex flex-col md:flex-row items-center pl-0 pr-0 md:pl-10 md:pr-10">
       <motion.div
         className="w-full md:w-3/5 p-4"
         initial="hidden"
@@ -119,7 +119,7 @@ export function FullTextHeaders({
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-10 pr-10">
+    <div className="flex flex-col md:flex-row items-center pl-0 pr-0 md:pl-10 md:pr-10">
       <motion.div
         className="w-full p-4"
         initial="hidden"
@@ -145,7 +145,7 @@ export function FullText({ textComponent }: FullTextProps) {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-10 pr-10">
+    <div className="flex flex-col md:flex-row items-center pl-0 pr-0 md:pl-10 md:pr-10">
       <motion.div
         className="w-full p-4"
         initial="hidden"
@@ -177,7 +177,7 @@ export function LeftRightImage({
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-10 pr-10">
+    <div className="flex flex-col md:flex-row items-center">
       <motion.div
         className="flex-shrink-0 w-full md:w-1/2 p-4 md:p-10"
         initial="hidden"
@@ -562,7 +562,7 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
   };
 
   return (
-    <div className="pl-5 pr-5">
+    <div className="pl-0 pr-0 md:pl-5 md:pr-5">
       <div className="relative p-4 border rounded-md border-gray-300">
         <span className="absolute top-2 left-5 text-sm font-bold text-gray-600">
           {codeType}
@@ -632,7 +632,7 @@ export function ParallaxBlock({
   background,
 }: ParallaxBlockProps) {
   return (
-    <div className="min-h-screen">
+    <div className="">
       <ParallaxBanner
         layers={[
           {

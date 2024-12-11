@@ -137,7 +137,7 @@ export default function Home() {
             <BannerTypewriter
               fontSize="text-6xl"
               fontColor="text-white"
-              textComponent={`I'm ${name}, A Enthusiastic Programmer!`}
+              textComponent={`I'm ${name}, An Enthusiastic Programmer!`}
             />
           }
           foreground={`${pathname}/foreground.png`}

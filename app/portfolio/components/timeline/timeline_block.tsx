@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TimelineProps } from "./timeline_interface";
+import Tags from "../tags/tags";
 
 export function DisabledTimelineItem({
   timeline,
@@ -43,7 +44,7 @@ export function TimelineImage({
   pathname: string;
 }) {
   return (
-    <div className="flex flex-col p-6">
+    <div className="flex-col p-6 hidden md:block">
       <div className="relative h-20 w-20 rounded-full overflow-hidden border-4 border-gray-500 group-hover:scale-110 transition duration-200">
         <Image
           src={`${pathname}/${timeline.url}/${timeline.icon}`}
@@ -67,6 +68,7 @@ export function TimelineDetails({ timeline }: { timeline: TimelineProps }) {
         {timeline.description}
       </div>
       <div className="event-date text-gray-500">{timeline.date}</div>
+      <Tags tags={timeline.tags} />
     </div>
   );
 }

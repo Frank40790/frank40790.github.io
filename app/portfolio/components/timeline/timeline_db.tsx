@@ -8,6 +8,7 @@ export const timelines: TimelineProps[] = [
     url: "cissa-codebrew-hackathon-2024",
     icon: "codebrew-icon.svg",
     type: "hidden",
+    tags: ["hackathon"],
   },
   {
     title: "Foundation of Computing Project 1",
@@ -16,6 +17,7 @@ export const timelines: TimelineProps[] = [
     url: "foc-project-1",
     icon: "unimelb-icon.jpg",
     type: "hidden",
+    tags: ["university project"],
   },
   {
     title: "Foundation of Computing Project 2",
@@ -24,6 +26,7 @@ export const timelines: TimelineProps[] = [
     url: "foc-project-2",
     icon: "unimelb-icon.jpg",
     type: "hidden",
+    tags: ["university project"],
   },
   {
     title: "VICHACK 2024",
@@ -32,6 +35,7 @@ export const timelines: TimelineProps[] = [
     url: "vichack-2024",
     icon: "vichack.png",
     type: "hidden",
+    tags: ["hackathon"],
   },
   {
     title: "Foundation of Algorithm Project 1",
@@ -40,6 +44,7 @@ export const timelines: TimelineProps[] = [
     url: "foa-project-1",
     icon: "unimelb-icon.jpg",
     type: "hidden",
+    tags: ["university project"],
   },
   {
     title: "Foundation of Algorithm Project 2",
@@ -48,6 +53,7 @@ export const timelines: TimelineProps[] = [
     url: "foa-project-1",
     icon: "unimelb-icon.jpg",
     type: "hidden",
+    tags: ["university project"],
   },
   {
     title: "Engineering Modelling and Design : Autonomous Robot Project",
@@ -56,6 +62,7 @@ export const timelines: TimelineProps[] = [
     url: "emd-project",
     icon: "unimelb-icon.jpg",
     type: "disabled",
+    tags: ["university project"],
   },
   {
     title: "Interaction Design Project",
@@ -64,6 +71,7 @@ export const timelines: TimelineProps[] = [
     url: "interaction-design-project",
     icon: "unimelb-icon.jpg",
     type: "disabled",
+    tags: ["university project"],
   },
   {
     title: "OpenGL Projection",
@@ -72,6 +80,7 @@ export const timelines: TimelineProps[] = [
     url: "opengl-projection",
     icon: "shape_2.png",
     type: "enabled",
+    tags: ["linear algebra", "opengl", "c"],
   },
   {
     title: "Text Generation",
@@ -80,6 +89,7 @@ export const timelines: TimelineProps[] = [
     url: "text-generation",
     icon: "transformer.png",
     type: "enabled",
+    tags: ["ai/ml", "text generation"],
   },
   {
     title: "Image Generation UNet",
@@ -88,5 +98,6 @@ export const timelines: TimelineProps[] = [
     url: "image-generation-unet",
     icon: "diffusion.png",
     type: "hidden",
+    tags: ["ai/ml", "image generation"],
   },
 ];

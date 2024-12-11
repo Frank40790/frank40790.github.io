@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ProjectsProps } from "./projects_interface";
+import Tags from "../tags/tags";
 
 export function DisabledProject({
   project,
@@ -66,6 +67,7 @@ export function ProjectDetails({ project }: { project: ProjectsProps }) {
       <div className="event-description text-gray-600">
         {project.description}
       </div>
+      <Tags tags={project.tags} />
     </div>
   );
 }

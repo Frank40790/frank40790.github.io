@@ -1,6 +1,7 @@
-import { DisabledPostProps, EnabledPostProps } from "./blog_interface";
+import Tags from "../tags/tags";
+import { PostProps } from "./blog_interface";
 
-export const DisabledPost = ({ post }: DisabledPostProps) => (
+export const DisabledPost = ({ post }: { post: PostProps }) => (
   <div className="mb-8 rounded-lg p-6">
     <div className="text-lg font-bold text-gray-600 dark:text-gray-200">
       {post.title}
@@ -12,7 +13,7 @@ export const DisabledPost = ({ post }: DisabledPostProps) => (
   </div>
 );
 
-export const EnabledPost = ({ post }: EnabledPostProps) => (
+export const EnabledPost = ({ post }: { post: PostProps }) => (
   <div className="mb-8 rounded-lg p-6 hover:scale-110 transition duration-300 border-l border-r border-black dark:border-white">
     <div className="text-lg font-bold text-gray-600 dark:text-gray-200">
       {post.title}

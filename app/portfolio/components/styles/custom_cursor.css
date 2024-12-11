@@ -14,3 +14,13 @@
   z-index: 9999;
   mix-blend-mode: difference;
 }
+
+@media (max-width: 768px), (pointer: coarse) {
+  * {
+    cursor: default !important;
+  }
+
+  .cursor {
+    display: none;
+  }
+}
