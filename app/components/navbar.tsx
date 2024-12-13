@@ -20,10 +20,10 @@ export default function Navbar() {
   const magnify_duration = 0.3;
 
   const links = [
-    { href: "/portfolio", label: "Home" },
-    { href: "/portfolio/timeline", label: "Timeline" },
-    { href: "/portfolio/projects", label: "Projects" },
-    { href: "/portfolio/blog", label: "Blog" },
+    { href: "/", label: "Home" },
+    { href: "/timeline", label: "Timeline" },
+    { href: "/projects", label: "Projects" },
+    { href: "/blog", label: "Blog" },
   ];
 
   const renderLink = ({ href, label }: LinkItem) => (

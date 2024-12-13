@@ -10,7 +10,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeHighlight from "rehype-highlight";
 import "katex/dist/katex.min.css"; // latex style
 import "highlight.js/styles/atom-one-dark.css"; // code style
-import "../components/styles/code_block.css"; // additional code style
+import "./styles/code_block.css"; // additional code style
 import { fetchContent } from "./utils";
 
 interface LeftPicRightTextProps {

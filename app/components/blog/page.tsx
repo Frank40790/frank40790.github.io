@@ -2,11 +2,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { DisabledPost, EnabledPost } from "../components/blog/blog_block";
-import { posts } from "../components/blog/blog_db";
-import { PostProps } from "../components/blog/blog_interface";
+import { DisabledPost, EnabledPost } from "./blog_block";
+import { posts } from "./blog_db";
+import { PostProps } from "./blog_interface";
 
-export default function Blog() {
+export default function Page() {
   return (
     <>
       <title>Blog</title>

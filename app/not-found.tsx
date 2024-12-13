@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import "./globals.css";
-import ReturnHome from "./portfolio/components/return_home";
+import ReturnHome from "./components/return_home";
 
 export default function NotFound() {
   const variants = {

@@ -2,14 +2,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { ProjectsProps } from "../components/projects/projects_interface";
-import { projects } from "../components/projects/projects_db";
-import {
-  DisabledProject,
-  EnabledProject,
-} from "../components/projects/projects_block";
+import { ProjectsProps } from "./projects_interface";
+import { projects } from "./projects_db";
+import { DisabledProject, EnabledProject } from "./projects_block";
 
-export default function Projects() {
+export default function Page() {
   return (
     <>
       <title>Projects</title>

@@ -35,7 +35,7 @@ export default function ReturnHome() {
   };
   return (
     <>
-      <Link href="/portfolio">
+      <Link href="/">
         <div className="svg-container">
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"

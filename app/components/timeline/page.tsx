@@ -2,14 +2,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { timelines } from "../components/timeline/timeline_db";
-import { TimelineProps } from "../components/timeline/timeline_interface";
-import {
-  DisabledTimelineItem,
-  EnabledTimelineItem,
-} from "../components/timeline/timeline_block";
+import { timelines } from "./timeline_db";
+import { TimelineProps } from "./timeline_interface";
+import { DisabledTimelineItem, EnabledTimelineItem } from "./timeline_block";
 
-export default function Timeline() {
+export default function Page() {
   return (
     <>
       <title>Timeline</title>

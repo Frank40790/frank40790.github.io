@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Providers } from "./providers";
 import "./globals.css";
 import { Comfortaa } from "next/font/google";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+import Debug from "./components/debug";
 
 const comfortaa = Comfortaa({ subsets: ["latin", "latin-ext"] });
 
@@ -20,7 +23,12 @@ export default function RootLayout({
       <head />
 
       <body className={comfortaa.className}>
-        <Providers>{children}</Providers>
+        <Debug />
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
