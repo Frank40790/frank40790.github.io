@@ -29,7 +29,7 @@ function PopupContent({ showLink, name }: PopupContentProps) {
         initial={{ scale: 0.8 }}
         animate={{ scale: showLink ? 1 : 0.8 }}
         exit={{ scale: 0.8 }}
-        className="p-8 rounded-lg shadow-lg w-96 h-96 flex flex-col items-center justify-center bg-opacity-80 backdrop-blur-md border border-black dark:border-white overflow-hidden bg-white dark:bg-black"
+        className="p-8 rounded-lg shadow-lg w-96 h-96 flex flex-col items-center justify-center bg-opacity-70 backdrop-blur-md border border-black dark:border-white overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="text-3xl font-bold text-center mb-5 text-black dark:text-white">
@@ -86,14 +86,15 @@ export default function Home() {
     setShowBanner(true);
     window.history.pushState({}, "", url.toString());
   };
+
   useEffect(() => {
     if (showLink) {
-      document.body.classList.add("lock-scroll");
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.classList.remove("lock-scroll");
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.classList.remove("lock-scroll");
+      document.body.style.overflow = "";
     };
   }, [showLink]);
 
@@ -146,7 +147,7 @@ export default function Home() {
             />
           }
           foreground="/foreground.png"
-          background="/background.png"
+          background="/background.jpeg"
         />
       )}
 

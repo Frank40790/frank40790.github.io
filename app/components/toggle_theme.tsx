@@ -34,7 +34,7 @@ export default function ThemeSwitcher() {
         role="button"
         aria-pressed={theme === "dark"}
         tabIndex={0}
-        data-theme={theme}  // Pass the current theme to the switch for visual indication
+        data-theme={theme}
       >
         <motion.div
           className="handle"

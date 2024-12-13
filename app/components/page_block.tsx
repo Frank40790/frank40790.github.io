@@ -30,34 +30,37 @@ export function LeftPicRightText({
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-0 pr-0 md:pl-10 md:pr-10">
-      <motion.div
-        className="flex-shrink-0 w-full md:w-2/5 p-4"
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.3 }}
-      >
-        <Image
-          src={imageSrc}
-          alt={altText}
-          width={700}
-          height={400}
-          className="object-cover rounded-lg"
-        />
-      </motion.div>
-      <motion.div
-        className="w-full md:w-3/5 p-4 text-lg"
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.3 }}
-      >
-        {textComponent}
-      </motion.div>
+    <div className="flex justify-center px-4 md:px-10">
+      <div className="flex flex-col md:flex-row items-center w-full max-w-screen-xl">
+        <motion.div
+          className="flex-shrink-0 w-full md:w-2/5 p-4 flex justify-center items-center"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          transition={{ duration: 0.3 }}
+        >
+          <Image
+            src={imageSrc}
+            alt={altText}
+            width={700}
+            height={400}
+            className="object-cover rounded-lg"
+          />
+        </motion.div>
+        <motion.div
+          className="w-full md:w-3/5 p-4 text-lg"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          transition={{ duration: 0.3 }}
+        >
+          {textComponent}
+        </motion.div>
+      </div>
     </div>
   );
 }
+
 interface RightPicLeftTextProps {
   imageSrc: string;
   altText: string;
@@ -75,31 +78,33 @@ export function RightPicLeftText({
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-0 pr-0 md:pl-10 md:pr-10">
-      <motion.div
-        className="w-full md:w-3/5 p-4"
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.3 }}
-      >
-        {textComponent}
-      </motion.div>
-      <motion.div
-        className="flex-shrink-0 w-full md:w-2/5 p-4 md:p-10"
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.3 }}
-      >
-        <Image
-          src={imageSrc}
-          alt={altText}
-          width={700}
-          height={400}
-          className="object-cover rounded-lg"
-        />
-      </motion.div>
+    <div className="flex justify-center px-4 md:px-10">
+      <div className="flex flex-col md:flex-row items-center w-full max-w-screen-xl">
+        <motion.div
+          className="w-full md:w-3/5 p-4"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          transition={{ duration: 0.3 }}
+        >
+          {textComponent}
+        </motion.div>
+        <motion.div
+          className="flex-shrink-0 w-full md:w-2/5 p-4 md:p-10 flex justify-center items-center"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          transition={{ duration: 0.3 }}
+        >
+          <Image
+            src={imageSrc}
+            alt={altText}
+            width={700}
+            height={400}
+            className="object-cover rounded-lg"
+          />
+        </motion.div>
+      </div>
     </div>
   );
 }
@@ -119,17 +124,19 @@ export function FullTextHeaders({
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-0 pr-0 md:pl-10 md:pr-10">
-      <motion.div
-        className="w-full p-4"
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.3 }}
-      >
-        <h1 className="text-3xl font-bold mb-4">{headers}</h1>
-        {textComponent}
-      </motion.div>
+    <div className="flex justify-center px-4 md:px-10">
+      <div className="flex flex-col md:flex-row items-start w-full max-w-screen-xl">
+        <motion.div
+          className="w-full p-4"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          transition={{ duration: 0.3 }}
+        >
+          <h1 className="text-3xl font-bold mb-4">{headers}</h1>
+          {textComponent}
+        </motion.div>
+      </div>
     </div>
   );
 }
@@ -145,16 +152,18 @@ export function FullText({ textComponent }: FullTextProps) {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center pl-0 pr-0 md:pl-10 md:pr-10">
-      <motion.div
-        className="w-full p-4"
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.3 }}
-      >
-        {textComponent}
-      </motion.div>
+    <div className="flex justify-center px-4 md:px-10">
+      <div className="flex flex-col md:flex-row items-center w-full max-w-screen-xl">
+        <motion.div
+          className="w-full p-4"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          transition={{ duration: 0.3 }}
+        >
+          {textComponent}
+        </motion.div>
+      </div>
     </div>
   );
 }
@@ -165,6 +174,7 @@ interface LeftRightImageProps {
   rightImageSrc: string;
   rightAltText: string;
 }
+
 export function LeftRightImage({
   leftImageSrc,
   leftAltText,
@@ -177,38 +187,40 @@ export function LeftRightImage({
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center">
-      <motion.div
-        className="flex-shrink-0 w-full md:w-1/2 p-4 md:p-10"
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.3 }}
-      >
-        <Image
-          src={leftImageSrc}
-          alt={leftAltText}
-          width={700}
-          height={400}
-          className="object-cover rounded-lg max-w-full"
-        />
-      </motion.div>
+    <div className="flex justify-center items-center mx-auto px-4 md:px-10">
+      <div className="flex flex-col md:flex-row items-center w-full max-w-screen-xl">
+        <motion.div
+          className="flex-shrink-0 w-full md:w-1/2 p-4 md:p-10 flex justify-center items-center"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          transition={{ duration: 0.3 }}
+        >
+          <Image
+            src={leftImageSrc}
+            alt={leftAltText}
+            width={700}
+            height={400}
+            className="object-cover rounded-lg max-w-full"
+          />
+        </motion.div>
 
-      <motion.div
-        className="flex-shrink-0 w-full md:w-1/2 p-4 md:p-10"
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
-        transition={{ duration: 0.3 }}
-      >
-        <Image
-          src={rightImageSrc}
-          alt={rightAltText}
-          width={700}
-          height={400}
-          className="object-cover rounded-lg max-w-full"
-        />
-      </motion.div>
+        <motion.div
+          className="flex-shrink-0 w-full md:w-1/2 p-4 md:p-10 flex justify-center items-center"
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          transition={{ duration: 0.3 }}
+        >
+          <Image
+            src={rightImageSrc}
+            alt={rightAltText}
+            width={700}
+            height={400}
+            className="object-cover rounded-lg max-w-full"
+          />
+        </motion.div>
+      </div>
     </div>
   );
 }
@@ -321,8 +333,8 @@ export function IconList({ icons, reverse }: IconFlowProps) {
   const duplicated = [...icons, ...icons];
   const x_dir = reverse === false ? ["0%", "-100%"] : ["-100%", "0%"];
   return (
-    <div className="relative h-full overflow-hidden py-12 mx-auto">
-      <div className="absolute inset-0 z-20 before:absolute before:left-0 "></div>
+    <div className="relative overflow-hidden mx-auto md:pt-10 md:pb-10">
+      <div className="absolute inset-0 z-20 before:absolute before:left-0"></div>
 
       <motion.div
         className="flex"
@@ -344,17 +356,15 @@ export function IconList({ icons, reverse }: IconFlowProps) {
               width: `${100 / icons.length}%`,
             }}
           >
-            <div className="flex items-center justify-center h-full">
+            <div className="flex items-center justify-center">
               <div
                 className="p-4 flex flex-col items-center"
                 style={{
                   width: "calc(10vw + 100px)",
-                  height: "calc(10vh + 100px)",
                   minWidth: "150px",
-                  minHeight: "150px",
                 }}
               >
-                <Icon icon={item.icon} width="10vw" height="10vw" />
+                <Icon icon={item.icon} width="50px" height="50px" />
                 <span className="mt-2 text-lg font-semibold hidden sm:block">
                   {item.name}
                 </span>
@@ -448,7 +458,7 @@ function CodeLink({ name, url }: CodeLinkProps) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <Icon icon="mingcute:code-fill" width="8vw" height="8vw" />
+            <Icon icon="mingcute:code-fill" width="50px" height="50px" />
           </motion.div>
         </motion.div>
       </motion.a>
@@ -461,11 +471,12 @@ interface VideoLoopBlockProps {
   videoSrc: string;
   poster?: string;
 }
+
 export function VideoLoopBlock({ videoSrc, poster }: VideoLoopBlockProps) {
   return (
-    <div className="flex justify-center items-center my-4">
+    <div className="flex justify-center items-center mx-auto my-4 px-4 md:px-10">
       <video
-        className="rounded-lg shadow-lg w-1/2 h-auto"
+        className="rounded-lg shadow-lg w-full max-w-3xl h-auto"
         src={videoSrc}
         poster={poster}
         autoPlay
@@ -600,6 +611,7 @@ export function FetchCode({ url }: FetchCodeProps) {
     html: "html",
     css: "css",
     js: "javascript",
+    txt: "text",
   };
   const codeType =
     extensionMapping[extension as keyof typeof extensionMapping] || "code";

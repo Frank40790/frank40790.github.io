@@ -5,14 +5,11 @@ import {
   FullTextHeaders,
   Banner,
   IconListStatic,
-  FullText,
   FullImage,
   MarkdownBlock,
   LeftRightImage,
-  CodeBlock,
   FetchCode,
 } from "../../components/page_block";
-
 
 export default function Event() {
   const icons = [
@@ -184,26 +181,7 @@ export default function Event() {
               trained for the longest
             </div>
             <br />
-            <CodeBlock
-              filename=""
-              code={`
-\`\`\`text
->>> I think
-----------model_0000.model----------
-[Sample 1] I think you're a bit more informative and much information about how to read a high-quality breed yourself may
-[Sample 2] I think you personally do indeed. - Clean your makeup area - Having a glass painting on your hand
-[Sample 3] I think we need to know the water source in your child. Adaptsication: The ability to learn
-----------model_0001.model----------
-[Sample 1] I think the cleaning of bags is part of a tooth and it may be as part of a block, or
-[Sample 2] I think about the FDA to enter open secret territories found other plants of Central and North Carolina. These those organisms
-[Sample 3] I think most Sarah this year doesn't that quite as we did with African African-Americans in poverty, but
-----------model_0002.model----------
-[Sample 1] I think the lead of yours is the best disaster of science fiction systems. So, what can we do
-[Sample 2] I think they will be good members of you are Let go over the planet and olives. Everything in
-[Sample 3] I think 5:30, or 4:37, and U G G. Lee, Martin, S.  
-\`\`\`
-            `}
-            />
+            <FetchCode url={`${pathname}/output.txt`} />
             <br />
             <div>
               The output doesn&apos;t always make sense... but given the
