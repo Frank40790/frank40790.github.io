@@ -10,4 +10,14 @@ export const posts: PostProps[] = [
     tags: ["website", "nextjs"],
     searchtag: "next.js, react.js, framer motion, tailwind, typescript",
   },
+  {
+    title: "Tags Update",
+    description: "Now you can search up articles by tags!",
+    date: "2024-12-13",
+    url: "tags-update",
+    type: "enabled",
+    tags: ["website", "update"],
+    searchtag:
+      "tags system, search, improvements, not found page, responsive, parallax, cursor",
+  },
 ];

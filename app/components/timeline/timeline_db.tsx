@@ -97,7 +97,7 @@ export const timelines: TimelineProps[] = [
     date: "21 May 2024 ~",
     url: "text-generation",
     icon: "transformer.png",
-    type: "enabled",
+    type: "star",
     tags: ["ai/ml", "llm", "python", "PyTorch"],
     searchtag:
       "genai, generative, artificial intelligence, machine learning, attention, large language model, nlp, natural language processing, neural network, qkv, query key value",

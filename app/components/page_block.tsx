@@ -364,7 +364,7 @@ export function IconList({ icons, reverse }: IconFlowProps) {
                   minWidth: "150px",
                 }}
               >
-                <Icon icon={item.icon} width="50px" height="50px" />
+                <Icon icon={item.icon} width="70px" height="70px" />
                 <span className="mt-2 text-lg font-semibold hidden sm:block">
                   {item.name}
                 </span>

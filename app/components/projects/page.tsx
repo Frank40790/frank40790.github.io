@@ -14,7 +14,15 @@ export default function Page() {
         <h1 className="text-3xl font-bold mb-4">Projects</h1>
         {projects
           .slice()
-          .reverse()
+          .sort((a, b) => {
+            if (a.type === "star" && b.type !== "star") {
+              return -1;
+            }
+            if (b.type === "star" && a.type !== "star") {
+              return 1;
+            }
+            return 0;
+          })
           .map((event, index) => (
             <Node projects={event} key={index} />
           ))}

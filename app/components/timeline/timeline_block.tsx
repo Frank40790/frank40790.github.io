@@ -43,9 +43,13 @@ export function TimelineImage({
   timeline: TimelineProps;
   pathname: string;
 }) {
+  const borderColor =
+    timeline.type === "star" ? "border-[#efbf04]" : "border-gray-500";
   return (
     <div className="flex-col p-6 hidden md:block">
-      <div className="relative h-20 w-20 rounded-full overflow-hidden border-4 border-gray-500 group-hover:scale-110 transition duration-200">
+      <div
+        className={`relative h-20 w-20 rounded-full overflow-hidden border-4 ${borderColor} group-hover:scale-110 transition duration-200`}
+      >
         <Image
           src={`${pathname}/${timeline.url}/${timeline.icon}`}
           alt={timeline.icon}

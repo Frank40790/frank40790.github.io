@@ -43,9 +43,11 @@ export function ProjectImage({
   project: ProjectsProps;
   pathname: string;
 }) {
+  const borderColor =
+    project.type === "star" ? "border-[#efbf04]" : "border-gray-500";
   return (
     <div className="flex flex-col p-6">
-      <div className="relative h-20 w-20 rounded-full overflow-hidden border-4 border-gray-500 group-hover:scale-110 transition duration-200">
+      <div className={`relative h-20 w-20 rounded-full overflow-hidden border-4 ${borderColor} group-hover:scale-110 transition duration-200`}>
         <Image
           src={`${pathname}/${project.url}/${project.icon}`}
           alt={project.icon}

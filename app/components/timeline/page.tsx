@@ -14,7 +14,22 @@ export default function Page() {
         <h1 className="text-3xl font-bold mb-4">Timeline</h1>
         {timelines
           .slice()
-          .reverse()
+          .sort((a, b) => {
+            if (a.type === "star" && b.type !== "star") {
+              return -1;
+            }
+            if (b.type === "star" && a.type !== "star") {
+              return 1;
+            }
+
+            const [startDateA] = a.date.split("~");
+            const [startDateB] = b.date.split("~");
+
+            const dateA = new Date(startDateA);
+            const dateB = new Date(startDateB);
+
+            return dateB.getTime() - dateA.getTime();
+          })
           .map((timeline, index) => (
             <Node timeline={timeline} key={index} />
           ))}

@@ -12,9 +12,26 @@ export default function Page() {
       <title>Blog</title>
       <div className="max-w-2xl mx-auto p-4 pt-6 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">Blog</h1>
-        {posts.map((post, index) => (
-          <Post key={index} post={post} />
-        ))}
+        {posts
+          .sort((a, b) => {
+            if (a.type === "star" && b.type !== "star") {
+              return -1;
+            }
+            if (b.type === "star" && a.type !== "star") {
+              return 1;
+            }
+
+            const [startDateA] = a.date.split("~");
+            const [startDateB] = b.date.split("~");
+
+            const dateA = new Date(startDateA);
+            const dateB = new Date(startDateB);
+
+            return dateB.getTime() - dateA.getTime();
+          })
+          .map((post, index) => (
+            <Post key={index} post={post} />
+          ))}
       </div>
     </>
   );
