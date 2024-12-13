@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import "./styles/toggle_theme.css";
 
-const ThemeSwitcher = () => {
+export default function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -21,16 +21,20 @@ const ThemeSwitcher = () => {
   }
 
   return (
-    <>
+    <div className="theme-switcher-container">
+      {/* Display the current theme */}
       <div className="bg-background text-primary-green">
         The current theme is: {theme}
       </div>
+
+      {/* Theme switcher toggle */}
       <div
         className="switch"
         onClick={toggleTheme}
         role="button"
         aria-pressed={theme === "dark"}
         tabIndex={0}
+        data-theme={theme}  // Pass the current theme to the switch for visual indication
       >
         <motion.div
           className="handle"
@@ -40,8 +44,6 @@ const ThemeSwitcher = () => {
           initial={{ x: "0%" }}
         />
       </div>
-    </>
+    </div>
   );
-};
-
-export default ThemeSwitcher;
+}
