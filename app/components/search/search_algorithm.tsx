@@ -13,15 +13,15 @@ export default function searchFunction(query: string) {
   const combinedData: MasterProps[] = [
     ...timelines.map((item) => ({
       ...item,
-      url: `/portfolio/timeline/${item.url}`,
+      url: `/timeline/${item.url}`,
     })),
     ...projects.map((item) => ({
       ...item,
-      url: `/portfolio/projects/${item.url}`,
+      url: `/projects/${item.url}`,
     })),
     ...posts.map((item) => ({
       ...item,
-      url: `/portfolio/blog/${item.url}`,
+      url: `/blog/${item.url}`,
     })),
   ];
 
