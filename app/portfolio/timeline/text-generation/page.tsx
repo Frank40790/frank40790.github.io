@@ -13,6 +13,7 @@ import {
   FetchCode,
 } from "../../components/page_block";
 
+
 export default function Event() {
   const icons = [
     { icon: "devicon:python", name: "Python" },

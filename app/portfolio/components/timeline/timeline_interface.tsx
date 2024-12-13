@@ -8,4 +8,5 @@ export interface TimelineProps extends MasterProps {
   icon: string;
   type: string;
   tags: string[];
+  searchtag: string;
 }

@@ -1,14 +1,17 @@
+import { useSearch } from "./search/search_context";
 interface TagsProps {
   tags: string[];
 }
 
 export default function Tags({ tags }: TagsProps) {
+  const { openSearch } = useSearch();
+
   const handleClick = (
     event: React.MouseEvent<HTMLSpanElement>,
     tag: string
   ) => {
     event.preventDefault();
-    // alert(tag);
+    openSearch("#" + tag);
   };
 
   return (

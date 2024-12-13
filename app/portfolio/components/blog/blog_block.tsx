@@ -1,4 +1,4 @@
-import Tags from "../tags/tags";
+import Tags from "../tags";
 import { PostProps } from "./blog_interface";
 
 export const DisabledPost = ({ post }: { post: PostProps }) => (

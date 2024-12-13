@@ -3,7 +3,8 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Icon } from "@iconify/react"; // Importing Iconify component
+import { Icon } from "@iconify/react";
+import { useSearch } from "./search/search_context";
 
 interface LinkItem {
   href: string;
@@ -45,12 +46,32 @@ export default function Navbar() {
       </Link>
     </motion.div>
   );
+  const { openSearch } = useSearch();
+  const handleOpenSearch = () => {
+    openSearch("");
+  };
+  const handleOpenSearchMobile = () => {
+    openSearch("");
+    setMenuOpen(false);
+  };
 
   return (
     <header className="h-16 flex items-center justify-center px-4 md:px-8">
       {/* Desktop Menu */}
       <div className="hidden md:flex centered flex-row space-x-4">
         {links.map(renderLink)}
+        {/* Search Button */}
+        <button
+          onClick={handleOpenSearch}
+          className="items-center justify-center"
+        >
+          <Icon
+            icon="material-symbols:search"
+            width={24}
+            height={24}
+            className="text-white"
+          />
+        </button>
       </div>
 
       {/* Mobile Menu Button */}
@@ -78,6 +99,19 @@ export default function Navbar() {
           >
             <div className="flex flex-col items-center space-y-2">
               {links.map(renderLink)}
+
+              {/* Search Button */}
+              <button
+                onClick={handleOpenSearchMobile}
+                className="items-center justify-center"
+              >
+                <Icon
+                  icon="material-symbols:search"
+                  width={24}
+                  height={24}
+                  className="text-white"
+                />
+              </button>
             </div>
           </motion.div>
         )}

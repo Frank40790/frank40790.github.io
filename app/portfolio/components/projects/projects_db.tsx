@@ -8,6 +8,8 @@ export const projects: ProjectsProps[] = [
     icon: "external-brain.png",
     type: "enabled",
     tags: ["llm", "python", "tts"],
+    searchtag:
+      "projects, notetaking, note taking, llm, large language model, text to speech",
   },
   {
     title: "Dev Diversify",
@@ -15,7 +17,8 @@ export const projects: ProjectsProps[] = [
     url: "dev-diversify",
     icon: "dev-diversify.png",
     type: "enabled",
-    tags: ["c", "python"],
+    tags: ["C", "python"],
+    searchtag: "projects, tools, toolbox, toolkit, development tools",
   },
   {
     title: "Semantic Spotlight",
@@ -24,5 +27,6 @@ export const projects: ProjectsProps[] = [
     icon: "semantic-spotlight.png",
     type: "hidden",
     tags: ["python", "semantic search"],
+    searchtag: "projects, semantic search, automatic highlighting",
   },
 ];

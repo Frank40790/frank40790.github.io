@@ -6,4 +6,5 @@ export interface MasterProps {
   icon?: string;
   type: string;
   tags: string[];
+  searchtag: string;
 }

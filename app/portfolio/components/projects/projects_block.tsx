@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ProjectsProps } from "./projects_interface";
-import Tags from "../tags/tags";
+import Tags from "../tags";
 
 export function DisabledProject({
   project,

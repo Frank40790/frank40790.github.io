@@ -9,6 +9,7 @@ export const timelines: TimelineProps[] = [
     icon: "codebrew-icon.svg",
     type: "hidden",
     tags: ["hackathon"],
+    searchtag: "",
   },
   {
     title: "Foundation of Computing Project 1",
@@ -18,6 +19,7 @@ export const timelines: TimelineProps[] = [
     icon: "unimelb-icon.jpg",
     type: "hidden",
     tags: ["university project"],
+    searchtag: "",
   },
   {
     title: "Foundation of Computing Project 2",
@@ -27,6 +29,7 @@ export const timelines: TimelineProps[] = [
     icon: "unimelb-icon.jpg",
     type: "hidden",
     tags: ["university project"],
+    searchtag: "",
   },
   {
     title: "VICHACK 2024",
@@ -36,6 +39,7 @@ export const timelines: TimelineProps[] = [
     icon: "vichack.png",
     type: "hidden",
     tags: ["hackathon"],
+    searchtag: "",
   },
   {
     title: "Foundation of Algorithm Project 1",
@@ -44,7 +48,8 @@ export const timelines: TimelineProps[] = [
     url: "foa-project-1",
     icon: "unimelb-icon.jpg",
     type: "hidden",
-    tags: ["university project"],
+    tags: ["university project", "C"],
+    searchtag: "algorithms, csv",
   },
   {
     title: "Foundation of Algorithm Project 2",
@@ -53,7 +58,8 @@ export const timelines: TimelineProps[] = [
     url: "foa-project-1",
     icon: "unimelb-icon.jpg",
     type: "hidden",
-    tags: ["university project"],
+    tags: ["university project", "C"],
+    searchtag: "algorithms, celleur automaton, eca",
   },
   {
     title: "Engineering Modelling and Design : Autonomous Robot Project",
@@ -63,6 +69,7 @@ export const timelines: TimelineProps[] = [
     icon: "unimelb-icon.jpg",
     type: "disabled",
     tags: ["university project"],
+    searchtag: "arduino, pid, differential control, robotics, matlab",
   },
   {
     title: "Interaction Design Project",
@@ -71,7 +78,8 @@ export const timelines: TimelineProps[] = [
     url: "interaction-design-project",
     icon: "unimelb-icon.jpg",
     type: "disabled",
-    tags: ["university project"],
+    tags: ["university project", "figma"],
+    searchtag: "interaction design, human computer interaction, HCI",
   },
   {
     title: "OpenGL Projection",
@@ -80,7 +88,8 @@ export const timelines: TimelineProps[] = [
     url: "opengl-projection",
     icon: "shape_2.png",
     type: "enabled",
-    tags: ["linear algebra", "opengl", "c"],
+    tags: ["linear algebra", "opengl", "C"],
+    searchtag: "linear algebra, la, math, 2d projection, draw",
   },
   {
     title: "Text Generation",
@@ -89,7 +98,9 @@ export const timelines: TimelineProps[] = [
     url: "text-generation",
     icon: "transformer.png",
     type: "enabled",
-    tags: ["ai/ml", "text generation"],
+    tags: ["ai/ml", "llm", "python", "PyTorch"],
+    searchtag:
+      "genai, generative, artificial intelligence, machine learning, attention, large language model, nlp, natural language processing, neural network, qkv, query key value",
   },
   {
     title: "Image Generation UNet",
@@ -99,5 +110,6 @@ export const timelines: TimelineProps[] = [
     icon: "diffusion.png",
     type: "hidden",
     tags: ["ai/ml", "image generation"],
+    searchtag: "ddpm, unet, cnn, convolution, neural network, image processing",
   },
 ];

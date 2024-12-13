@@ -7,4 +7,5 @@ export interface ProjectsProps extends MasterProps {
   icon: string;
   type: string;
   tags: string[];
+  searchtag: string;
 }

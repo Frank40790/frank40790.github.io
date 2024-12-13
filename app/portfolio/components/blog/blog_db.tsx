@@ -8,5 +8,6 @@ export const posts: PostProps[] = [
     url: "first-version",
     type: "enabled",
     tags: ["website", "nextjs"],
+    searchtag: "next.js, react.js, framer motion, tailwind, typescript",
   },
 ];

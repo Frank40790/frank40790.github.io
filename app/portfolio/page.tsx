@@ -23,42 +23,45 @@ function PopupContent({ showLink, name }: PopupContentProps) {
   const characters = text
     .split("")
     .map((char) => (char === " " ? "\u00A0" : char));
+
   return (
-    <motion.div
-      initial={{ scale: 0.8 }}
-      animate={{ scale: showLink ? 1 : 0.8 }}
-      exit={{ scale: 0.8 }}
-      className="p-8 rounded-lg shadow-lg w-96 h-96 flex flex-col items-center justify-center bg-opacity-50 backdrop-blur-md border border-black dark:border-white overflow-hidden"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <div className="text-3xl font-bold text-center mb-5 text-black dark:text-white">
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
-          {characters.map((char, index) => (
-            <motion.span
-              key={index}
-              initial={{ y: 0 }}
-              animate={{ y: [0, -5, 0] }}
-              transition={{
-                type: "tween",
-                ease: "easeInOut",
-                duration: 0.3,
-                delay: index * 0.05,
-              }}
-              style={{ display: "inline-block" }}
-            >
-              {char}
-            </motion.span>
-          ))}
+    <>
+      <motion.div
+        initial={{ scale: 0.8 }}
+        animate={{ scale: showLink ? 1 : 0.8 }}
+        exit={{ scale: 0.8 }}
+        className="p-8 rounded-lg shadow-lg w-96 h-96 flex flex-col items-center justify-center bg-opacity-80 backdrop-blur-md border border-black dark:border-white overflow-hidden bg-black"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="text-3xl font-bold text-center mb-5 text-black dark:text-white">
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
+            {characters.map((char, index) => (
+              <motion.span
+                key={index}
+                initial={{ y: 0 }}
+                animate={{ y: [0, -5, 0] }}
+                transition={{
+                  type: "tween",
+                  ease: "easeInOut",
+                  duration: 0.3,
+                  delay: index * 0.05,
+                }}
+                style={{ display: "inline-block" }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </div>
         </div>
-      </div>
-      <Contact />
-    </motion.div>
+        <Contact />
+      </motion.div>
+    </>
   );
 }
 
@@ -95,9 +98,11 @@ export default function Home() {
       document.body.classList.remove("lock-scroll");
     };
   }, [showLink]);
+
   return (
     <>
       <title>Home</title>
+
       {/* Popup link */}
       {showLink && (
         <motion.div
@@ -112,10 +117,11 @@ export default function Home() {
           <PopupContent showLink={showLink} name={linkName} />
         </motion.div>
       )}
+
       {/* Padding durring popup */}
       {showLink && (
         <>
-          <div className="pb-96 hidden md:block">
+          <div className="pb-96 hidden md:block z-60">
             <BannerTypewriter
               fontSize="text-5xl"
               fontColor="auto"
@@ -130,6 +136,7 @@ export default function Home() {
           </div>
         </>
       )}
+
       {/* Banner when popup is removed */}
       {showBanner && (
         <ParallaxBlock
