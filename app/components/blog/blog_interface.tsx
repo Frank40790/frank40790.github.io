@@ -5,6 +5,7 @@ export interface PostProps extends MasterProps {
   description: string;
   date: string;
   url: string;
+  icon: string;
   type: string;
   tags: string[];
   searchtag: string;

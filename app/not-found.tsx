@@ -11,7 +11,7 @@ function Text({ text }: TextProp) {
   return (
     <div className="relative">
       <motion.div
-        className="bg-gradient-to-r from-black via-gray-200 to-black dark:from-white dark:via-gray-600 dark:to-white bg-clip-text text-transparent text-5xl font-extrabold leading-none pb-5 pt-5"
+        className="bg-gradient-to-r from-black via-gray-200 to-black dark:from-white dark:via-gray-600 dark:to-white bg-clip-text text-transparent text-5xl font-extrabold leading-none pb-5 pt-5 text-center "
         initial={{ backgroundPosition: "200% 0" }}
         animate={{ backgroundPosition: "-200% 0" }}
         transition={{

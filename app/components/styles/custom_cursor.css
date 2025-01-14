@@ -13,6 +13,38 @@
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
+  transition: all 0.3s ease, transform 0.1s ease;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor.enlarged.blue {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: -50px;
+  background-color: rgb(54, 83, 142);
+  mix-blend-mode: normal;
+}
+
+.cursor.enlarged.green {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: -50px;
+  background-color: rgb(54, 142, 76);
+  mix-blend-mode: normal;
+}
+
+.cursor.enlarged.disabled {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: -50px;
+  background-color: rgb(142, 54, 54);
+  mix-blend-mode: normal;
 }
 
 @media (max-width: 768px), (pointer: coarse) {

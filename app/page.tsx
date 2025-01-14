@@ -11,6 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import Contact from "./components/contact";
 import { name, skills } from "./components/detail";
+import { useTheme } from "next-themes";
 
 interface PopupContentProps {
   showLink: boolean;
@@ -69,6 +70,7 @@ export default function Home() {
   const [showLink, setShowLink] = useState(false);
   const [linkName, setLinkName] = useState("");
   const [showBanner, setShowBanner] = useState(true);
+  const { theme, resolvedTheme, setTheme } = useTheme();
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
     if (queryParams.get("p") === "link") {
@@ -146,7 +148,11 @@ export default function Home() {
               textComponent={`I'm ${name}, An Enthusiastic Programmer!`}
             />
           }
-          foreground="/foreground.png"
+          foreground={
+            resolvedTheme === "light"
+              ? "/foreground-light.png"
+              : "/foreground-dark.png"
+          }
           background="/background.jpeg"
         />
       )}

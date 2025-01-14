@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useSearch } from "./search/search_context";
+import ThemeSwitcher from "./toggle_theme";
 
 interface LinkItem {
   href: string;
@@ -16,7 +17,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const selected_item_css = "";
   const magnify_min = 1;
-  const magnify_max = 1.5;
+  const magnify_max = 1.1;
   const magnify_duration = 0.3;
 
   const links = [
@@ -37,7 +38,7 @@ export default function Navbar() {
     >
       <Link
         href={href}
-        className={`flex justify-center p-3 text-gray-600 dark:text-white ${
+        className={`flex justify-center p-3 text-black dark:text-white ${
           pathname === href ? selected_item_css : ""
         }`}
         onClick={() => setMenuOpen(false)}
@@ -63,7 +64,7 @@ export default function Navbar() {
         {/* Search Button */}
         <button
           onClick={handleOpenSearch}
-          className="items-center justify-center"
+          className="items-center justify-center px-3"
         >
           <Icon
             icon="material-symbols:search"
@@ -72,12 +73,14 @@ export default function Navbar() {
             className="text-black dark:text-white"
           />
         </button>
+        <div className="flex items-center justify-center px-3">
+          <ThemeSwitcher iconColor="text-black dark:text-white" />
+        </div>
       </div>
-
       {/* Mobile Menu Button */}
       <div className="flex md:hidden ">
         <button
-          className="text-gray-600 dark:text-white focus:outline-none"
+          className="text-black dark:text-white focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (
@@ -95,23 +98,10 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="absolute top-16 left-0 right-0 bg-gray-200 bg-opacity-50 backdrop-blur-md dark:bg-zinc-900 dark:bg-opacity-50 z-50 md:hidden rounded-b-xl border-l border-r border-black dark:border-white"
+            className="absolute top-16 left-0 right-0 bg-gray-200 bg-opacity-50 backdrop-blur-md dark:bg-zinc-900 dark:bg-opacity-50 z-50 md:hidden rounded-b-xl "
           >
             <div className="flex flex-col items-center space-y-2">
               {links.map(renderLink)}
-
-              {/* Search Button */}
-              <button
-                onClick={handleOpenSearchMobile}
-                className="items-center justify-center"
-              >
-                <Icon
-                  icon="material-symbols:search"
-                  width={24}
-                  height={24}
-                  className="text-white"
-                />
-              </button>
             </div>
           </motion.div>
         )}

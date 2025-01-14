@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Icon } from "@iconify/react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { ParallaxBanner, Parallax } from "react-scroll-parallax";
 import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
@@ -12,6 +12,7 @@ import "katex/dist/katex.min.css"; // latex style
 import "highlight.js/styles/atom-one-dark.css"; // code style
 import "./styles/code_block.css"; // additional code style
 import { fetchContent } from "./utils";
+import { handleMouseEnter, handleMouseLeave } from "./cursor/hover_cursor";
 
 interface LeftPicRightTextProps {
   imageSrc: string;
@@ -364,7 +365,7 @@ export function IconList({ icons, reverse }: IconFlowProps) {
                   minWidth: "150px",
                 }}
               >
-                <Icon icon={item.icon} width="70px" height="70px" />
+                <Icon icon={item.icon} width="60px" height="60px" />
                 <span className="mt-2 text-lg font-semibold hidden sm:block">
                   {item.name}
                 </span>
@@ -428,14 +429,17 @@ interface CodeLinkProps {
 }
 
 function CodeLink({ name, url }: CodeLinkProps) {
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleClick = () => {
-    setIsClicked(true);
-  };
-
+  useEffect(() => {
+    return () => {
+      handleMouseLeave(".linkIcon", "blue");
+    };
+  }, []);
   return (
-    <div className="flex flex-col items-center m-4">
+    <div
+      className="flex flex-col items-center m-4"
+      onMouseEnter={() => handleMouseEnter(".linkIcon", "blue")}
+      onMouseLeave={() => handleMouseLeave(".linkIcon", "blue")}
+    >
       <motion.a
         href={url}
         download
@@ -454,7 +458,6 @@ function CodeLink({ name, url }: CodeLinkProps) {
           <motion.div
             key="code-icon"
             initial={{ opacity: 1 }}
-            animate={{ opacity: isClicked ? 0 : 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
@@ -566,14 +569,45 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
     .trim();
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(cleanCode).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(cleanCode).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      });
+    } else {
+      const textArea = document.createElement("textarea");
+      textArea.value = cleanCode;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand("copy");
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (err) {}
+      document.body.removeChild(textArea);
+    }
   };
 
+  useEffect(() => {
+    return () => {
+      handleMouseLeave(".clipboardIcon", "blue");
+    };
+  }, []);
+
   return (
-    <div className="pl-0 pr-0 md:pl-5 md:pr-5">
+    <div
+      className="pl-0 pr-0 md:pl-5 md:pr-5"
+      onMouseEnter={() => handleMouseEnter(".clipboardIcon", "blue")}
+      onMouseLeave={() => handleMouseLeave(".clipboardIcon", "blue")}
+      onMouseDown={() => {
+        handleMouseLeave(".clipboardIcon", "blue");
+        handleMouseEnter(".checkIcon", "green");
+        copyToClipboard();
+        setTimeout(function () {
+          handleMouseLeave(".checkIcon", "green");
+        }, 500);
+      }}
+    >
       <div className="relative p-4 border rounded-md border-gray-300">
         <span className="absolute top-2 left-5 text-sm font-bold text-gray-600">
           {codeType}
@@ -666,6 +700,158 @@ export function ParallaxBlock({
         ]}
         className="w-full aspect-[16/9] min-h-[600px]"
       />
+    </div>
+  );
+}
+
+interface ImageSplitProps {
+  beforeImage: string;
+  afterImage: string;
+  lineColor: string;
+}
+
+export function ImageSplit({
+  beforeImage,
+  afterImage,
+  lineColor,
+}: ImageSplitProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [dragPosition, setDragPosition] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const getXPosition = (e: MouseEvent | TouchEvent) => {
+    if ("touches" in e) {
+      return e.touches[0].clientX;
+    } else {
+      return e.clientX;
+    }
+  };
+
+  const handleDrag = useCallback(
+    (e: MouseEvent | TouchEvent) => {
+      if (!isDragging) return;
+
+      const xPos = getXPosition(e);
+      const containerRect = containerRef.current?.getBoundingClientRect();
+
+      if (!containerRect) return;
+
+      let newPos = xPos - containerRect.left;
+      newPos = Math.max(0, Math.min(newPos, containerRect.width));
+      setDragPosition((newPos / containerRect.width) * 100);
+    },
+    [isDragging]
+  );
+
+  const handleDragEnd = useCallback(() => {
+    setIsDragging(false);
+  }, []);
+
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  useEffect(() => {
+    if (isDragging) {
+      // Mouse events
+      window.addEventListener("mousemove", handleDrag);
+      window.addEventListener("mouseup", handleDragEnd);
+
+      // Touch events
+      window.addEventListener("touchmove", handleDrag, { passive: false });
+      window.addEventListener("touchend", handleDragEnd);
+    } else {
+      window.removeEventListener("mousemove", handleDrag);
+      window.removeEventListener("mouseup", handleDragEnd);
+      window.removeEventListener("touchmove", handleDrag);
+      window.removeEventListener("touchend", handleDragEnd);
+    }
+
+    return () => {
+      window.removeEventListener("mousemove", handleDrag);
+      window.removeEventListener("mouseup", handleDragEnd);
+      window.removeEventListener("touchmove", handleDrag);
+      window.removeEventListener("touchend", handleDragEnd);
+    };
+  }, [isDragging, handleDrag, handleDragEnd]);
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      handleMouseLeave(".arrowIcon", "blue");
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      handleMouseLeave(".arrowIcon", "blue");
+    };
+  }, []);
+
+  return (
+    <div
+      className="flex flex-col md:flex-row items-center justify-center max-w-[90%] mx-auto"
+      onMouseEnter={() => handleMouseEnter(".arrowIcon", "blue")}
+      onMouseLeave={() => handleMouseLeave(".arrowIcon", "blue")}
+    >
+      <div className="w-full max-w-4xl h-[500px]">
+        <div
+          ref={containerRef}
+          className="relative w-full h-full overflow-hidden rounded-lg"
+          onMouseDown={handleDragStart}
+          onTouchStart={handleDragStart}
+          style={{ touchAction: "none" }}
+        >
+          {/* Before Image */}
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div
+              className="w-full h-full bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${beforeImage})`,
+                clipPath: `inset(0 ${100 - dragPosition}% 0 0)`,
+                transition: isDragging ? "none" : "clip-path 0.3s ease",
+              }}
+            />
+          </div>
+
+          {/* After Image */}
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div
+              className="w-full h-full bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${afterImage})`,
+                clipPath: `inset(0 0 0 ${dragPosition}%)`,
+                transition: isDragging ? "none" : "clip-path 0.3s ease",
+              }}
+            />
+          </div>
+
+          {/* Draggable Bar */}
+          <div
+            className={`absolute top-0 bottom-0 ${lineColor} z-10`}
+            style={{
+              left: `${dragPosition}%`,
+              width: "5px",
+              marginLeft: "-2.5px",
+              cursor: "ew-resize",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div
+              className="w-full h-full bg-white opacity-50"
+              style={{ width: "2px" }}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

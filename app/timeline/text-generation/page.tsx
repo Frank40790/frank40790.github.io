@@ -177,7 +177,7 @@ export default function Event() {
               took quite some time to train.
             </div>
             <div>
-              These are the result of the models, where model_0002.model is
+              These are the result of the models, where model_0003.model is
               trained for the longest
             </div>
             <br />
