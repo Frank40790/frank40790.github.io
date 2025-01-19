@@ -11,18 +11,24 @@ export default function searchFunction(query: string) {
   }
 
   const combinedData: MasterProps[] = [
-    ...timelines.map((item) => ({
-      ...item,
-      url: `/timeline/${item.url}`,
-    })),
-    ...projects.map((item) => ({
-      ...item,
-      url: `/projects/${item.url}`,
-    })),
-    ...posts.map((item) => ({
-      ...item,
-      url: `/blog/${item.url}`,
-    })),
+    ...timelines
+      .filter((item) => !item.url.startsWith("/"))
+      .map((item) => ({
+        ...item,
+        url: `/timeline/${item.url}`,
+      })),
+    ...projects
+      .filter((item) => !item.url.startsWith("/"))
+      .map((item) => ({
+        ...item,
+        url: `/projects/${item.url}`,
+      })),
+    ...posts
+      .filter((item) => !item.url.startsWith("/"))
+      .map((item) => ({
+        ...item,
+        url: `/blog/${item.url}`,
+      })),
   ];
 
   const isTagMode = query.startsWith("#");

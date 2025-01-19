@@ -17,6 +17,7 @@ export function DisabledPost({
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
     >
       <div className="absolute inset-0 backdrop-blur-3xl bg-black/60 transition-opacity"></div>
 
@@ -36,7 +37,10 @@ export function EnabledPost({
   pathname: string;
 }) {
   return (
-    <div className="mb-6 sm:mb-8 lg:mb-12 rounded-xl overflow-hidden relative group">
+    <div
+      className="mb-6 sm:mb-8 lg:mb-12 rounded-xl overflow-hidden relative group"
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
+    >
       <div className="relative w-full h-20 sm:h-28 md:h-36 lg:h-40">
         <Image
           src={`${pathname}/${post.url}/${post.icon}`}

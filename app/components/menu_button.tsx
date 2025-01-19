@@ -61,7 +61,10 @@ export default function MenuButton() {
   };
 
   return (
-    <div className="fixed bottom-10 right-10 z-20">
+    <div
+      className="fixed bottom-10 right-10 z-20 md:hidden"
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
+    >
       {/* Menu Items */}
       <AnimatePresence>
         {isOpen &&

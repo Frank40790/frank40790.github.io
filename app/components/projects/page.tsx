@@ -53,6 +53,7 @@ function Node({ projects }: { projects: ProjectsProps }) {
         damping: 20,
       }}
       className={nodeStyles}
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
     >
       {isDisabled ? (
         <DisabledProject project={projects} pathname={pathname} />

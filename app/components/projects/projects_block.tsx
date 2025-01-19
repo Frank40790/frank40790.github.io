@@ -10,7 +10,10 @@ export function DisabledProject({
   pathname: string;
 }) {
   return (
-    <div className="relative flex flex-col rounded-lg overflow-hidden group transition duration-300 bg-transparent">
+    <div
+      className="relative flex flex-col rounded-lg overflow-hidden group transition duration-300 bg-transparent"
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
+    >
       <div className="relative w-full h-96 overflow-hidden">
         <div className="relative w-full h-full overflow-hidden">
           <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110">
@@ -44,7 +47,10 @@ export function EnabledProject({
   pathname: string;
 }) {
   return (
-    <div className="relative flex flex-col rounded-lg overflow-hidden group transition duration-300 bg-transparent">
+    <div
+      className="relative flex flex-col rounded-lg overflow-hidden group transition duration-300 bg-transparent"
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
+    >
       <div className="relative w-full h-96 overflow-hidden">
         <div className="relative w-full h-full overflow-hidden">
           <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110">

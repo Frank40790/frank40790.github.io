@@ -7,11 +7,54 @@ import {
   FullTextHeaders,
   Banner,
   ImageSplit,
+  ConfettiButton,
 } from "../../components/page_block";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Blog() {
   const pathname = usePathname();
+
+  const [screenSize, setScreenSize] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  const [cursorPosition, setCursorPosition] = useState({
+    x: 0,
+    y: 0,
+  });
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setScreenSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", updateScreenSize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const updateCursorPosition = (event: any) => {
+      setCursorPosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", updateCursorPosition);
+
+    return () => {
+      window.removeEventListener("mousemove", updateCursorPosition);
+    };
+  }, []);
 
   return (
     <>
@@ -47,15 +90,30 @@ export default function Blog() {
               This update also gives a better mobile experience through
               responsive design.
             </div>
+            <strong>Timeline</strong>
+            <div>
+              A horizontal timeline is great for managing versions, so i just
+              decided to add this in
+            </div>
             <strong>Cursor</strong>
+            <br />
+
             <div
-              onMouseEnter={() => handleMouseEnter(".eyeIcon", "green")}
-              onMouseLeave={() => handleMouseLeave(".eyeIcon", "green")}
-              className="pb-4 pt-2"
+              onMouseEnter={() =>
+                handleMouseEnter(".eyeIcon", "green", "large")
+              }
+              onMouseLeave={() =>
+                handleMouseLeave(".eyeIcon", "green", "large")
+              }
+              className=""
             >
-              You can see sometimes the cursor will change, that indicates you
-              can interact with the item you are hovering on. Just a fun feature
-              to add :)
+              <ConfettiButton
+                x={cursorPosition.x / screenSize.width}
+                y={cursorPosition.y / screenSize.height}
+                content={
+                  "You can see sometimes the cursor will change, that indicates you can interact with the item you are hovering on. Just a fun feature to add :)"
+                }
+              />
             </div>
           </>
         }

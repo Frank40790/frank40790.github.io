@@ -53,11 +53,16 @@ export default function Page() {
 }
 
 function Node({ timeline }: { timeline: TimelineProps }) {
-  const pathname = usePathname();
+  let pathname = usePathname();
   const { theme, resolvedTheme, setTheme } = useTheme();
 
   if (timeline.type === "hidden") {
     return null;
+  }
+  let href = `${pathname}/${timeline.url}`;
+
+  if (timeline.url.startsWith("/")) {
+    href = timeline.url;
   }
 
   const isDisabled = timeline.type === "disabled";
@@ -100,6 +105,7 @@ function Node({ timeline }: { timeline: TimelineProps }) {
             ? "bg-black text-white"
             : "bg-white text-black"
         }  py-2 px-4 font-semibold rounded-lg`}
+        about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
       >
         {timeline.date}
       </div>
@@ -116,10 +122,7 @@ function Node({ timeline }: { timeline: TimelineProps }) {
         {isDisabled ? (
           <DisabledTimelineItem timeline={timeline} pathname={pathname} />
         ) : (
-          <Link
-            href={`${pathname}/${timeline.url}`}
-            className="flex flex-col relative"
-          >
+          <Link href={href} className="flex flex-col relative">
             <EnabledTimelineItem timeline={timeline} pathname={pathname} />
           </Link>
         )}

@@ -73,7 +73,10 @@ export default function Search({ text }: SearchProps) {
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-40">
+    <div
+      className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-40"
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
+    >
       <motion.div
         className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-lg"
         onClick={closeSearch}

@@ -59,7 +59,10 @@ export default function Navbar() {
   return (
     <header className="h-16 flex items-center justify-center px-4 md:px-8 border-b border-black dark:border-white">
       {/* Desktop Menu */}
-      <div className="hidden md:flex centered flex-row space-x-4">
+      <div
+        className="hidden md:flex centered flex-row space-x-4"
+        about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
+      >
         {links.map(renderLink)}
         {/* Search Button */}
         <button

@@ -29,4 +29,15 @@ export const projects: ProjectsProps[] = [
     tags: ["python", "semantic search"],
     searchtag: "projects, semantic search, automatic highlighting",
   },
+  {
+    title: "Text Generation",
+    description: "Writing a small decoder only transformer language model",
+    date: "21 May 2024 ~",
+    url: "text-generation",
+    icon: "icon.png",
+    type: "enabled",
+    tags: ["ai/ml", "llm", "python", "PyTorch"],
+    searchtag:
+      "genai, generative, artificial intelligence, machine learning, attention, large language model, nlp, natural language processing, neural network, qkv, query key value",
+  },
 ];

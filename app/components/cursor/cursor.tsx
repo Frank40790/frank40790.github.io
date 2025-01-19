@@ -37,44 +37,33 @@ export default function CustomCursor() {
       }
     };
   }, []);
+  const icons = [
+    { id: "mdi:eye", class: "eyeIcon" },
+    { id: "dashicons:no", class: "disabledIcon" },
+    { id: "material-symbols:check", class: "checkIcon" },
+    { id: "mynaui:clipboard", class: "clipboardIcon" },
+    { id: "material-symbols:link-rounded", class: "linkIcon" },
+    { id: "material-symbols-light:arrow-range-rounded", class: "arrowIcon" },
+    { id: "material-symbols:chevron-left-rounded", class: "leftIcon" },
+    { id: "material-symbols:chevron-right-rounded", class: "rightIcon" },
+    { id: "eva:arrow-up-fill", class: "upIcon" },
+  ];
 
   return (
     <>
-      <div className="">
+      <div about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf">
         <div
           ref={cursorRef}
           className="cursor flex items-center justify-center text-center rounded-md break-words"
         >
-          <Icon
-            icon="mdi:eye"
-            className="eyeIcon hidden text-white"
-            width={50}
-          />
-          <Icon
-            icon="dashicons:no"
-            className="disabledIcon hidden text-white"
-            width={50}
-          />
-          <Icon
-            icon="material-symbols:check"
-            className="checkIcon hidden text-white"
-            width={50}
-          />
-          <Icon
-            icon="mynaui:clipboard"
-            className="clipboardIcon hidden text-white"
-            width={50}
-          />
-          <Icon
-            icon="material-symbols:link-rounded"
-            className="linkIcon hidden text-white"
-            width={50}
-          />
-          <Icon
-            icon="material-symbols-light:arrow-range-rounded"
-            className="arrowIcon hidden text-white"
-            width={50}
-          />
+          {icons.map((icon, index) => (
+            <Icon
+              key={index}
+              icon={icon.id}
+              className={`${icon.class} hidden text-white`}
+              width={50}
+            />
+          ))}
         </div>
       </div>
     </>
