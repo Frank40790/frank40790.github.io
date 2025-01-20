@@ -21,7 +21,7 @@ node_modules
 *.pem
 *.zip
 .vscode/
-database/
+old/
 
 # debug
 npm-debug.log*
@@ -38,3 +38,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+app/test

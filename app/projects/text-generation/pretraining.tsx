@@ -3,7 +3,6 @@ import { usePathname } from "next/navigation";
 import {
   RightPicLeftText,
   FullTextHeaders,
-  Banner,
   IconListStatic,
   FullImage,
   MarkdownBlock,
@@ -11,7 +10,7 @@ import {
   FetchCode,
 } from "../../components/page_block";
 
-export default function Event() {
+export default function Pretraining() {
   const icons = [
     { icon: "devicon:python", name: "Python" },
     { icon: "devicon:pytorch", name: "PyTorch" },
@@ -19,9 +18,6 @@ export default function Event() {
   const pathname = usePathname();
   return (
     <>
-      <title>Text Generation</title>
-      <Banner textComponent="Text Generation" />
-
       <FullTextHeaders
         headers="What does this do?"
         textComponent={
@@ -177,7 +173,7 @@ export default function Event() {
               took quite some time to train.
             </div>
             <div>
-              These are the result of the models, where model_0002.model is
+              These are the result of the models, where model_0003.model is
               trained for the longest
             </div>
             <br />

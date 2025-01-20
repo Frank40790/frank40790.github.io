@@ -10,10 +10,30 @@ export function DisabledProject({
   pathname: string;
 }) {
   return (
-    <div className="flex flex-col relative">
-      <div className="flex flex-row rounded-lg group transition duration-300 bg-transparent hover:bg-gray-200">
-        <ProjectImage project={project} pathname={pathname} />
-        <ProjectDetails project={project} />
+    <div
+      className="relative flex flex-col rounded-lg overflow-hidden group transition duration-300 bg-transparent"
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
+    >
+      <div className="relative w-full h-96 overflow-hidden">
+        <div className="relative w-full h-full overflow-hidden">
+          <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110">
+            <Image
+              src={`${pathname}/${project.url}/${project.icon}`}
+              alt={project.title}
+              layout="fill"
+              objectFit="cover"
+              className="transition-all duration-500"
+              style={{
+                filter: "blur(8px)",
+                opacity: 0.6,
+              }}
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        </div>
+        <div className="absolute bottom-0 left-0 w-full p-6 z-10">
+          <ProjectDetails project={project} />
+        </div>
       </div>
     </div>
   );
@@ -27,34 +47,26 @@ export function EnabledProject({
   pathname: string;
 }) {
   return (
-    <div className="flex flex-col relative">
-      <div className="flex flex-row rounded-lg group transition duration-300 bg-transparent hover:bg-gray-200">
-        <ProjectImage project={project} pathname={pathname} />
-        <ProjectDetails project={project} />
-      </div>
-    </div>
-  );
-}
-
-export function ProjectImage({
-  project,
-  pathname,
-}: {
-  project: ProjectsProps;
-  pathname: string;
-}) {
-  const borderColor =
-    project.type === "star" ? "border-[#efbf04]" : "border-gray-500";
-  return (
-    <div className="flex flex-col p-6">
-      <div className={`relative h-20 w-20 rounded-full overflow-hidden border-4 ${borderColor} group-hover:scale-110 transition duration-200`}>
-        <Image
-          src={`${pathname}/${project.url}/${project.icon}`}
-          alt={project.icon}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
+    <div
+      className="relative flex flex-col rounded-lg overflow-hidden group transition duration-300 bg-transparent"
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
+    >
+      <div className="relative w-full h-96 overflow-hidden">
+        <div className="relative w-full h-full overflow-hidden">
+          <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110">
+            <Image
+              src={`${pathname}/${project.url}/${project.icon}`}
+              alt={project.title}
+              layout="fill"
+              objectFit="cover"
+              className="transition-all duration-500"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        </div>
+        <div className="absolute bottom-0 left-0 w-full p-6 z-10">
+          <ProjectDetails project={project} />
+        </div>
       </div>
     </div>
   );
@@ -62,11 +74,9 @@ export function ProjectImage({
 
 export function ProjectDetails({ project }: { project: ProjectsProps }) {
   return (
-    <div className="event-box group flex flex-col p-6">
-      <div className="event-title text-lg font-bold text-black dark:text-white group-hover:text-gray-700 dark:group-hover:text-black">
-        {project.title}
-      </div>
-      <div className="event-description text-gray-600">
+    <div className="event-box flex flex-col text-white">
+      <div className="event-title text-xl font-bold mb-2">{project.title}</div>
+      <div className="event-description text-gray-300 mb-4">
         {project.description}
       </div>
       <Tags tags={project.tags} />

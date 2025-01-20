@@ -95,7 +95,7 @@ export const timelines: TimelineProps[] = [
     title: "Text Generation",
     description: "Writing a small decoder only transformer language model",
     date: "21 May 2024 ~",
-    url: "text-generation",
+    url: "/projects/text-generation",
     icon: "transformer.png",
     type: "star",
     tags: ["ai/ml", "llm", "python", "PyTorch"],

@@ -15,7 +15,10 @@ export default function Tags({ tags }: TagsProps) {
   };
 
   return (
-    <div className="event-tags mt-3 flex flex-wrap gap-2">
+    <div
+      className="event-tags mt-3 flex flex-wrap gap-2"
+      about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
+    >
       {tags.map((tag) => (
         <div
           key={tag}
