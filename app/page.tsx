@@ -162,7 +162,7 @@ export default function Home() {
         imageSrc="/unimelb-front.png"
         altText="icon"
         textComponent={
-          <div className="text-xl">
+          <div>
             I am currently a undergraduate student studying at University of
             Melbourne, planning to major in Computer Science. It is always
             enjoyable to learn and explore different areas of computing.
@@ -173,7 +173,7 @@ export default function Home() {
         imageSrc="/unimelb-building.png"
         altText="icon"
         textComponent={
-          <div className="text-xl">
+          <div>
             Random, but I also enjoy casually walking around the campus,
             exploring around. Oftentimes, finding some native Australian
             wildlife that fascinates me ~~
@@ -184,7 +184,7 @@ export default function Home() {
         headers="Skill Set"
         textComponent={
           <>
-            <div className="text-xl">
+            <div>
               I enjoy trying out different technologies! In my free time, I
               explore around different fields of computing. My skill set spans
               across different field, including web design, AI / ML, graphics
@@ -199,13 +199,13 @@ export default function Home() {
         headers="Future Vision"
         textComponent={
           <>
-            <div className="text-xl">
+            <div>
               As artificial intelligence integrates to our life bit by bit, it
               is important to understand the inner workings of those new
               technologies. I would like to improve myself so that in the
               future, I can build a technology that benifits humanity.
             </div>
-            <div className="text-xl">
+            <div>
               Another part of computer science that interest me is
               cybersecurity. Thousands of cyberthreats are circulating the
               internet. I am passionate about cybersecurity and want to learn

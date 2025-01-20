@@ -56,7 +56,7 @@ export function LeftPicRightText({
           />
         </motion.div>
         <motion.div
-          className="w-full md:w-3/5 p-4 text-lg"
+          className="w-full md:w-3/5 p-4"
           initial="hidden"
           animate="visible"
           variants={fadeIn}
@@ -598,12 +598,6 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
   };
 
   useEffect(() => {
-    return () => {
-      handleMouseLeave(".clipboardIcon", "blue", "large");
-    };
-  }, []);
-
-  useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.key === "c" || event.key === "C") && !keyPressed) {
         setCPress((prev) => !prev);
@@ -625,6 +619,13 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
       window.removeEventListener("keyup", handleKeyUp);
     };
   }, [keyPressed]);
+
+  useEffect(() => {
+    return () => {
+      handleMouseLeave(".clipboardIcon", "blue", "large");
+      typingLeave();
+    };
+  }, []);
 
   return (
     <div
