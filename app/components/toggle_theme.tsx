@@ -46,7 +46,6 @@ export default function ThemeSwitcher({ iconColor }: { iconColor: string }) {
       <button
         onClick={toggleTheme}
         className="items-center justify-center flex rounded-full bg-transparent transition duration-300"
-        aria-pressed={theme === "dark"}
         role="button"
         tabIndex={0}
         data-theme={theme}

@@ -1,4 +1,4 @@
-import { MasterProps } from "../interfaces";
+import { MasterProps } from "@/app/components/interfaces";
 
 export interface ProjectsProps extends MasterProps {
   title: string;

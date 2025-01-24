@@ -1,5 +1,5 @@
-import Tags from "../tags";
-import { PostProps } from "./blog_interface";
+import Tags from "@/app/components/tags";
+import { PostProps } from "@/app/components/blog/blog_interface";
 import Image from "next/image";
 
 export function DisabledPost({

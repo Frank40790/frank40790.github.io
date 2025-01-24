@@ -7,7 +7,7 @@ import {
   CodeLinkBlock,
 } from "../../components/page_block";
 import { usePathname } from "next/navigation";
-import { github } from "../../components/detail";
+import { github } from "@/app/components/detail";
 
 export default function Event() {
   const icons = [

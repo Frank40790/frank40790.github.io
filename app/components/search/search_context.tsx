@@ -5,7 +5,7 @@ import React, {
   ReactNode,
   useEffect,
 } from "react";
-import Search from "./search";
+import Search from "@/app/components/search/search";
 
 interface SearchContextType {
   isOpen: boolean;

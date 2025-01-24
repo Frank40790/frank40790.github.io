@@ -1,8 +1,11 @@
 import Image from "next/image";
-import { TimelineProps } from "./timeline_interface";
-import Tags from "../tags";
+import { TimelineProps } from "@/app/components/timeline/timeline_interface";
+import Tags from "@/app/components/tags";
 import { useEffect } from "react";
-import { handleMouseEnter, handleMouseLeave } from "../cursor/hover_cursor";
+import {
+  handleMouseEnter,
+  handleMouseLeave,
+} from "@/app/components/cursor/hover_cursor";
 
 export function DisabledTimelineItem({
   timeline,

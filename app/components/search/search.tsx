@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useSearch } from "./search_context";
+import { useSearch } from "@/app/components/search/search_context";
 import { Icon } from "@iconify/react";
-import { MasterProps } from "../interfaces";
+import { MasterProps } from "@/app/components/interfaces";
 import Link from "next/link";
-import Tags from "../tags";
-import searchFunction from "./search_algorithm";
+import Tags from "@/app/components/tags";
+import searchFunction from "@/app/components/search/search_algorithm";
 
 interface SearchProps {
   text: string;
