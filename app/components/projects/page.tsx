@@ -2,15 +2,18 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { ProjectsProps } from "./projects_interface";
-import { projects } from "./projects_db";
-import { DisabledProject, EnabledProject } from "./projects_block";
+import { ProjectsProps } from "@/app/components/projects/projects_interface";
+import { projects } from "@/app/components/projects/projects_db";
+import {
+  DisabledProject,
+  EnabledProject,
+} from "@/app/components/projects/projects_block";
 
 export default function Page() {
   return (
     <>
       <title>Projects</title>
-      <div className="max-w-7xl mx-auto p-4 pt-6 min-h-screen">
+      <div className="max-w-7xl mx-auto p-4 pt-20 min-h-screen">
         <h1 className="text-3xl font-bold mb-4">Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {projects

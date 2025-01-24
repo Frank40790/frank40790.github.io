@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
-import { useSearch } from "./search/search_context";
-import ThemeSwitcher from "./toggle_theme";
+import { useSearch } from "@/app/components/search/search_context";
+import ThemeSwitcher from "@/app/components/toggle_theme";
 
 interface LinkItem {
   href: string;
@@ -57,13 +57,14 @@ export default function Navbar() {
   };
 
   return (
-    <header className="h-16 flex items-center justify-center px-4 md:px-8 border-b border-black dark:border-white">
+    <header className="fixed inset-x-0 top-0 h-16 flex items-center justify-center px-5 md:px-8 z-20 select-none">
       {/* Desktop Menu */}
       <div
-        className="hidden md:flex centered flex-row space-x-4"
+        className="hidden md:flex centered flex-row space-x-4 z-10 border rounded-full bg-white dark:bg-black opacity-90"
         about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
       >
         {links.map(renderLink)}
+
         {/* Search Button */}
         <button
           onClick={handleOpenSearch}
@@ -76,6 +77,7 @@ export default function Navbar() {
             className="text-black dark:text-white"
           />
         </button>
+
         <div className="flex items-center justify-center px-3">
           <ThemeSwitcher iconColor="text-black dark:text-white" />
         </div>

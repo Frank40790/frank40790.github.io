@@ -1,4 +1,4 @@
-import { PostProps } from "./blog_interface";
+import { PostProps } from "@/app/components/blog/blog_interface";
 
 export const posts: PostProps[] = [
   {

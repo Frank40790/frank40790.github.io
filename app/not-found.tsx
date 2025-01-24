@@ -3,11 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-interface TextProp {
-  text: string;
-}
-
-function Text({ text }: TextProp) {
+function Text({ text }: { text: string }) {
   return (
     <div className="relative">
       <motion.div

@@ -1,4 +1,4 @@
-import { MasterProps } from "../interfaces";
+import { MasterProps } from "@/app/components/interfaces";
 
 export interface TimelineProps extends MasterProps {
   title: string;

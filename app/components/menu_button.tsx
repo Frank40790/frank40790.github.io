@@ -3,8 +3,8 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
-import ThemeSwitcher from "./toggle_theme";
-import { useSearch } from "./search/search_context";
+import ThemeSwitcher from "@/app/components/toggle_theme";
+import { useSearch } from "@/app/components/search/search_context";
 
 export default function MenuButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +71,7 @@ export default function MenuButton() {
           menuItems.map((item, index) => {
             const { x, y } = getMenuItemPosition(index, menuItems.length);
             return (
-              <motion.button
+              <motion.div
                 key={index}
                 className={`absolute text-white rounded-full p-4 hover:bg-opacity-75 focus:outline-none ${item.color} w-14 h-14 flex items-center justify-center`}
                 initial={{ opacity: 0, x: 0, y: 0 }}
@@ -85,13 +85,13 @@ export default function MenuButton() {
                 ) : (
                   <div className="w-14 h-14" />
                 )}
-              </motion.button>
+              </motion.div>
             );
           })}
       </AnimatePresence>
 
       {/* Menu Button */}
-      <motion.button
+      <motion.div
         ref={menuButtonRef}
         className="relative z-10 w-14 h-14 bg-black dark:bg-white text-white dark:text-black rounded-full focus:outline-none flex items-center justify-center"
         onClick={toggleMenu}
@@ -124,7 +124,7 @@ export default function MenuButton() {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.button>
+      </motion.div>
     </div>
   );
 }

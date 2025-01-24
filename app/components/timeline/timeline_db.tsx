@@ -1,4 +1,4 @@
-import { TimelineProps } from "./timeline_interface";
+import { TimelineProps } from "@/app/components/timeline/timeline_interface";
 
 export const timelines: TimelineProps[] = [
   {

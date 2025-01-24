@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-import { linkedin, github } from "./detail";
+import { linkedin, github } from "@/app/components/detail";
 
-export default function Contact() {
+export default function Contact({ iconColor }: { iconColor?: string }) {
   return (
     <>
       <div className="flex space-x-4 justify-center mt-8">
@@ -13,7 +13,12 @@ export default function Contact() {
             whileTap={{ scale: 0.9 }}
             className="transition-transform transform hover:scale-110 flex items-center justify-center"
           >
-            <Icon icon="brandico:linkedin-rect" width={80} height={80} />
+            <Icon
+              icon="brandico:linkedin-rect"
+              width={80}
+              height={80}
+              className={`${iconColor} text-black dark:text-white`}
+            />
           </motion.div>
         </Link>
         <Link href={github} aria-label="GitHub Profile">
@@ -22,7 +27,12 @@ export default function Contact() {
             whileTap={{ scale: 0.9 }}
             className="transition-transform transform hover:scale-110 flex items-center justify-center"
           >
-            <Icon icon="mdi:github" width={80} height={80} />
+            <Icon
+              icon="mdi:github"
+              width={80}
+              height={80}
+              className={`${iconColor} text-black dark:text-white`}
+            />
           </motion.div>
         </Link>
       </div>

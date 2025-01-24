@@ -1,7 +1,7 @@
-import { timelines } from "../timeline/timeline_db";
-import { projects } from "../projects/projects_db";
-import { posts } from "../blog/blog_db";
-import { MasterProps } from "../interfaces";
+import { timelines } from "@/app/components/timeline/timeline_db";
+import { projects } from "@/app/components/projects/projects_db";
+import { posts } from "@/app/components/blog/blog_db";
+import { MasterProps } from "@/app/components/interfaces";
 
 // search function, sort by earlier occurrence of the search query
 // Tag mode will only search for tags

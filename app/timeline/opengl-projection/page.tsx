@@ -9,7 +9,7 @@ import {
   VideoLoopBlock,
   CodeBlock,
 } from "../../components/page_block";
-import { github } from "../../components/detail";
+import { github } from "@/app/components/detail";
 import { usePathname } from "next/navigation";
 
 export default function Event() {

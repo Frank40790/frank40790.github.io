@@ -1,4 +1,4 @@
-import { useSearch } from "./search/search_context";
+import { useSearch } from "@/app/components/search/search_context";
 interface TagsProps {
   tags: string[];
 }

@@ -2,9 +2,12 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { timelines } from "./timeline_db";
-import { TimelineProps } from "./timeline_interface";
-import { DisabledTimelineItem, EnabledTimelineItem } from "./timeline_block";
+import { timelines } from "@/app/components/timeline/timeline_db";
+import { TimelineProps } from "@/app/components/timeline/timeline_interface";
+import {
+  DisabledTimelineItem,
+  EnabledTimelineItem,
+} from "@/app/components/timeline/timeline_block";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -18,7 +21,7 @@ export default function Page() {
   return (
     <>
       <title>Timeline</title>
-      <div className="max-w-2xl mx-auto pt-6 min-h-screen">
+      <div className="max-w-2xl mx-auto min-h-screen pt-20">
         <h1 className="text-3xl font-bold mb-4">Timeline</h1>
         <VerticalTimeline
           lineColor={resolvedTheme === "light" ? "black" : "white"}
