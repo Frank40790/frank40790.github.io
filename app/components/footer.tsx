@@ -1,4 +1,4 @@
-import { name } from "@/app/components/detail";
+import { name } from "@/app/components/Detail";
 
 export default function Footer() {
   const date = new Date();

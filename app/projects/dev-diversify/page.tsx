@@ -5,9 +5,9 @@ import {
   Banner,
   IconListStatic,
   CodeLinkBlock,
-} from "../../components/page_block";
+} from "../../components/blocks/PageBlock";
 import { usePathname } from "next/navigation";
-import { github } from "@/app/components/detail";
+import { github } from "@/app/components/Detail";
 
 export default function Event() {
   const icons = [

@@ -6,7 +6,7 @@ import {
   Banner,
   IconList,
   URLLinkBlock,
-} from "../../components/page_block";
+} from "../../components/blocks/PageBlock";
 
 export default function Event() {
   return (

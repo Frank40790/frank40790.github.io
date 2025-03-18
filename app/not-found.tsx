@@ -48,19 +48,24 @@ function SmallText({ text }: SmallTextProp) {
 }
 
 export default function NotFound() {
+  const [subText, setSubText] = useState("Redirecting...");
   const router = useRouter();
 
   useEffect(() => {
-    setTimeout(() => {
+    setSubText(Math.random() < 0.2 ? "418: I'm a Teapot" : "Redirecting...");
+
+    const timer = setTimeout(() => {
       router.push("/");
     }, 3000);
+
+    return () => clearTimeout(timer);
   }, [router]);
 
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-black">
         <Text text={"Oops, this page does not exist!"} />
-        <SmallText text={"Redirecting..."} />
+        <SmallText text={subText} />
       </div>
     </>
   );

@@ -8,7 +8,7 @@ import {
   MarkdownBlock,
   LeftRightImage,
   FetchCode,
-} from "../../components/page_block";
+} from "../../components/blocks/PageBlock";
 
 export default function Pretraining() {
   const icons = [

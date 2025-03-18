@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
-import { linkedin, github } from "@/app/components/detail";
+import { linkedin, github } from "@/app/components/Detail";
 
 export default function Contact({ iconColor }: { iconColor?: string }) {
   return (

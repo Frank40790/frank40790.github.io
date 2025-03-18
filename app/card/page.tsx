@@ -9,7 +9,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { Icon } from "@iconify/react";
-import { name, occupation, linkedin, github } from "@/app/components/detail";
+import { name, occupation, linkedin, github } from "@/app/components/Detail";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";

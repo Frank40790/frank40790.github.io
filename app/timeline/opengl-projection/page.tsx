@@ -8,8 +8,8 @@ import {
   LeftRightImage,
   VideoLoopBlock,
   CodeBlock,
-} from "../../components/page_block";
-import { github } from "@/app/components/detail";
+} from "../../components/blocks/PageBlock";
+import { github } from "@/app/components/Detail";
 import { usePathname } from "next/navigation";
 
 export default function Event() {

@@ -1,54 +1,80 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense, lazy } from "react";
 
 function Text({ text }: { text: string }) {
   return (
     <div className="relative h-screen pt-20">
       <motion.div
-        className="bg-gradient-to-r from-black via-gray-200 to-black dark:from-white dark:via-gray-600 dark:to-white bg-clip-text text-transparent text-3xl font-extrabold leading-none pb-5 pt-5 text-center "
+        className="bg-gradient-to-r from-gray-600 via-white to-gray-600 dark:from-white dark:via-gray-600 dark:to-white bg-clip-text text-transparent leading-none pb-5 pt-5 text-3xl text-center"
         initial={{ backgroundPosition: "200% 0" }}
         animate={{ backgroundPosition: "-200% 0" }}
         transition={{
-          duration: 20,
+          duration: 9,
           repeat: Infinity,
           repeatType: "loop",
           ease: "linear",
         }}
         style={{
-          backgroundSize: "400% 100%",
+          backgroundSize: "50% 100%",
         }}
       >
-        {text}
+        {text}{" "}
+        {"···".split("").map((char, index) => (
+          <motion.div
+            key={index}
+            initial={{ y: 0 }}
+            animate={{
+              y: [4, 0, 4],
+              transition: {
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.5,
+                repeat: Infinity,
+                repeatType: "loop",
+                delay: index * 0.05,
+                repeatDelay: 0.8,
+              },
+            }}
+            style={{
+              display: "inline-block",
+              letterSpacing: "2px",
+              transform: "translateY(50%)",
+            }}
+            className="text-black dark:text-white"
+          >
+            {char}
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );
 }
 
+const PageA = lazy(() => import("./home/page_a"));
+const PageB = lazy(() => import("./home/page_b"));
+
 export default function Page() {
   const [variant, setVariant] = useState<"a" | "b" | null>(null);
 
   useEffect(() => {
-    let variantAssigned = localStorage.getItem("ab-test-variant");
+    let variantAssigned = localStorage.getItem("variant");
 
     if (variantAssigned === "a" || variantAssigned === "b") {
       setVariant(variantAssigned);
     } else {
-      const randomVariant = Math.random() < 0.2 ? "a" : "b";
-      localStorage.setItem("ab-test-variant", randomVariant);
+      const randomVariant = Math.random() < 0 ? "a" : "b";
+      localStorage.setItem("variant", randomVariant);
       setVariant(randomVariant);
     }
   }, []);
 
-  if (!variant) {
-    return <Text text="Page is loading..." />;
-  }
+  const VariantComponent = variant === "a" ? PageA : PageB;
 
-  const VariantComponent =
-    variant === "a"
-      ? require("./home/page_a").default
-      : require("./home/page_b").default;
-
-  return <VariantComponent />;
+  return (
+    <Suspense fallback={<Text text="Page is loading" />}>
+      <VariantComponent />
+    </Suspense>
+  );
 }
