@@ -74,7 +74,7 @@ const DraggableContainer: React.FC<DraggableContainerProps> = ({
 
 export default function Page() {
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-black">
       <DraggableContainer>
         <MusicWidget />
       </DraggableContainer>
