@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "../styles/custom_cursor.css";
+import "@/app/components/styles/CustomCursor.css";
 import { Icon } from "@iconify/react";
 
 export default function CustomCursor() {
@@ -20,7 +20,7 @@ export default function CustomCursor() {
 
     const updateCursor = () => {
       if (cursor) {
-        const cursorSize = 20;
+        const cursorSize = 20; // Ensure this matches your CSS dimensions
         cursor.style.transform = `translate3d(${
           mousePosition.current.x - cursorSize / 2
         }px, ${mousePosition.current.y - cursorSize / 2}px, 0)`;

@@ -5,7 +5,7 @@ import {
   FullTextHeaders,
   Banner,
   IconList,
-} from "../../components/page_block";
+} from "../../components/blocks/PageBlock";
 
 export default function Event() {
   return (

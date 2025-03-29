@@ -6,7 +6,7 @@ import {
   FullTextHeaders,
   Banner,
   IconList,
-} from "../../components/page_block";
+} from "../../components/blocks/PageBlock";
 import { usePathname } from "next/navigation";
 
 export default function Event() {

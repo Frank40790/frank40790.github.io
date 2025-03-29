@@ -5,7 +5,7 @@ import {
   Banner,
   LeftRightImage,
   IconListStatic,
-} from "../../components/page_block";
+} from "../../components/blocks/PageBlock";
 
 export default function Event() {
   const icons = [{ icon: "devicon:figma", name: "Figma" }];

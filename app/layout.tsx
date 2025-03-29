@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Providers } from "@/app/providers";
 import "./globals.css";
 import { Comfortaa } from "next/font/google";
-import Navbar from "@/app/components/navbar";
-import Footer from "@/app/components/footer";
-import { name } from "@/app/components/detail";
-import MenuButton from "@/app/components/menu_button";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
+import { name } from "@/app/components/Detail";
+import MenuButton from "@/app/components/MenuButton";
 
 const comfortaa = Comfortaa({ subsets: ["latin", "latin-ext"] });
 

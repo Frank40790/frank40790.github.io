@@ -3,8 +3,8 @@ import { motion, Variants } from "framer-motion";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as random from "maath/random";
-import { name, skills } from "@/app/components/detail";
-import Contact from "@/app/components/contact";
+import { name, skills } from "@/app/components/Detail";
+import Contact from "@/app/components/Contact";
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
@@ -68,6 +68,19 @@ export function IconGridPopup() {
   const closePopup = () => {
     setIsPopupOpen(false);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closePopup();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   const handleBackdropClick = (event: any) => {
     if (event.target === event.currentTarget) {
       closePopup();
@@ -95,7 +108,7 @@ export function IconGridPopup() {
           <div className="bg-black opacity-80 border rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-scroll p-6 scrollbar-hide">
             {/* Popup Header */}
             <div className="flex justify-between items-center">
-              <h2 className="text-2xl font-bold text-white">Icon Collection</h2>
+              <h2 className="text-2xl font-bold text-white">Skills</h2>
               <button
                 onClick={closePopup}
                 className="text-gray-600 hover:text-red-500 transition-colors"
@@ -303,8 +316,8 @@ export default function Page() {
               variants={fadeInUp}
               className="text-white text-center text-xl"
             >
-              I am currently a undergraduate student studying at University of
-              Melbourne, planning to major in Computer Science. It is always
+              I am currently an undergraduate student studying at the University
+              of Melbourne, planning to major in Computer Science. It is always
               enjoyable to learn and explore different areas of computing.
             </motion.div>
           </motion.div>
@@ -328,8 +341,8 @@ export default function Page() {
             <motion.div variants={fadeInUp} className="space-y-8">
               <div className="text-white text-center text-xl">
                 I enjoy trying out different technologies! In my free time, I
-                explore around different fields of computing. My skill set spans
-                across different field, including web design, AI / ML, graphics
+                explore different fields related to computing. My skill set
+                spans various fields, including web design, AI / ML, graphics
                 and much more!
               </div>
               {[
@@ -360,6 +373,152 @@ export default function Page() {
           </motion.div>
         </section>
 
+        {/* Interest - AI and ML */}
+        <section className="min-h-screen snap-start flex items-center justify-center p-4 md:p-8">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="max-w-4xl w-full"
+          >
+            <motion.h2
+              variants={fadeInUp}
+              className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
+            >
+              Interest: AI and ML
+            </motion.h2>
+            <div className="text-white text-center text-lg">
+              Artificial intelligence is always a really interesting topic, and
+              I am always eager to dive deeper. Starting with OpenCV, I&apos;ve
+              did some simple line-centering algorithms, which are not complex,
+              but fun.
+            </div>
+            <div className="text-white text-center text-lg">
+              Later, I got into Machine Learning and Deep Learning field and was
+              stunned by how much a computer can do. Starting simple, I&apos;ve
+              wrote some classic machine learning programs such as Titanic,
+              Housing price prediction to get experience in data processing and
+              cleaning. Later, I started to write CNN for MNIST hand-written
+              digits recognition, learning more about neural networks. Getting
+              more advanced, I&apos;ve tried Generative adversarial network (GAN) to
+              generate hand-written digits. After exploring those, I got into
+              NLP for RNN, LSTM etc. I&apos;ve also tried some 2D self
+              driving-car using JS for fun.
+            </div>
+            <div className="text-white text-center text-lg">
+              After the explosion of generative AI during 2022, I started to
+              explore more about cutting-edge research. I&apos;ve attempted to
+              build a language model on transformer architecture and an image
+              generation model using UNet.
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Interest - System Admin */}
+        <section className="min-h-screen snap-start flex items-center justify-center p-4 md:p-8">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="max-w-4xl w-full"
+          >
+            <motion.h2
+              variants={fadeInUp}
+              className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
+            >
+              Interest: System Admin
+            </motion.h2>
+            <div className="text-white text-center text-lg">
+              I like to explore around my systems and build applications on it.
+              On the web design backend side, I try out many different programs,
+              such as docker and nginx to manage the backend of a service. From
+              a more virtualization perspective, I would often try software such
+              as VirtualBox or Proxmox, and use different Linux distros on it. I
+              also think that knowing how networking works is a pretty important
+              part of being a computer science major, so I did learn about
+              things such as routers, switches and most importantly, the OSI
+              model.
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Interest - Web design*/}
+        <section className="min-h-screen snap-start flex items-center justify-center p-4 md:p-8">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="max-w-4xl w-full"
+          >
+            <motion.h2
+              variants={fadeInUp}
+              className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
+            >
+              Interest: Web Design
+            </motion.h2>
+            <div className="text-white text-center text-lg">
+              I am also interested in web design since I can create a webpage of
+              my own and design it however I want. I often look up tutorials to
+              gather inspiration to build a better website.
+            </div>
+            <div className="text-white text-center text-lg">
+              I start with learning various programming languages for the web,
+              such as HTML, CSS, JS and PHP without the use of any framework
+              while hosting the backend using Python Django or Flask.
+            </div>
+            <div className="text-white text-center text-lg">
+              Shortly after, I realised that my workflow would be much better
+              with framework, I started to learn some JavaScript libraries such
+              as Next.js along with tailwind and different animation libraries.
+            </div>
+            <div className="text-white text-center text-lg">
+              Most of the time, writing projects makes me improve the most.
+              Therefore, I spend lots of my free time tweaking and rewriting
+              this website. It is a fun thing for me.
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Interest - Graphics */}
+        <section className="min-h-screen snap-start flex items-center justify-center p-4 md:p-8">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="max-w-4xl w-full"
+          >
+            <motion.h2
+              variants={fadeInUp}
+              className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
+            >
+              Interest: Graphics
+            </motion.h2>
+            <div className="text-white text-center text-lg">
+              Graphics is also the field I want to explore more about.
+              Currently, I am not experienced in this field, but I really want
+              to explore more about it.
+            </div>
+            <div className="text-white text-center text-lg">
+              In the past, I&apos;ve tried a lot of different things relating to
+              graphics, such as VFX with After Effects or playing around with
+              Unity. In terms of graphics and modelling, I&apos;ve also used
+              Blender to do a lot of stuff. For example, I use Blender for
+              camera tracking, fluid simulation, ray tracing, modelling and
+              animation. I would like to learn more to create more advanced
+              visuals.
+            </div>
+            <div className="text-white text-center text-lg">
+              Sometimes I also use my programming skills to write something fun.
+              There is an OpenGL projection code that I wrote to do orthogonal
+              projection. And another program that does basic ray tracing.
+            </div>
+          </motion.div>
+        </section>
+
         {/* Future Vision */}
         <section className="min-h-screen snap-start flex items-center justify-center p-4 md:p-8">
           <motion.div
@@ -376,17 +535,17 @@ export default function Page() {
               Future Vision
             </motion.h2>
             <div className="text-white text-center text-lg">
-              As artificial intelligence integrates to our life bit by bit, it
-              is important to understand the inner workings of those new
+              As artificial intelligence integrates into our lives bit by bit,
+              it is important to understand the inner workings of those new
               technologies. I would like to improve myself so that in the
-              future, I can build a technology that benifits humanity.
+              future, I can build a technology that benefits humanity.
             </div>
             <div className="text-white text-center text-lg">
-              Another part of computer science that interest me is
-              cybersecurity. Thousands of cyberthreats are circulating the
+              Another part of computer science that interests me is
+              cybersecurity. Thousands of cyber threats are circulating the
               internet. I am passionate about cybersecurity and want to learn
               more about it in the future, hopefully developing technology that
-              can prevent cyberthreats effectively.
+              can prevent cyber threats effectively.
             </div>
           </motion.div>
         </section>

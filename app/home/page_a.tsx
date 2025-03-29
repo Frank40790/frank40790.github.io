@@ -7,10 +7,10 @@ import {
   IconList,
   BannerTypewriter,
   ParallaxBlock,
-} from "@/app/components/page_block";
+} from "@/app/components/blocks/PageBlock";
 import { useEffect, useState } from "react";
-import Contact from "@/app/components/contact";
-import { name, skills } from "@/app/components/detail";
+import Contact from "@/app/components/Contact";
+import { name, skills } from "@/app/components/Detail";
 import { useTheme } from "next-themes";
 
 interface PopupContentProps {

@@ -1,6 +1,6 @@
 "use client";
 
-import { Banner, TimelineTab } from "@/app/components/page_block";
+import { Banner, TimelineTab } from "@/app/components/blocks/PageBlock";
 import Pretraining from "./pretraining";
 import InstructionTuning from "./instruction_tuning";
 

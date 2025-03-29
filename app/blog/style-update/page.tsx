@@ -2,13 +2,13 @@
 import {
   handleMouseEnter,
   handleMouseLeave,
-} from "@/app/components/cursor/hover_cursor";
+} from "@/app/components/cursor/HoverCursor";
 import {
   FullTextHeaders,
   Banner,
   ImageSplit,
   ConfettiButton,
-} from "../../components/page_block";
+} from "../../components/blocks/PageBlock";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
