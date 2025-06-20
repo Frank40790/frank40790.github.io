@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Providers } from "@/app/providers";
 import "./globals.css";
 import { Comfortaa } from "next/font/google";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/components/navbar/Navbar";
 import Footer from "@/app/components/Footer";
 import { name } from "@/app/components/Detail";
 import MenuButton from "@/app/components/MenuButton";

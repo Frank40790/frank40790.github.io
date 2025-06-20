@@ -6,7 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useSearch } from "@/app/components/search/SearchContext";
 import ThemeSwitcher from "@/app/components/ToggleTheme";
-import LocalisationSwitcher from "./language/LocalisationSwitcher";
+import LocalisationSwitcher from "../language/LocalisationSwitcher";
+
+import en from "./lang/en.json";
+import de from "./lang/de.json";
+import zh from "./lang/zh.json";
+import { useTranslation } from "../language/LocalisationHooks";
+const translations = { en, de, zh };
 
 interface LinkItem {
   href: string;
@@ -15,6 +21,7 @@ interface LinkItem {
 
 export default function Navbar() {
   const pathname = usePathname();
+  const t = useTranslation(translations);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -25,10 +32,10 @@ export default function Navbar() {
   const magnify_duration = 0.3;
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/timeline", label: "Timeline" },
-    { href: "/projects", label: "Projects" },
-    { href: "/blog", label: "Blog" },
+    { href: "/", label: t("home") },
+    { href: "/timeline", label: t("timeline") },
+    { href: "/projects", label: t("projects") },
+    { href: "/blog", label: t("blog") },
   ];
 
   const renderLink = ({ href, label }: LinkItem) => (
