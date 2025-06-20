@@ -43,6 +43,7 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
   const [copied, setCopied] = useState<boolean>(false);
   const [cPress, setCPress] = useState<boolean>(false);
   const [keyPressed, setKeyPressed] = useState<boolean>(false);
+  const [expanded, setExpanded] = useState<boolean>(false);
 
   useEffect(() => {
     const codeBlockMatch = code.match(/```(\w+)/);
@@ -104,6 +105,10 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
     };
   }, []);
 
+  const codeLines = code.split("\n");
+  const isCollapsible = codeLines.length > 10;
+  const displayedCode = expanded ? code : codeLines.slice(0, 10).join("\n");
+
   return (
     <div
       className="pl-0 pr-0 md:pl-5 md:pr-5"
@@ -126,7 +131,9 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
         </div>
 
         <div
-          className="scrollbar-hide"
+          className={`scrollbar-hide transition-all duration-500 ease-in-out overflow-hidden ${
+            expanded ? "max-h-[1000px]" : "max-h-[320px]"
+          }`}
           onMouseEnter={() => {
             typingLeave();
             if (cPress) {
@@ -153,8 +160,23 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
           }}
         >
           <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
-            {code}
+            {displayedCode}
           </ReactMarkdown>
+
+          {isCollapsible && !expanded && (
+            <div className="absolute bottom-12 left-0 w-full h-12 pointer-events-none bg-gradient-to-b from-transparent to-white/80 dark:to-black/40 backdrop-blur-sm rounded-b-md" />
+          )}
+
+          {isCollapsible && (
+            <div className="pt-4 text-center backdrop-blur-sm">
+              <button
+                onClick={() => setExpanded(!expanded)}
+                className="text-black dark:text-white hover:font-bold"
+              >
+                {expanded ? "Collapse" : "Expand"}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
