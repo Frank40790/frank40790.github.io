@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ParallaxBanner } from "react-scroll-parallax";
 
 interface LeftPicRightTextProps {
   imageSrc: string;
@@ -307,43 +306,5 @@ export function BannerTypewriter({
         </motion.span>
       ))}
     </motion.h1>
-  );
-}
-
-interface ParallaxBlockProps {
-  textComponent: React.ReactNode;
-  foreground: string;
-  background: string;
-}
-
-export function ParallaxBlock({
-  textComponent,
-  foreground,
-  background,
-}: ParallaxBlockProps) {
-  return (
-    <div about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf">
-      <ParallaxBanner
-        layers={[
-          {
-            image: background,
-            speed: -30,
-          },
-          {
-            speed: -30,
-            children: (
-              <div className="absolute inset-0 flex items-center justify-center">
-                {textComponent}
-              </div>
-            ),
-          },
-          {
-            image: foreground,
-            speed: -10,
-          },
-        ]}
-        className="w-full aspect-[16/9] min-h-[600px]"
-      />
-    </div>
   );
 }

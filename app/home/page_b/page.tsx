@@ -8,6 +8,10 @@ import Contact from "@/app/components/Contact";
 import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { useTranslation } from "@/app/components/language/LocalisationHooks";
+import en from "./lang/en.json";
+import de from "./lang/de.json";
+import zh from "./lang/zh.json";
 
 function Stars(props: any) {
   const ref = useRef<any>();
@@ -145,6 +149,9 @@ export function IconGridPopup() {
 }
 
 export default function Page() {
+  const translations = { en, de, zh };
+  const t = useTranslation(translations);
+
   const fadeInUp: Variants = {
     initial: {
       opacity: 0,
@@ -199,24 +206,20 @@ export default function Page() {
 
   const links = [
     {
-      title: "Projects",
-      description: "Explore various projects I've worked on",
+      title: t("link_1_title"),
+      description: t("link_1_description"),
       link: "/projects",
       image: "/icon_project.png",
     },
     {
-      title: "Timeline",
-      description: "Check out the timeline of my journey!",
+      title: t("link_2_title"),
+      description: t("link_2_description"),
       link: "/timeline",
       image: "/icon_timeline.png",
     },
   ];
 
-  const subtitles = [
-    "Creative Developer",
-    "Design Enthusiast",
-    "I Develop for Fun!",
-  ];
+  const subtitles = [t("subtitle_1"), t("subtitle_2"), t("subtitle_3")];
 
   const [subtitleIndex, setSubtitleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -270,7 +273,7 @@ export default function Page() {
                 variants={titleAnimation}
                 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-clip-text"
               >
-                I&apos;m {name}
+                {t("intro")} {name}
               </motion.h1>
 
               <div className="text-center text-2xl text-gray-600 h-12 flex justify-center items-center">
@@ -310,15 +313,13 @@ export default function Page() {
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
-              About Me
+              {t("about_me")}
             </motion.h2>
             <motion.div
               variants={fadeInUp}
               className="text-white text-center text-xl"
             >
-              I am currently an undergraduate student studying at the University
-              of Melbourne, planning to major in Computer Science. It is always
-              enjoyable to learn and explore different areas of computing.
+              {t("about_me_content")}
             </motion.div>
           </motion.div>
         </section>
@@ -336,19 +337,16 @@ export default function Page() {
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
-              Skills
+              {t("skills")}
             </motion.h2>
             <motion.div variants={fadeInUp} className="space-y-8">
               <div className="text-white text-center text-xl">
-                I enjoy trying out different technologies! In my free time, I
-                explore different fields related to computing. My skill set
-                spans various fields, including web design, AI / ML, graphics
-                and much more!
+                {t("skills_content")}
               </div>
               {[
-                { name: "Programing languages", level: 85 },
-                { name: "Artificial Intelligence", level: 80 },
-                { name: "Website Design", level: 75 },
+                { name: t("skills_1"), level: 85 },
+                { name: t("skills_2"), level: 80 },
+                { name: t("skills_3"), level: 75 },
               ].map((skill, index) => (
                 <div key={index} className="relative">
                   <div className="flex justify-between mb-2">
@@ -386,31 +384,16 @@ export default function Page() {
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
-              Interest: AI and ML
+              {t("interest_ai")}
             </motion.h2>
             <div className="text-white text-center text-lg">
-              Artificial intelligence is always a really interesting topic, and
-              I am always eager to dive deeper. Starting with OpenCV, I&apos;ve
-              did some simple line-centering algorithms, which are not complex,
-              but fun.
+              {t("interest_ai_content_1")}
             </div>
             <div className="text-white text-center text-lg">
-              Later, I got into Machine Learning and Deep Learning field and was
-              stunned by how much a computer can do. Starting simple, I&apos;ve
-              wrote some classic machine learning programs such as Titanic,
-              Housing price prediction to get experience in data processing and
-              cleaning. Later, I started to write CNN for MNIST hand-written
-              digits recognition, learning more about neural networks. Getting
-              more advanced, I&apos;ve tried Generative adversarial network (GAN) to
-              generate hand-written digits. After exploring those, I got into
-              NLP for RNN, LSTM etc. I&apos;ve also tried some 2D self
-              driving-car using JS for fun.
+              {t("interest_ai_content_2")}
             </div>
             <div className="text-white text-center text-lg">
-              After the explosion of generative AI during 2022, I started to
-              explore more about cutting-edge research. I&apos;ve attempted to
-              build a language model on transformer architecture and an image
-              generation model using UNet.
+              {t("interest_ai_content_3")}
             </div>
           </motion.div>
         </section>
@@ -428,18 +411,10 @@ export default function Page() {
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
-              Interest: System Admin
+              {t("interest_sysadmin")}
             </motion.h2>
             <div className="text-white text-center text-lg">
-              I like to explore around my systems and build applications on it.
-              On the web design backend side, I try out many different programs,
-              such as docker and nginx to manage the backend of a service. From
-              a more virtualization perspective, I would often try software such
-              as VirtualBox or Proxmox, and use different Linux distros on it. I
-              also think that knowing how networking works is a pretty important
-              part of being a computer science major, so I did learn about
-              things such as routers, switches and most importantly, the OSI
-              model.
+              {t("interest_sysadmin_content")}
             </div>
           </motion.div>
         </section>
@@ -457,27 +432,21 @@ export default function Page() {
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
-              Interest: Web Design
+              {t("interest_web_design")}
+              
             </motion.h2>
             <div className="text-white text-center text-lg">
-              I am also interested in web design since I can create a webpage of
-              my own and design it however I want. I often look up tutorials to
-              gather inspiration to build a better website.
+              {t("interest_web_design_content_1")}
             </div>
             <div className="text-white text-center text-lg">
-              I start with learning various programming languages for the web,
-              such as HTML, CSS, JS and PHP without the use of any framework
-              while hosting the backend using Python Django or Flask.
+              {t("interest_web_design_content_2")}
+              
             </div>
             <div className="text-white text-center text-lg">
-              Shortly after, I realised that my workflow would be much better
-              with framework, I started to learn some JavaScript libraries such
-              as Next.js along with tailwind and different animation libraries.
+              {t("interest_web_design_content_3")}
             </div>
             <div className="text-white text-center text-lg">
-              Most of the time, writing projects makes me improve the most.
-              Therefore, I spend lots of my free time tweaking and rewriting
-              this website. It is a fun thing for me.
+              {t("interest_web_design_content_4")}
             </div>
           </motion.div>
         </section>
@@ -495,26 +464,16 @@ export default function Page() {
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
-              Interest: Graphics
+              {t("interest_graphics")}
             </motion.h2>
             <div className="text-white text-center text-lg">
-              Graphics is also the field I want to explore more about.
-              Currently, I am not experienced in this field, but I really want
-              to explore more about it.
+              {t("interest_graphics_content_1")}
             </div>
             <div className="text-white text-center text-lg">
-              In the past, I&apos;ve tried a lot of different things relating to
-              graphics, such as VFX with After Effects or playing around with
-              Unity. In terms of graphics and modelling, I&apos;ve also used
-              Blender to do a lot of stuff. For example, I use Blender for
-              camera tracking, fluid simulation, ray tracing, modelling and
-              animation. I would like to learn more to create more advanced
-              visuals.
+              {t("interest_graphics_content_2")}
             </div>
             <div className="text-white text-center text-lg">
-              Sometimes I also use my programming skills to write something fun.
-              There is an OpenGL projection code that I wrote to do orthogonal
-              projection. And another program that does basic ray tracing.
+              {t("interest_graphics_content_3")}
             </div>
           </motion.div>
         </section>
@@ -532,20 +491,13 @@ export default function Page() {
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
-              Future Vision
+              {t("future_vision")}
             </motion.h2>
             <div className="text-white text-center text-lg">
-              As artificial intelligence integrates into our lives bit by bit,
-              it is important to understand the inner workings of those new
-              technologies. I would like to improve myself so that in the
-              future, I can build a technology that benefits humanity.
+              {t("future_vision_content_1")}
             </div>
             <div className="text-white text-center text-lg">
-              Another part of computer science that interests me is
-              cybersecurity. Thousands of cyber threats are circulating the
-              internet. I am passionate about cybersecurity and want to learn
-              more about it in the future, hopefully developing technology that
-              can prevent cyber threats effectively.
+              {t("future_vision_content_2")}
             </div>
           </motion.div>
         </section>
@@ -563,7 +515,7 @@ export default function Page() {
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
-              Contact
+              {t("contact")}
             </motion.h2>
             <Contact iconColor="text-white" />
           </motion.div>
@@ -582,7 +534,7 @@ export default function Page() {
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
-              The Jorney Begins...
+              {t("journey_begin")}
             </motion.h2>
             <motion.div
               variants={fadeInUp}

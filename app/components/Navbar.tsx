@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useSearch } from "@/app/components/search/SearchContext";
 import ThemeSwitcher from "@/app/components/ToggleTheme";
+import LocalisationSwitcher from "./language/LocalisationSwitcher";
 
 interface LinkItem {
   href: string;
@@ -87,6 +88,7 @@ export default function Navbar() {
             exit={{ y: "-100%" }}
             transition={{ duration: 0.3 }}
           >
+            <LocalisationSwitcher />
             {/* Desktop Menu */}
             <div className="hidden md:flex centered flex-row space-x-4 z-10 border rounded-full bg-white dark:bg-black opacity-90">
               {links.map(renderLink)}

@@ -52,8 +52,8 @@ function Text({ text }: { text: string }) {
   );
 }
 
-const PageA = lazy(() => import("./home/page_a"));
-const PageB = lazy(() => import("./home/page_b"));
+const PageA = lazy(() => import("./home/page_a/page"));
+const PageB = lazy(() => import("./home/page_b/page"));
 
 export default function Page() {
   const [variant, setVariant] = useState<"a" | "b" | null>(null);
