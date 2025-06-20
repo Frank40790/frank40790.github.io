@@ -1,0 +1,20 @@
+{
+  "title": "ExternalBrain",
+  "what_does_this_do_title": "Was macht diese App?",
+  "what_does_this_do_p1": "Das Ziel dieser App ist es, den Prozess der Notierung langer Audioaufnahmen zu vereinfachen und eine hilfreiche Zusammenfassung bereitzustellen. Die App nutzt Text-to-Speech-Technologie, um Audio aufzunehmen und in Text zu transkribieren. Anschließend wird ein Sprachmodell verwendet, um den Text in eine kurze, stichpunktartige Zusammenfassung zu komprimieren.",
+  "what_does_this_do_p2": "Hier sind einige Screenshots der App",
+  "model_selection_alt": "Modellauswahl-Fenster",
+  "gui_window_alt": "GUI-Fenster",
+  "journey": "Reise",
+  "external_brain_image_alt": "Bild vom Externen Gehirn",
+  "journey_p1": "Externes Gehirn ist ein Projekt, das ich 2023 als Übung gestartet habe, um praktische Python-Fähigkeiten zu erlernen und beliebte KI-Tools auszuprobieren.",
+  "cli_title": "CLI",
+  "cli_text": "Zu Beginn habe ich eine Befehlszeilenschnittstelle entwickelt. Diese beinhaltete die Aufnahmefunktion und das Speichern der Audiodateien. Außerdem wurde ein Backend entwickelt, das die Transkription übernimmt und die Modelle zur Zusammenfassung aufruft.",
+  "gui_title": "GUI",
+  "gui_text": "Später fügte ich eine GUI mit Tkinter (Custom Tkinter) hinzu, um die App benutzerfreundlicher zu machen als die reine Kommandozeilennutzung.",
+  "tech_stack_title": "Tech-Stack?",
+  "tech_stack_p1": "Dieses Projekt basiert auf Python und verwendet verschiedene Bibliotheken. Die wichtigsten Bibliotheken sind",
+  "tech_stack_p2": "Zusätzlich wird in diesem Projekt Poetry zur Abhängigkeitsverwaltung verwendet.",
+  "learning_title": "Was habe ich gelernt?",
+  "learning_text": "Durch dieses Projekt konnte ich mein Wissen über Python festigen und eine vollständige Anwendung entwickeln. Da ich zum ersten Mal mit GitHub gearbeitet habe, lernte ich auch Versionskontrolle, Pull Requests, Branches und Forks mit GitHub Desktop. Das Projekt war eine wertvolle Erfahrung in der Softwareentwicklung."
+}

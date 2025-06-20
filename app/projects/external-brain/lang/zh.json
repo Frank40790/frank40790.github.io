@@ -1,0 +1,20 @@
+{
+  "title": "ExternalBrain",
+  "what_does_this_do_title": "這是做什麼的？",
+  "what_does_this_do_p1": "這個應用程式的目標是簡化記錄長時間語音的過程，並提供有用的總結。它利用語音轉文字技術，先將語音錄製並轉錄為文字檔，然後再使用語言模型將長文本濃縮為簡短的重點摘要。",
+  "what_does_this_do_p2": "以下是一些應用程式的截圖",
+  "model_selection_alt": "模型選擇視窗",
+  "gui_window_alt": "圖形介面視窗",
+  "journey": "開發歷程",
+  "external_brain_image_alt": "ExternalBrain 圖片集",
+  "journey_p1": "外部大腦是我在 2023 年開始的一個有趣項目，用來練習實用的 Python 技能，也結合了當時很熱門的人工智慧工具。",
+  "cli_title": "命令列介面",
+  "cli_text": "在開發初期，我先開發了命令列介面，包括建立錄音系統和儲存錄音檔案。也包含開發後端部分，用於將音訊轉錄成文字並調用模型生成摘要。",
+  "gui_title": "圖形介面",
+  "gui_text": "後期我加入了 Tkinter（自訂版）圖形介面，讓這個應用程式更易於使用，而不僅是使用命令列參數。",
+  "tech_stack_title": "技術堆疊？",
+  "tech_stack_p1": "此專案使用 Python 並結合多個函式庫。主要使用的函式庫包括",
+  "tech_stack_p2": "此外，本專案使用 Poetry 來管理依賴項。",
+  "learning_title": "我學到了什麼？",
+  "learning_text": "這個專案幫助我鞏固了對 Python 的理解，成功打造了一個應用程式。在這個過程中，因為是第一次使用 GitHub，我也學會了版本控制、拉取請求、分支管理與使用 GitHub Desktop 工具。這個專案讓我獲得了寶貴的軟體開發經驗。"
+}
