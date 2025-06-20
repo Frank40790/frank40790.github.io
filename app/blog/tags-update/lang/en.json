@@ -1,0 +1,13 @@
+{
+  "title": "Tags Update",
+  "alt_homepage": "homepage",
+  "heading_1": "What's new?",
+  "paragraph_1": "As the pages on this website increase, it is important to implement a search system and a tag system for an easier way to find pages. In this update, a tag system is added, where hashtags can be used to search for specific tags. (Don't try to search for the pages that are hidden tho...)",
+  "alt_tags": "tags system on timeline page",
+  "alt_search_tags": "search system for tags",
+  "paragraph_2": "You can also just search up things by pressing the icon in the navbar or press the hotkey Ctrl+K or Ctrl+S",
+  "alt_search": "search",
+  "paragraph_3": "The 404 page also has a new look, if you somehow got there",
+  "alt_404": "search",
+  "paragraph_4": "This update also includes some minor responsive design fixes, that prevent my website from breaking apart :)"
+}

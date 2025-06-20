@@ -11,7 +11,7 @@ const LanguageSwitcher = () => {
         onChange={(e) => setLanguage(e.target.value as any)}
       >
         <option value="en">English</option>
-        <option value="de">German</option>
+        <option value="de">Deutsch</option>
         <option value="zh">中文</option>
       </select>
     </div>

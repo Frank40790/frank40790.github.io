@@ -8,6 +8,12 @@ import {
 } from "@/app/components/blocks/TextImageBlocks";
 import { usePathname } from "next/navigation";
 
+import { useTranslation } from "@/app/components/language/LocalisationHooks";
+import en from "./lang/en.json";
+import de from "./lang/de.json";
+import zh from "./lang/zh.json";
+const translations = { en, de, zh };
+
 export default function Blog() {
   const pathname = usePathname();
   const icons = [
@@ -17,35 +23,27 @@ export default function Blog() {
     { icon: "devicon:typescript", name: "TypeScript" },
     { icon: "simple-icons:framer", name: "Framer" },
   ];
+  const t = useTranslation(translations);
 
   return (
     <>
-      <title>First Website</title>
-      <Banner textComponent={"First Website"} />
+      <title>{t("title")}</title>
+      <Banner textComponent={t("title")} />
       <FullImage
         imageSrc={`${pathname}/homepage.png`}
-        altText="Website Home Page"
+        altText={t("image_alt_home")}
       />
       <FullTextHeaders
-        headers="How do we get here?"
+        headers={t("heading_1")}
         textComponent={
           <>
-            <div>
-              This is the first version of my website containing some of the
-              projects I am working on. The website at this stage is still
-              pretty barebone. I would like to add some new pages and projects
-              onto this page in the future.
-            </div>
-            <div>
-              You might see some of the projects and pages are not clickable
-              yet. I am still working on those, and expecting to finish it in
-              the near future.
-            </div>
+            <div>{t("heading_1_paragraph_1")}</div>
+            <div>{t("heading_1_paragraph_2")}</div>
             <br />
           </>
         }
       />
-      <FullTextHeaders headers="Tech Stack" textComponent="" />
+      <FullTextHeaders headers={t("heading_2")} textComponent="" />
       <IconListStatic icons={icons} />
     </>
   );

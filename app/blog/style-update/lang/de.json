@@ -1,0 +1,18 @@
+{
+  "title": "Style-Update",
+  "heading_1": "Was ist neu?",
+  "color_theme_title": "Farbschema",
+  "color_theme_text": "Die Website unterstützt jetzt Hell- und Dunkelmodus! Du kannst sie oben auf der Seite umschalten. Das Sonnensymbol steht für den hellen Modus mit einem sauberen, klaren Design. Der Mond steht für den Dunkelmodus. Und das Erdsymbol synchronisiert das Design mit deinem System.",
+  "styling_title": "Website-Styling",
+  "styling_text_1": "Die Website hat ein neues Aussehen erhalten. Die Zeitachsen-Seite enthält jetzt eine echte Zeitleiste anstelle einer einfachen Liste. Die Bilder auf der Projektseite wurden vergrößert, um moderner zu wirken.",
+  "styling_text_2": "Dieses Update verbessert auch die mobile Benutzererfahrung durch ein responsives Design.",
+  "timeline_title": "Zeitachse",
+  "timeline_text": "Eine horizontale Zeitachse ist perfekt für die Versionsverwaltung – also habe ich sie eingebaut.",
+  "cursor_title": "Cursor",
+  "cursor_text": "Der Cursor ändert sich gelegentlich – das zeigt an, dass du mit dem Element interagieren kannst. Nur ein kleines Extra als Spielerei :)",
+  "heading_2": "Website-Styling",
+  "comparison_intro": "Hier sind einige Vergleiche zwischen dem alten und neuen Design der verschiedenen Seiten.",
+  "timeline_page": "Zeitachsen-Seite",
+  "projects_page": "Projekt-Seite",
+  "blog_page": "Blog-Seite"
+}
