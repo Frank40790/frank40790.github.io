@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useSearch } from "@/app/components/search/SearchContext";
 import ThemeSwitcher from "@/app/components/ToggleTheme";
-import LocalisationSwitcher from "../language/LocalisationSwitcher";
+import { LanguageSwitcher } from "../language/LocalisationSwitcher";
 
 import en from "./lang/en.json";
 import de from "./lang/de.json";
@@ -95,7 +95,6 @@ export default function Navbar() {
             exit={{ y: "-100%" }}
             transition={{ duration: 0.3 }}
           >
-            <LocalisationSwitcher />
             {/* Desktop Menu */}
             <div className="hidden md:flex centered flex-row space-x-4 z-10 border rounded-full bg-white dark:bg-black opacity-90">
               {links.map(renderLink)}
@@ -115,6 +114,9 @@ export default function Navbar() {
 
               <div className="flex items-center justify-center px-3">
                 <ThemeSwitcher iconColor="text-black dark:text-white" />
+              </div>
+              <div className="flex items-center justify-center px-3">
+                <LanguageSwitcher />
               </div>
             </div>
 
