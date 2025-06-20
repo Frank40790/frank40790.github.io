@@ -1,17 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
-import {
-  LeftPicRightText,
-  RightPicLeftText,
-  FullTextHeaders,
-  IconList,
-  BannerTypewriter,
-  ParallaxBlock,
-} from "@/app/components/blocks/PageBlock";
 import { useEffect, useState } from "react";
 import Contact from "@/app/components/Contact";
 import { name, skills } from "@/app/components/Detail";
 import { useTheme } from "next-themes";
+import {
+  BannerTypewriter,
+  FullTextHeaders,
+  LeftPicRightText,
+  ParallaxBlock,
+  RightPicLeftText,
+} from "../components/blocks/TextImageBlocks";
+import { IconList } from "../components/blocks/IconBlocks";
 
 interface PopupContentProps {
   showLink: boolean;

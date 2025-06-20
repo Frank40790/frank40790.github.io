@@ -1,11 +1,12 @@
 "use client";
+
+import { IconListStatic } from "@/app/components/blocks/IconBlocks";
 import {
-  RightPicLeftText,
-  FullTextHeaders,
   Banner,
-  IconListStatic,
+  FullTextHeaders,
   LeftRightImage,
-} from "../../components/blocks/PageBlock";
+  RightPicLeftText,
+} from "@/app/components/blocks/TextImageBlocks";
 import { usePathname } from "next/navigation";
 
 export default function Project() {

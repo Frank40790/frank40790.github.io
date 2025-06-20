@@ -1,14 +1,14 @@
 "use client";
+
+import { IconListStatic } from "@/app/components/blocks/IconBlocks";
+import { CodeLinkBlock } from "@/app/components/blocks/LinkBlocks";
 import {
+  Banner,
   FullText,
   FullTextHeaders,
-  Banner,
-  CodeLinkBlock,
-  IconListStatic,
   LeftRightImage,
-  VideoLoopBlock,
-  CodeBlock,
-} from "../../components/blocks/PageBlock";
+} from "@/app/components/blocks/TextImageBlocks";
+import { VideoLoopBlock } from "@/app/components/blocks/VideoBlocks";
 import { github } from "@/app/components/Detail";
 import { usePathname } from "next/navigation";
 

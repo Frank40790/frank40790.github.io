@@ -1,14 +1,13 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { FetchCode, MarkdownBlock } from "@/app/components/blocks/CodeBlocks";
+import { IconListStatic } from "@/app/components/blocks/IconBlocks";
 import {
-  RightPicLeftText,
-  FullTextHeaders,
-  IconListStatic,
   FullImage,
-  MarkdownBlock,
+  FullTextHeaders,
   LeftRightImage,
-  FetchCode,
-} from "../../components/blocks/PageBlock";
+  RightPicLeftText,
+} from "@/app/components/blocks/TextImageBlocks";
+import { usePathname } from "next/navigation";
 
 export default function Pretraining() {
   const icons = [

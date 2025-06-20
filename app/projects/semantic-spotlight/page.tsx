@@ -1,12 +1,9 @@
 "use client";
+
 import {
-  LeftPicRightText,
-  RightPicLeftText,
-  FullText,
-  FullTextHeaders,
   Banner,
-  IconList,
-} from "../../components/blocks/PageBlock";
+  FullTextHeaders,
+} from "@/app/components/blocks/TextImageBlocks";
 import { usePathname } from "next/navigation";
 
 export default function Event() {

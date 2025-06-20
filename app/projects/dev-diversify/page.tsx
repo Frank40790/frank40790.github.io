@@ -1,13 +1,14 @@
 "use client";
-import {
-  FullTextHeaders,
-  FullImage,
-  Banner,
-  IconListStatic,
-  CodeLinkBlock,
-} from "../../components/blocks/PageBlock";
+
 import { usePathname } from "next/navigation";
 import { github } from "@/app/components/Detail";
+import {
+  Banner,
+  FullImage,
+  FullTextHeaders,
+} from "@/app/components/blocks/TextImageBlocks";
+import { IconListStatic } from "@/app/components/blocks/IconBlocks";
+import { CodeLinkBlock } from "@/app/components/blocks/LinkBlocks";
 
 export default function Event() {
   const icons = [

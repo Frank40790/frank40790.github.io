@@ -1,14 +1,15 @@
 "use client";
+import { ImageSplit } from "@/app/components/blocks/ImageProps";
+import { ConfettiButton } from "@/app/components/blocks/MiscBlocks";
+import {
+  Banner,
+  FullTextHeaders,
+} from "@/app/components/blocks/TextImageBlocks";
 import {
   handleMouseEnter,
   handleMouseLeave,
 } from "@/app/components/cursor/HoverCursor";
-import {
-  FullTextHeaders,
-  Banner,
-  ImageSplit,
-  ConfettiButton,
-} from "../../components/blocks/PageBlock";
+
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 

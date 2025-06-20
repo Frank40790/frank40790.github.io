@@ -1,8 +1,8 @@
 "use client";
-
-import { Banner, TimelineTab } from "@/app/components/blocks/PageBlock";
 import Pretraining from "./pretraining";
 import InstructionTuning from "./instruction_tuning";
+import { Banner } from "@/app/components/blocks/TextImageBlocks";
+import { TimelineTab } from "@/app/components/blocks/TimelineBlock";
 
 export default function Event() {
   const items = [

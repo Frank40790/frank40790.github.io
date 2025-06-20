@@ -1,11 +1,4 @@
-import {
-  LeftPicRightText,
-  RightPicLeftText,
-  FullText,
-  FullTextHeaders,
-  Banner,
-  IconList,
-} from "../../components/blocks/PageBlock";
+import { Banner } from "@/app/components/blocks/TextImageBlocks";
 
 export default function Event() {
   return (

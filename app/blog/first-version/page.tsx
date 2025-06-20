@@ -1,10 +1,11 @@
 "use client";
+
+import { IconListStatic } from "@/app/components/blocks/IconBlocks";
 import {
-  FullTextHeaders,
   Banner,
-  IconListStatic,
   FullImage,
-} from "../../components/blocks/PageBlock";
+  FullTextHeaders,
+} from "@/app/components/blocks/TextImageBlocks";
 import { usePathname } from "next/navigation";
 
 export default function Blog() {

@@ -1,14 +1,11 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { FetchCode } from "@/app/components/blocks/CodeBlocks";
 import {
-  RightPicLeftText,
-  FullTextHeaders,
-  IconListStatic,
   FullImage,
-  MarkdownBlock,
+  FullTextHeaders,
   LeftRightImage,
-  FetchCode,
-} from "../../components/blocks/PageBlock";
+} from "@/app/components/blocks/TextImageBlocks";
+import { usePathname } from "next/navigation";
 
 export default function InstructionTuning() {
   const pathname = usePathname();
