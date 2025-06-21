@@ -1,0 +1,34 @@
+{
+  "external_brain_title": "External Brain",
+  "external_brain_desc": "Eine App, die Notizen neu definiert",
+  "external_brain_searchtag": "projekte, notizen, notiz-app, llm, großes sprachmodell, text-zu-sprache",
+
+  "dev_diversify_title": "Dev Diversify",
+  "dev_diversify_desc": "Ein Werkzeugkasten für Programmierer",
+  "dev_diversify_searchtag": "projekte, werkzeuge, toolkit, entwicklungswerkzeuge",
+
+  "semantic_spotlight_title": "Semantic Spotlight",
+  "semantic_spotlight_desc": "Semantische Suche",
+  "semantic_spotlight_searchtag": "projekte, semantische suche, automatische hervorhebung",
+
+  "text_generation_title": "Textgenerierung",
+  "text_generation_desc": "Ein kleiner Transformer-Sprachmodell-Decoder",
+  "text_generation_searchtag": "genai, generativ, künstliche intelligenz, maschinelles lernen, aufmerksamkeit, großes sprachmodell, nlp, natürliche sprachverarbeitung, neuronales netz",
+
+  "simple_chat_app_title": "Einfache Chat-App",
+  "simple_chat_app_desc": "Eine einfache NextJS Chatbot-App",
+  "simple_chat_app_searchtag": "ai/ml, webanwendung, schnittstelle, ui/ux, sprachmodell",
+
+  "raytracing_title": "Raytracing",
+  "raytracing_desc": "Ein Raytracer in Java implementiert",
+  "raytracing_searchtag": "raytracing",
+
+  "tag_tts": "Text-zu-Sprache",
+  "tag_llm": "Großes Sprachmodell",
+  "tag_ai": "Künstliche Intelligenz",
+  "tag_ai_ml": "KI/ML",
+  "tag_semantic_search": "Semantische Suche",
+  "tag_web": "Web",
+  "tag_graphics": "Grafik",
+  "tag_ray_tracing": "Raytracing"
+}

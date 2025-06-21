@@ -7,6 +7,9 @@ import { Icon } from "@iconify/react";
 import { MasterProps } from "@/app/components/Interfaces";
 import Link from "next/link";
 import Tags from "@/app/components/Tags";
+import GetTimelines from "@/app/components/timeline/TimelineDB";
+import GetProjects from "@/app/components/projects/ProjectsDB";
+import GetPosts from "@/app/components/blog/BlogDB";
 import searchFunction from "@/app/components/search/SearchAlgorithm";
 
 interface SearchProps {
@@ -18,6 +21,11 @@ export default function Search({ text }: SearchProps) {
   const [searchQuery, setSearchQuery] = useState(text);
   const [searchResults, setSearchResults] = useState<MasterProps[]>([]);
   const [viewportHeight, setViewportHeight] = useState(0);
+  const timelines = GetTimelines();
+  const projects = GetProjects();
+  const posts = GetPosts();
+
+  const searchPages = { timelines, projects, posts };
 
   useEffect(() => {
     setSearchQuery(text);
@@ -38,7 +46,7 @@ export default function Search({ text }: SearchProps) {
   }, [closeSearch]);
 
   useEffect(() => {
-    const results = searchFunction(searchQuery);
+    const results = searchFunction(searchQuery, searchPages);
     setSearchResults(results);
   }, [searchQuery]);
 

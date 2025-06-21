@@ -1,0 +1,35 @@
+{
+  "external_brain_title": "External Brain",
+  "external_brain_desc": "An app that transforms note taking",
+  "external_brain_searchtag": "projects, notetaking, note taking, llm, large language model, text to speech",
+
+  "dev_diversify_title": "Dev Diversify",
+  "dev_diversify_desc": "A toolbox for programmers",
+  "dev_diversify_searchtag": "projects, tools, toolbox, toolkit, development tools",
+
+  "semantic_spotlight_title": "Semantic Spotlight",
+  "semantic_spotlight_desc": "Semantic search",
+  "semantic_spotlight_searchtag": "projects, semantic search, automatic highlighting",
+
+  "text_generation_title": "Text Generation",
+  "text_generation_desc": "Writing a small decoder only transformer language model",
+  "text_generation_searchtag": "genai, generative, artificial intelligence, machine learning, attention, large language model, nlp, natural language processing, neural network, qkv, query key value",
+
+  "simple_chat_app_title": "Simple Chat App",
+  "simple_chat_app_desc": "A really simple NextJS app for chatbot",
+  "simple_chat_app_searchtag": "ai/ml, webapp, interface, ui/ux, language model",
+
+  "raytracing_title": "Raytracing",
+  "raytracing_desc": "A ray tracer implemented in Java",
+  "raytracing_searchtag": "raytracing",
+
+  "tag_tts": "tts",
+  "tag_llm": "llm",
+  "tag_ai": "ai",
+  "tag_ai_ml": "ai/ml",
+  "tag_semantic_search": "semantic search",
+  "tag_web": "web",
+  "tag_graphics": "graphics",
+  "tag_ray_tracing": "ray tracing"
+
+}

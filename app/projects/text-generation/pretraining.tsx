@@ -116,7 +116,7 @@ export default function Pretraining() {
             Vaswani, Ashish. Figure 1: The Transformer - model architecture. 2 Aug. 2023. Attention Is All You Need, https://arxiv.org/pdf/1706.03762. Accessed 5 Dec 2024.
           </div>
           <div className="relative before:content-['>'] before:absolute before:left-[-1em]">
-            Karpathy, Andrej. “Let's Build GPT: From Scratch, in Code, Spelled Out.” YouTube, 17 Jan. 2023, www.youtube.com/watch?v=kCc8FmEb1nY.
+            Karpathy, Andrej. “Let&apos;s Build GPT: From Scratch, in Code, Spelled Out.” YouTube, 17 Jan. 2023, www.youtube.com/watch?v=kCc8FmEb1nY.
           </div>
           <div className="relative before:content-['>'] before:absolute before:left-[-1em]">
             Karpathy, Andrej. nanoGPT, 2023, https://github.com/karpathy/nanoGPT.git. Accessed 2024.

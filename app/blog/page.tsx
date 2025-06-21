@@ -3,10 +3,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { DisabledPost, EnabledPost } from "@/app/components/blog/BlogBlock";
-import { posts } from "@/app/components/blog/BlogDB";
+import GetPosts from "@/app/components/blog/BlogDB";
 import { PostProps } from "@/app/components/blog/BlogInterface";
 
 export default function Page() {
+  const posts = GetPosts();
   return (
     <>
       <title>Blog</title>

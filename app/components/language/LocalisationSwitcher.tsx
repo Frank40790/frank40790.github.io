@@ -113,9 +113,7 @@ export function MobileLanguageSwitcher() {
                 <button
                   onClick={() => handleSelect(code)}
                   className={`w-full text-sm px-3 py-1 rounded-full transition-all ${
-                    language === code
-                      ? "bg-gray-200 dark:bg-gray-700 font-bold"
-                      : "hover:bg-gray-100 dark:hover:bg-gray-800"
+                    language === code ? "font-bold" : ""
                   }`}
                 >
                   {label}

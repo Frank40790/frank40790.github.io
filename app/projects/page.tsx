@@ -3,13 +3,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { ProjectsProps } from "@/app/components/projects/ProjectsInterface";
-import { projects } from "@/app/components/projects/ProjectsDB";
+import GetProjects from "@/app/components/projects/ProjectsDB";
 import {
   DisabledProject,
   EnabledProject,
 } from "@/app/components/projects/ProjectsBlock";
 
 export default function Page() {
+  const projects = GetProjects();
   return (
     <>
       <title>Projects</title>

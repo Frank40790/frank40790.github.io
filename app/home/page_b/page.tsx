@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useRef, Suspense, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -12,6 +14,8 @@ import { useTranslation } from "@/app/components/language/LocalisationHooks";
 import en from "./lang/en.json";
 import de from "./lang/de.json";
 import zh from "./lang/zh.json";
+
+const translations = { en, de, zh };
 
 function Stars(props: any) {
   const ref = useRef<any>();
@@ -54,7 +58,7 @@ function Stars(props: any) {
   );
 }
 
-export function IconGridPopup() {
+function IconGridPopup() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   useEffect(() => {
@@ -90,6 +94,7 @@ export function IconGridPopup() {
       closePopup();
     }
   };
+  const t = useTranslation(translations);
 
   return (
     <div>
@@ -112,7 +117,7 @@ export function IconGridPopup() {
           <div className="bg-black opacity-80 border rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-scroll p-6 scrollbar-hide">
             {/* Popup Header */}
             <div className="flex justify-between items-center">
-              <h2 className="text-2xl font-bold text-white">Skills</h2>
+              <h2 className="text-2xl font-bold text-white">{t("skills")}</h2>
               <button
                 onClick={closePopup}
                 className="text-gray-600 hover:text-red-500 transition-colors"
@@ -149,7 +154,6 @@ export function IconGridPopup() {
 }
 
 export default function Page() {
-  const translations = { en, de, zh };
   const t = useTranslation(translations);
 
   const fadeInUp: Variants = {
@@ -433,14 +437,12 @@ export default function Page() {
               className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
             >
               {t("interest_web_design")}
-              
             </motion.h2>
             <div className="text-white text-center text-lg">
               {t("interest_web_design_content_1")}
             </div>
             <div className="text-white text-center text-lg">
               {t("interest_web_design_content_2")}
-              
             </div>
             <div className="text-white text-center text-lg">
               {t("interest_web_design_content_3")}

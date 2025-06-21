@@ -1,11 +1,18 @@
-import { timelines } from "@/app/components/timeline/TimelineDB";
-import { projects } from "@/app/components/projects/ProjectsDB";
-import { posts } from "@/app/components/blog/BlogDB";
 import { MasterProps } from "@/app/components/Interfaces";
+import { PostProps } from "../blog/BlogInterface";
+import { ProjectsProps } from "../projects/ProjectsInterface";
+import { TimelineProps } from "../timeline/TimelineInterface";
 
 // search function, sort by earlier occurrence of the search query
 // Tag mode will only search for tags
-export default function searchFunction(query: string) {
+export default function searchFunction(
+  query: string,
+  {
+    timelines,
+    projects,
+    posts,
+  }: { timelines: TimelineProps[]; projects: ProjectsProps[]; posts: PostProps[] }
+) {
   if (!query) {
     return [];
   }

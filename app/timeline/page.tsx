@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { timelines } from "@/app/components/timeline/TimelineDB";
+import GetTimelines from "@/app/components/timeline/TimelineDB";
 import { TimelineProps } from "@/app/components/timeline/TimelineInterface";
 import {
   DisabledTimelineItem,
@@ -18,6 +18,7 @@ import { useTheme } from "next-themes";
 
 export default function Page() {
   const { theme, resolvedTheme, setTheme } = useTheme();
+  const timelines = GetTimelines();
   return (
     <>
       <title>Timeline</title>

@@ -1,0 +1,18 @@
+{
+  "post1_title": "The first version of my website!",
+  "post1_desc": "Took some time to build...",
+  "post1_searchtag": "next.js, react.js, framer motion, tailwind, typescript",
+
+  "post2_title": "Tags Update",
+  "post2_desc": "Now you can search up articles by tags!",
+  "post2_searchtag": "tags system, search, improvements, not found page, responsive, parallax, cursor",
+
+  "post3_title": "Style Update",
+  "post3_desc": "Timeline, Projects and Blog page has a new look!",
+  "post3_searchtag": "style, color, modern, dark mode, light mode",
+
+  "website": "website",
+  "update": "update",
+  "tags": "tags",
+  "style": "style"
+}

@@ -1,0 +1,18 @@
+{
+  "post1_title": "我的網站第一版上線！",
+  "post1_desc": "花了一些時間才完成...",
+  "post1_searchtag": "next.js, react.js, framer motion, tailwind, typescript",
+
+  "post2_title": "標籤功能更新",
+  "post2_desc": "現在你可以透過標籤搜尋文章了！",
+  "post2_searchtag": "標籤系統, 搜尋, 改進, 找不到頁面, 響應式設計, 視差效果, 滑鼠樣式",
+
+  "post3_title": "風格更新",
+  "post3_desc": "時間軸、項目與部落格頁面全新風格！",
+  "post3_searchtag": "風格, 顏色, 現代感, 深色模式, 淺色模式",
+
+  "website": "網站",
+  "update": "更新",
+  "tags": "標籤",
+  "style": "風格"
+}

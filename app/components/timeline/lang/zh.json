@@ -1,0 +1,55 @@
+{
+  "hackathon": "黑客松",
+  "uniproject": "大學專案",
+
+  "codebrew_title": "CISSA Codebrew 黑客松 2024",
+  "codebrew_desc": "由墨爾本大學 CISSA 舉辦的黑客松活動",
+  "codebrew_searchtag": "",
+
+  "foc1_title": "計算基礎專案 1",
+  "foc1_desc": "Vaccumator：探索路徑尋找演算法",
+  "foc1_searchtag": "",
+
+  "foc2_title": "計算基礎專案 2",
+  "foc2_desc": "Zoomerbinies：依據限制條件進行物件分類",
+  "foc2_searchtag": "",
+
+  "vichack_title": "VICHACK 2024",
+  "vichack_desc": "黑客松活動",
+  "vichack_searchtag": "",
+
+  "foa1_title": "演算法基礎專案 1",
+  "foa1_desc": "打好 C 語言基礎",
+  "foa1_searchtag": "演算法, csv",
+
+  "foa2_title": "演算法基礎專案 2",
+  "foa2_desc": "生命遊戲",
+  "foa2_searchtag": "演算法, 元胞自動機, eca",
+
+  "emd_title": "工程建模與設計：自動機器人專案",
+  "emd_desc": "實作循線演算法與 PID 控制",
+  "emd_searchtag": "arduino, pid, 差速控制, 機器人, matlab",
+
+  "idx_title": "互動設計專案",
+  "idx_desc": "使用 Figma 設計桌遊原型",
+  "idx_searchtag": "互動設計, 人機互動, HCI",
+
+  "opengl_title": "OpenGL 投影",
+  "opengl_desc": "使用線性代數投影形狀",
+  "opengl_searchtag": "線性代數, la, 數學, 二維投影, 繪圖",
+
+  "textgen_title": "文字生成",
+  "textgen_desc": "撰寫簡單的 Transformer 語言模型（Decoder-only）",
+  "textgen_searchtag": "genai, 生成式AI, 人工智慧, 機器學習, 注意力機制, 大型語言模型, 自然語言處理, 神經網路, qkv",
+
+  "imggen_title": "影像生成 UNet",
+  "imggen_desc": "撰寫簡單的 UNet 擴散模型（DDPM）",
+  "imggen_searchtag": "ddpm, unet, cnn, 卷積, 神經網路, 影像處理",
+  
+  "tag_hackathon": "黑客松",
+  "tag_uniproject": "大學專題",
+  "tag_linear_algebra": "線性代數",
+  "tag_ai_ml": "人工智慧／機器學習",
+  "tag_llm": "大型語言模型",
+  "tag_image_generation": "圖像生成"
+}

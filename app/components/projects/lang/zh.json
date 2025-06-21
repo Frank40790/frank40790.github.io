@@ -1,0 +1,34 @@
+{
+  "external_brain_title": "External Brain",
+  "external_brain_desc": "一個改變筆記方式的應用程式",
+  "external_brain_searchtag": "專案, 筆記, 筆記應用, llm, 大型語言模型, 語音合成",
+
+  "dev_diversify_title": "Dev Diversify",
+  "dev_diversify_desc": "為程式員打造的工具箱",
+  "dev_diversify_searchtag": "專案, 工具, 工具箱, 開發工具",
+
+  "semantic_spotlight_title": "Semantic Spotlight",
+  "semantic_spotlight_desc": "語義搜尋",
+  "semantic_spotlight_searchtag": "專案, 語義搜尋, 自動高亮",
+
+  "text_generation_title": "文字生成",
+  "text_generation_desc": "編寫小型 Transformer 解碼器語言模型",
+  "text_generation_searchtag": "生成式AI, 人工智慧, 機器學習, 注意力機制, 大型語言模型, 自然語言處理, 神經網絡",
+
+  "simple_chat_app_title": "簡易聊天應用",
+  "simple_chat_app_desc": "一個非常簡單的 NextJS 聊天機器人應用",
+  "simple_chat_app_searchtag": "AI, 網頁應用, 介面設計, 語言模型",
+
+  "raytracing_title": "光線追蹤",
+  "raytracing_desc": "用 Java 實現的光線追蹤器",
+  "raytracing_searchtag": "光線追蹤",
+
+  "tag_tts": "文字轉語音",
+  "tag_llm": "大型語言模型",
+  "tag_ai": "人工智慧",
+  "tag_ai_ml": "人工智慧／機器學習",
+  "tag_semantic_search": "語意搜尋",
+  "tag_web": "網路",
+  "tag_graphics": "圖形",
+  "tag_ray_tracing": "光線追蹤"
+}

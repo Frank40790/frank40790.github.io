@@ -62,7 +62,7 @@ export function EnabledTimelineItem({
       about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
     >
       <div
-        className="flex flex-row rounded-lg group transition duration-300 bg-transparent"
+        className="flex flex-row w-full rounded-lg group transition duration-300 bg-transparent"
         onMouseEnter={() => handleMouseEnter(".eyeIcon", "blue", "large")}
         onMouseLeave={() => handleMouseLeave(".eyeIcon", "blue", "large")}
       >
@@ -111,7 +111,7 @@ export function TimelineImage({
 
 export function TimelineDetails({ timeline }: { timeline: TimelineProps }) {
   return (
-    <div className="event-box group flex flex-col pt-6 pr-6 pb-6">
+    <div className="event-box group flex flex-col pt-6 pr-6 pb-6 flex-1">
       <div className="event-title text-lg font-bold text-black dark:text-white">
         {timeline.title}
       </div>
