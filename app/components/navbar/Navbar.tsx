@@ -7,12 +7,11 @@ import { Icon } from "@iconify/react";
 import { useSearch } from "@/app/components/search/SearchContext";
 import ThemeSwitcher from "@/app/components/ToggleTheme";
 import { LanguageSwitcher } from "../language/LocalisationSwitcher";
-
-import en from "./lang/en.json";
-import de from "./lang/de.json";
-import zh from "./lang/zh.json";
 import { useTranslation } from "../language/LocalisationHooks";
-const translations = { en, de, zh };
+
+import lang from "./lang.json";
+
+const translations = lang;
 
 interface LinkItem {
   href: string;

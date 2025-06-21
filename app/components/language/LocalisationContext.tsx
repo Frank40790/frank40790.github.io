@@ -6,7 +6,7 @@ import {
   useEffect,
 } from "react";
 
-type Language = "en" | "de" | "zh";
+type Language = "en" | "zh" | "de" | "ja" | "es" | "ko";
 
 interface LanguageContextType {
   language: Language;
@@ -18,7 +18,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 const isValidLanguage = (lang: string): lang is Language => {
-  return ["en", "de", "zh"].includes(lang);
+  return ["en",  "zh", "de", "ja", "es", "ko"].includes(lang);
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {

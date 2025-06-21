@@ -1,9 +1,8 @@
 import { ProjectsProps } from "@/app/components/projects/ProjectsInterface";
 import { useTranslation } from "@/app/components/language/LocalisationHooks";
-import en from "./lang/en.json";
-import de from "./lang/de.json";
-import zh from "./lang/zh.json";
-const translations = { en, de, zh };
+import lang from "./lang.json";
+
+const translations = lang;
 
 export default function GetProjects() {
   const t = useTranslation(translations);

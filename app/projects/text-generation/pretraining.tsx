@@ -8,13 +8,10 @@ import {
   RightPicLeftText,
 } from "@/app/components/blocks/TextImageBlocks";
 import { usePathname } from "next/navigation";
-
 import { useTranslation } from "@/app/components/language/LocalisationHooks";
-import en from "./lang/en.json";
-import zh from "./lang/zh.json";
-import de from "./lang/de.json";
-const translations = { en, zh, de };
+import lang from "./lang.json";
 
+const translations = lang;
 export default function Pretraining() {
   const pathname = usePathname();
   const t = useTranslation(translations);

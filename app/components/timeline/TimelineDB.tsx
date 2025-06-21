@@ -1,10 +1,8 @@
 import { TimelineProps } from "@/app/components/timeline/TimelineInterface";
 import { useTranslation } from "@/app/components/language/LocalisationHooks";
-import en from "./lang/en.json";
-import de from "./lang/de.json";
-import zh from "./lang/zh.json";
+import lang from "./lang.json";
 
-const translations = { en, de, zh };
+const translations = lang;
 
 export default function GetTimelines() {
   const t = useTranslation(translations);

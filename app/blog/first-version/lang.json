@@ -1,0 +1,50 @@
+{
+  "en": {
+    "title": "First Website",
+    "image_alt_home": "Website Home Page",
+    "heading_1": "How do we get here?",
+    "heading_1_paragraph_1": "This is the first version of my website containing some of the projects I am working on. The website at this stage is still pretty barebone. I would like to add some new pages and projects onto this page in the future.",
+    "heading_1_paragraph_2": "You might see some of the projects and pages are not clickable yet. I am still working on those, and expecting to finish it in the near future.",
+    "heading_2": "Tech Stack"
+  },
+  "zh": {
+    "title": "第一個網站",
+    "image_alt_home": "網站首頁",
+    "heading_1": "我們是怎麼到這裡的？",
+    "heading_1_paragraph_1": "這是我網站的第一個版本，包含了一些我正在進行的專案。目前這個網站還非常簡單。我希望未來能加入更多新頁面和專案。",
+    "heading_1_paragraph_2": "你可能會發現有些專案或頁面還無法點擊。我仍在開發中，預計不久的將來會完成。",
+    "heading_2": "技術棧"
+  },
+  "de": {
+    "title": "Erste Website",
+    "image_alt_home": "Startseite der Website",
+    "heading_1": "Wie sind wir hierher gekommen?",
+    "heading_1_paragraph_1": "Dies ist die erste Version meiner Website, die einige der Projekte enthält, an denen ich arbeite. Die Website ist in diesem Stadium noch recht einfach. Ich möchte in Zukunft weitere Seiten und Projekte hinzufügen.",
+    "heading_1_paragraph_2": "Einige der Projekte und Seiten sind möglicherweise noch nicht anklickbar. Ich arbeite noch daran und hoffe, sie in naher Zukunft fertigzustellen.",
+    "heading_2": "Technologie-Stack"
+  },
+  "ja": {
+    "title": "最初のウェブサイト",
+    "image_alt_home": "ウェブサイトのホームページ",
+    "heading_1": "どうやってここまで来たのか？",
+    "heading_1_paragraph_1": "これは私のウェブサイトの最初のバージョンで、取り組んでいるいくつかのプロジェクトを含んでいます。この段階のウェブサイトはまだ非常にシンプルです。将来的には新しいページやプロジェクトを追加したいと思っています。",
+    "heading_1_paragraph_2": "一部のプロジェクトやページはまだクリックできない場合があります。現在も作業中で、近いうちに完成させる予定です。",
+    "heading_2": "技術スタック"
+  },
+  "es": {
+    "title": "Primer sitio web",
+    "image_alt_home": "Página de inicio del sitio web",
+    "heading_1": "¿Cómo llegamos aquí?",
+    "heading_1_paragraph_1": "Esta es la primera versión de mi sitio web que contiene algunos de los proyectos en los que estoy trabajando. En esta etapa, el sitio todavía es bastante básico. Me gustaría añadir nuevas páginas y proyectos en el futuro.",
+    "heading_1_paragraph_2": "Puede que veas que algunos proyectos y páginas aún no son clicables. Todavía estoy trabajando en ellos y espero terminarlos en un futuro cercano.",
+    "heading_2": "Tecnologías usadas"
+  },
+  "ko": {
+    "title": "첫 번째 웹사이트",
+    "image_alt_home": "웹사이트 홈 페이지",
+    "heading_1": "우리는 어떻게 여기까지 왔을까?",
+    "heading_1_paragraph_1": "이것은 제가 작업 중인 몇 가지 프로젝트를 담은 웹사이트의 첫 번째 버전입니다. 이 단계에서 웹사이트는 아직 매우 간단한 상태입니다. 앞으로 새로운 페이지와 프로젝트를 추가하고 싶습니다.",
+    "heading_1_paragraph_2": "몇몇 프로젝트와 페이지는 아직 클릭할 수 없을 수도 있습니다. 저는 아직 작업 중이며 가까운 시일 내에 완성할 예정입니다.",
+    "heading_2": "기술 스택"
+  }
+}

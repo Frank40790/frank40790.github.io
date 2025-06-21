@@ -9,15 +9,12 @@ import {
   handleMouseEnter,
   handleMouseLeave,
 } from "@/app/components/cursor/HoverCursor";
-
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-
 import { useTranslation } from "@/app/components/language/LocalisationHooks";
-import en from "./lang/en.json";
-import de from "./lang/de.json";
-import zh from "./lang/zh.json";
-const translations = { en, de, zh };
+import lang from "./lang.json";
+
+const translations = lang;
 
 export default function Blog() {
   const pathname = usePathname();

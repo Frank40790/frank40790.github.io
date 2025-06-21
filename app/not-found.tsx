@@ -2,6 +2,10 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import lang from "./lang.json";
+import { useTranslation } from "./components/language/LocalisationHooks";
+
+const translations = lang;
 
 function Text({ text }: { text: string }) {
   return (
@@ -48,11 +52,12 @@ function SmallText({ text }: SmallTextProp) {
 }
 
 export default function NotFound() {
-  const [subText, setSubText] = useState("Redirecting...");
+  const t = useTranslation(translations);
+  const [subText, setSubText] = useState(t("redirect"));
   const router = useRouter();
 
   useEffect(() => {
-    setSubText(Math.random() < 0.2 ? "418: I'm a Teapot" : "Redirecting...");
+    setSubText(Math.random() < 0.2 ? t("teapot") : t("redirect"));
 
     const timer = setTimeout(() => {
       router.push("/");
@@ -64,7 +69,7 @@ export default function NotFound() {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-black">
-        <Text text={"Oops, this page does not exist!"} />
+        <Text text={t("not_exist")} />
         <SmallText text={subText} />
       </div>
     </>

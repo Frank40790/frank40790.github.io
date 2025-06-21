@@ -1,0 +1,80 @@
+{
+  "en": {
+    "title": "Tags Update",
+    "alt_homepage": "homepage",
+    "heading_1": "What's new?",
+    "paragraph_1": "As the pages on this website increase, it is important to implement a search system and a tag system for an easier way to find pages. In this update, a tag system is added, where hashtags can be used to search for specific tags. (Don't try to search for the pages that are hidden tho...)",
+    "alt_tags": "tags system on timeline page",
+    "alt_search_tags": "search system for tags",
+    "paragraph_2": "You can also just search up things by pressing the icon in the navbar or press the hotkey Ctrl+K or Ctrl+S",
+    "alt_search": "search",
+    "paragraph_3": "The 404 page also has a new look, if you somehow got there",
+    "alt_404": "search",
+    "paragraph_4": "This update also includes some minor responsive design fixes, that prevent my website from breaking apart :)"
+  },
+  "zh": {
+    "title": "標籤系統更新",
+    "alt_homepage": "首頁",
+    "heading_1": "有什麼新功能？",
+    "paragraph_1": "隨著網站頁面數量增加，建立搜尋與標籤系統變得非常重要。這次更新加入了標籤功能，讓你可以透過標籤快速搜尋相關內容。（不過不要試圖搜尋那些隱藏的頁面啦⋯）",
+    "alt_tags": "時間線頁面的標籤系統",
+    "alt_search_tags": "標籤搜尋系統",
+    "paragraph_2": "你也可以點選導航欄的搜尋圖示，或是使用快速鍵 Ctrl+K 或 Ctrl+S 來進行搜尋。",
+    "alt_search": "搜尋",
+    "paragraph_3": "如果你不小心進入 404 頁面，你會發現它也有了新面貌。",
+    "alt_404": "搜尋",
+    "paragraph_4": "這次更新也包含一些響應式設計的小修復，避免網站在不同裝置上崩壞 :)"
+  },
+  "de": {
+    "title": "Tags-Update",
+    "alt_homepage": "Startseite",
+    "heading_1": "Was ist neu?",
+    "paragraph_1": "Da die Seitenzahl dieser Website zunimmt, ist es wichtig, ein Such- und Tag-System zu implementieren, um Seiten leichter finden zu können. In diesem Update wurde ein Tag-System hinzugefügt, bei dem Hashtags zur gezielten Suche verwendet werden können. (Versuch aber besser nicht, versteckte Seiten zu finden...)",
+    "alt_tags": "Tags-System auf der Zeitachse-Seite",
+    "alt_search_tags": "Tags-Suchsystem",
+    "paragraph_2": "Du kannst auch einfach über das Symbol in der Navigationsleiste suchen oder die Tastenkombination Strg+K oder Strg+S verwenden.",
+    "alt_search": "Suche",
+    "paragraph_3": "Auch die 404-Seite hat ein neues Aussehen – falls du dort landest.",
+    "alt_404": "Suche",
+    "paragraph_4": "Dieses Update enthält außerdem kleinere Verbesserungen im responsiven Design, damit die Website nicht auseinanderfällt :)"
+  },
+  "ja": {
+    "title": "タグ更新",
+    "alt_homepage": "ホームページ",
+    "heading_1": "新機能は？",
+    "paragraph_1": "このウェブサイトのページ数が増えるにつれて、検索システムとタグシステムを導入してページを簡単に見つけられるようにすることが重要です。今回のアップデートでは、特定のタグを検索できるハッシュタグ機能が追加されました。（ただし、非公開のページは検索しないでくださいね…）",
+    "alt_tags": "タイムラインページのタグシステム",
+    "alt_search_tags": "タグ検索システム",
+    "paragraph_2": "ナビゲーションバーのアイコンをクリックするか、ホットキーのCtrl+KまたはCtrl+Sを押して検索することもできます。",
+    "alt_search": "検索",
+    "paragraph_3": "もし間違って404ページにたどり着いた場合も、新しいデザインになっています。",
+    "alt_404": "検索",
+    "paragraph_4": "このアップデートには、ウェブサイトが崩れないようにするための細かなレスポンシブデザインの修正も含まれています :)"
+  },
+  "es": {
+    "title": "Actualización de Etiquetas",
+    "alt_homepage": "página principal",
+    "heading_1": "¿Qué hay de nuevo?",
+    "paragraph_1": "A medida que aumentan las páginas en este sitio web, es importante implementar un sistema de búsqueda y un sistema de etiquetas para facilitar la localización de las páginas. En esta actualización, se añadió un sistema de etiquetas donde puedes usar hashtags para buscar etiquetas específicas. (Pero no intentes buscar páginas ocultas...)",
+    "alt_tags": "sistema de etiquetas en la página de la línea de tiempo",
+    "alt_search_tags": "sistema de búsqueda por etiquetas",
+    "paragraph_2": "También puedes buscar presionando el ícono en la barra de navegación o usando el atajo Ctrl+K o Ctrl+S.",
+    "alt_search": "búsqueda",
+    "paragraph_3": "La página 404 también tiene un nuevo aspecto, en caso de que llegues allí por error.",
+    "alt_404": "búsqueda",
+    "paragraph_4": "Esta actualización también incluye algunas correcciones menores de diseño responsivo que evitan que el sitio web se desconfigure :)"
+  },
+  "ko": {
+    "title": "태그 업데이트",
+    "alt_homepage": "홈페이지",
+    "heading_1": "무엇이 새로워졌나요?",
+    "paragraph_1": "사이트 내 페이지가 늘어나면서 페이지를 더 쉽게 찾기 위해 검색 시스템과 태그 시스템을 도입하는 것이 중요해졌습니다. 이번 업데이트에서는 특정 태그를 검색할 수 있는 해시태그 기반 태그 시스템이 추가되었습니다. (숨겨진 페이지는 검색하지 마세요...)",
+    "alt_tags": "타임라인 페이지의 태그 시스템",
+    "alt_search_tags": "태그 검색 시스템",
+    "paragraph_2": "또한 네비게이션 바 아이콘을 누르거나 단축키 Ctrl+K 또는 Ctrl+S를 눌러 검색할 수 있습니다.",
+    "alt_search": "검색",
+    "paragraph_3": "404 페이지도 새로운 모습으로 업데이트되었습니다. 만약 거기로 가게 된다면 참고하세요.",
+    "alt_404": "검색",
+    "paragraph_4": "이번 업데이트에는 웹사이트가 깨지지 않도록 하는 소소한 반응형 디자인 수정도 포함되어 있습니다 :)"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "en": {
+    "post1_title": "The first version of my website!",
+    "post1_desc": "Took some time to build...",
+    "post1_searchtag": "next.js, react.js, framer motion, tailwind, typescript",
+
+    "post2_title": "Tags Update",
+    "post2_desc": "Now you can search up articles by tags!",
+    "post2_searchtag": "tags system, search, improvements, not found page, responsive, parallax, cursor",
+
+    "post3_title": "Style Update",
+    "post3_desc": "Timeline, Projects and Blog page has a new look!",
+    "post3_searchtag": "style, color, modern, dark mode, light mode",
+
+    "website": "website",
+    "update": "update",
+    "tags": "tags",
+    "style": "style"
+  },
+  "zh": {
+    "post1_title": "我的網站第一版上線！",
+    "post1_desc": "花了一些時間才完成...",
+    "post1_searchtag": "next.js, react.js, framer motion, tailwind, typescript",
+
+    "post2_title": "標籤功能更新",
+    "post2_desc": "現在你可以透過標籤搜尋文章了！",
+    "post2_searchtag": "標籤系統, 搜尋, 改進, 找不到頁面, 響應式設計, 視差效果, 滑鼠樣式",
+
+    "post3_title": "風格更新",
+    "post3_desc": "時間軸、項目與部落格頁面全新風格！",
+    "post3_searchtag": "風格, 顏色, 現代感, 深色模式, 淺色模式",
+
+    "website": "網站",
+    "update": "更新",
+    "tags": "標籤",
+    "style": "風格"
+  },
+  "de": {
+    "post1_title": "Die erste Version meiner Website!",
+    "post1_desc": "Hat etwas Zeit gebraucht, um sie zu bauen...",
+    "post1_searchtag": "next.js, react.js, framer motion, tailwind, typescript",
+
+    "post2_title": "Tags-Update",
+    "post2_desc": "Du kannst jetzt Artikel nach Tags durchsuchen!",
+    "post2_searchtag": "Tags-System, Suche, Verbesserungen, Fehlerseite, responsiv, Parallax, Cursor",
+
+    "post3_title": "Style-Update",
+    "post3_desc": "Timeline-, Projekt- und Blog-Seiten haben ein neues Design!",
+    "post3_searchtag": "Stil, Farben, modern, Dark Mode, Light Mode",
+
+    "website": "Webseite",
+    "update": "Aktualisierung",
+    "tags": "Stichwörter",
+    "style": "Stil"
+  },
+  "ja": {
+    "post1_title": "ウェブサイトの初版公開！",
+    "post1_desc": "作るのに少し時間がかかりました…",
+    "post1_searchtag": "next.js, react.js, framer motion, tailwind, typescript",
+
+    "post2_title": "タグ機能のアップデート",
+    "post2_desc": "タグで記事を検索できるようになりました！",
+    "post2_searchtag": "タグシステム, 検索, 改善, ページが見つかりません, レスポンシブ, パララックス, カーソル",
+
+    "post3_title": "スタイルの更新",
+    "post3_desc": "タイムライン、プロジェクト、ブログページが新しくなりました！",
+    "post3_searchtag": "スタイル, 色, モダン, ダークモード, ライトモード",
+
+    "website": "ウェブサイト",
+    "update": "アップデート",
+    "tags": "タグ",
+    "style": "スタイル"
+  },
+  "es": {
+    "post1_title": "¡La primera versión de mi sitio web!",
+    "post1_desc": "Me tomó algo de tiempo construirlo...",
+    "post1_searchtag": "next.js, react.js, framer motion, tailwind, typescript",
+
+    "post2_title": "Actualización de Etiquetas",
+    "post2_desc": "¡Ahora puedes buscar artículos por etiquetas!",
+    "post2_searchtag": "sistema de etiquetas, búsqueda, mejoras, página no encontrada, responsive, parallax, cursor",
+
+    "post3_title": "Actualización de Estilo",
+    "post3_desc": "¡Las páginas de Línea de Tiempo, Proyectos y Blog tienen un nuevo diseño!",
+    "post3_searchtag": "estilo, color, moderno, modo oscuro, modo claro",
+
+    "website": "sitio web",
+    "update": "actualización",
+    "tags": "etiquetas",
+    "style": "estilo"
+  },
+  "ko": {
+    "post1_title": "웹사이트 첫 버전 출시!",
+    "post1_desc": "만드는 데 시간이 좀 걸렸어요...",
+    "post1_searchtag": "next.js, react.js, framer motion, tailwind, typescript",
+
+    "post2_title": "태그 시스템 업데이트",
+    "post2_desc": "이제 태그로 게시글을 검색할 수 있어요!",
+    "post2_searchtag": "태그 시스템, 검색, 개선, 페이지 없음, 반응형, 패럴랙스, 커서",
+
+    "post3_title": "스타일 업데이트",
+    "post3_desc": "타임라인, 프로젝트, 블로그 페이지가 새롭게 바뀌었어요!",
+    "post3_searchtag": "스타일, 색상, 모던, 다크 모드, 라이트 모드",
+
+    "website": "웹사이트",
+    "update": "업데이트",
+    "tags": "태그",
+    "style": "스타일"
+  }
+}

@@ -11,11 +11,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { useTranslation } from "@/app/components/language/LocalisationHooks";
-import en from "./lang/en.json";
-import de from "./lang/de.json";
-import zh from "./lang/zh.json";
 
-const translations = { en, de, zh };
+import lang from "./lang.json";
+
+const translations = lang;
 
 function Stars(props: any) {
   const ref = useRef<any>();
