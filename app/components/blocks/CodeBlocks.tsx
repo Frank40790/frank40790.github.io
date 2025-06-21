@@ -111,7 +111,7 @@ export function CodeBlock({ filename, code }: CodeBlockProps) {
 
   return (
     <div
-      className="pl-0 pr-0 md:pl-5 md:pr-5"
+      className="pl-0 pr-0 md:pl-5 md:pr-5 py-2"
       about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
     >
       <div className="relative p-4 border rounded-md border-gray-300">
