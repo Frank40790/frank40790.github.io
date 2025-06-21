@@ -1,0 +1,50 @@
+{
+  "en": {
+    "about_me": "About Me: ",
+    "about_me_content": "I like to explore new stuff",
+    "interest": "Interest: ",
+    "interest_content": "AI, Web Design",
+    "language": "Language: ",
+    "language_content": "Mandarin, English, (German)"
+ },
+ "zh": {
+    "about_me": "關於我：",
+    "about_me_content": "我喜歡探索新事物",
+    "interest": "興趣：",
+    "interest_content": "人工智慧、網頁設計",
+    "language": "語言：",
+    "language_content": "中文、英文、（德文）"
+  },
+  "de": {
+    "about_me": "Über mich: ",
+    "about_me_content": "Ich entdecke gerne neue Dinge",
+    "interest": "Interessen: ",
+    "interest_content": "KI, Webdesign",
+    "language": "Sprachen: ",
+    "language_content": "Chinesisch, Englisch, (Deutsch)"
+  },
+  "ja": {
+    "about_me": "自己紹介：",
+    "about_me_content": "新しいことを探求するのが好きです",
+    "interest": "興味：",
+    "interest_content": "AI、ウェブデザイン",
+    "language": "言語：",
+    "language_content": "中国語、英語、（ドイツ語）"
+  },
+  "es": {
+    "about_me": "Sobre mí: ",
+    "about_me_content": "Me gusta explorar cosas nuevas",
+    "interest": "Intereses: ",
+    "interest_content": "IA, diseño web",
+    "language": "Idiomas: ",
+    "language_content": "Chino, inglés, (alemán)"
+  },
+  "ko": {
+    "about_me": "소개: ",
+    "about_me_content": "새로운 것을 탐험하는 것을 좋아합니다",
+    "interest": "관심사: ",
+    "interest_content": "인공지능, 웹 디자인",
+    "language": "언어: ",
+    "language_content": "중국어, 영어, (독일어)"
+  }
+}

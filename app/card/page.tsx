@@ -14,6 +14,10 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
 import { useRouter } from "next/navigation";
+import lang from "./lang.json";
+import { useTranslation } from "../components/language/LocalisationHooks";
+
+const translations = lang;
 
 export default function Card() {
   const [showSocials, setShowSocials] = useState(false);
@@ -194,6 +198,8 @@ export default function Card() {
   ];
   const selectedColor = colorSet[Math.floor(Math.random() * colorSet.length)];
 
+  const t = useTranslation(translations);
+
   return (
     <div className="w-full h-screen bg-black flex flex-col items-center justify-center">
       {/* Card */}
@@ -247,18 +253,16 @@ export default function Card() {
                   transition={{ delay: 0.4 }}
                 >
                   <p className="text-sm flex items-center space-x-2">
-                    <span className="text-blue-200">About Me: </span>
-                    <span className="font-light">I like to try new stuff</span>
+                    <span className="text-blue-200">{t("about_me")}</span>
+                    <span className="font-light">{t("about_me_content")}</span>
                   </p>
                   <p className="text-sm flex items-center space-x-2">
-                    <span className="text-blue-200">Interest: </span>
-                    <span className="font-light">AI/ML, Biotechnology</span>
+                    <span className="text-blue-200">{t("interest")}</span>
+                    <span className="font-light">{t("interest_content")}</span>
                   </p>
                   <p className="text-sm flex items-center space-x-2">
-                    <span className="text-blue-200">Language: </span>
-                    <span className="font-light">
-                      Mandarin, English, German
-                    </span>
+                    <span className="text-blue-200">{t("language")}</span>
+                    <span className="font-light">{t("language_content")}</span>
                   </p>
                 </motion.div>
               </div>

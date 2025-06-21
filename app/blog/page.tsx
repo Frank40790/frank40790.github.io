@@ -5,17 +5,22 @@ import { motion } from "framer-motion";
 import { DisabledPost, EnabledPost } from "@/app/components/blog/BlogBlock";
 import GetPosts from "@/app/components/blog/BlogDB";
 import { PostProps } from "@/app/components/blog/BlogInterface";
+import { useTranslation } from "@/app/components/language/LocalisationHooks";
+import lang from "@/app/components/navbar/lang.json";
+
+const translations = lang;
 
 export default function Page() {
   const posts = GetPosts();
+  const t = useTranslation(translations);
   return (
     <>
-      <title>Blog</title>
+      <title>{t("blog")}</title>
       <div
         className="max-w-7xl mx-auto p-4 pt-20 min-h-screen"
         about="12fc27143b8a43136895b1319059be713ecbe0217248b5ad4f1087942a798fdf"
       >
-        <h1 className="text-3xl font-bold mb-4">Blog</h1>
+        <h1 className="text-3xl font-bold mb-4">{t("blog")}</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {posts
             .sort((a, b) => {

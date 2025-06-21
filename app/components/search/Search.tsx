@@ -123,7 +123,7 @@ export default function Search({ text }: SearchProps) {
         >
           <input
             type="text"
-            className="w-full p-4 pl-12 rounded-full border border-white shadow-lg focus:outline-none text-lg bg-white dark:bg-black text-white"
+            className="w-full p-4 pl-12 rounded-full border border-white shadow-lg focus:outline-none text-lg bg-white dark:bg-black text-black dark:text-white"
             placeholder={t("search")}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}

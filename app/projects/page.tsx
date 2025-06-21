@@ -8,14 +8,19 @@ import {
   DisabledProject,
   EnabledProject,
 } from "@/app/components/projects/ProjectsBlock";
+import { useTranslation } from "@/app/components/language/LocalisationHooks";
+import lang from "@/app/components/navbar/lang.json";
+
+const translations = lang;
 
 export default function Page() {
   const projects = GetProjects();
+  const t = useTranslation(translations);
   return (
     <>
-      <title>Projects</title>
+      <title>{t("projects")}</title>
       <div className="max-w-7xl mx-auto p-4 pt-20 min-h-screen">
-        <h1 className="text-3xl font-bold mb-4">Projects</h1>
+        <h1 className="text-3xl font-bold mb-4">{t("projects")}</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
           {projects
             .slice()
