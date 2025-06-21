@@ -1,54 +1,42 @@
 "use client";
+
 import {
-  FullTextHeaders,
   Banner,
-  IconListStatic,
   FullImage,
+  FullTextHeaders,
   LeftRightImage,
-} from "../../components/blocks/PageBlock";
+} from "@/app/components/blocks/TextImageBlocks";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/app/components/language/LocalisationHooks";
+import lang from "./lang.json";
+
+const translations = lang;
 
 export default function Blog() {
   const pathname = usePathname();
+  const t = useTranslation(translations);
 
   return (
     <>
-      <title>Tags Update</title>
-      <Banner textComponent={"Tags Update"} />
-      <FullImage imageSrc={`${pathname}/homepage.png`} altText="homepage" />
+      <title>{t("title")}</title>
+      <Banner textComponent={t("title")} />
+      <FullImage imageSrc={`${pathname}/homepage.png`} altText={t("alt_homepage")} />
       <FullTextHeaders
-        headers="What's new?"
+        headers={t("heading_1")}
         textComponent={
           <>
-            <div>
-              As the pages on this website increase, it is important to
-              implement a search system and a tag system for a easier way to
-              find pages. In this update, a tag system is added, where hashtag
-              can be added to search for specific tags. (Don&apos;t try to
-              search for the pages that are hidden tho...)
-            </div>
+            <div>{t("paragraph_1")}</div>
             <LeftRightImage
               leftImageSrc={`${pathname}/tags.png`}
-              leftAltText="tags system on timeline page"
+              leftAltText={t("alt_tags")}
               rightImageSrc={`${pathname}/search_tags.png`}
-              rightAltText="search system for tags"
+              rightAltText={t("alt_search_tags")}
             />
-            <div>
-              You can also just search up things by pressing the icon in the
-              navbar or press the hotkey Ctrl+K or Ctrl+S
-            </div>
-            <FullImage imageSrc={`${pathname}/search.png`} altText="search" />
-            <div>
-              The 404 page also have a new look, if you somehow got there
-            </div>
-            <FullImage
-              imageSrc={`${pathname}/not_found.png`}
-              altText="search"
-            />
-            <div>
-              This update also includes some minor responsive design fixes, that
-              prevents my website from breaking apart :)
-            </div>
+            <div>{t("paragraph_2")}</div>
+            <FullImage imageSrc={`${pathname}/search.png`} altText={t("alt_search")} />
+            <div>{t("paragraph_3")}</div>
+            <FullImage imageSrc={`${pathname}/not_found.png`} altText={t("alt_404")} />
+            <div>{t("paragraph_4")}</div>
           </>
         }
       />

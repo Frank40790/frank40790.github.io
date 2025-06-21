@@ -1,0 +1,62 @@
+{
+  "en": {
+    "title": "DevDiversify",
+    "header_1": "What does this do?",
+    "paragraph_1": "This is a codebase that contains lots of different code, including code snippets, projects' code etc...",
+    "image_alt": "DevDiversify GitHub Page",
+    "header_2": "Programming Languages?",
+    "paragraph_2": "The codebase mainly has these languages, but could expand in the future",
+    "code_header": "Code",
+    "link_name": "DevDiversify"
+  },
+  "zh": {
+    "title": "DevDiversify",
+    "header_1": "這是什麼？",
+    "paragraph_1": "這是一個代碼庫，包含許多不同的代碼，包括代碼片段、專案代碼等等……",
+    "image_alt": "DevDiversify 的 GitHub 頁面",
+    "header_2": "程式語言？",
+    "paragraph_2": "這個代碼庫主要包含這些語言，但未來可能會擴展",
+    "code_header": "原始碼",
+    "link_name": "DevDiversify"
+  },
+  "de": {
+    "title": "DevDiversify",
+    "header_1": "Worum geht es hier?",
+    "paragraph_1": "Dies ist eine Codebasis, die viele verschiedene Codes enthält, darunter Code-Snippets, Projektcode usw.",
+    "image_alt": "DevDiversify GitHub-Seite",
+    "header_2": "Programmiersprachen?",
+    "paragraph_2": "Die Codebasis enthält hauptsächlich diese Sprachen, könnte aber in Zukunft erweitert werden",
+    "code_header": "Code",
+    "link_name": "DevDiversify"
+  },
+  "ja": {
+    "title": "DevDiversify",
+    "header_1": "これは何ですか？",
+    "paragraph_1": "これは、コードスニペットやプロジェクトのコードなど、多くの異なるコードを含むコードベースです。",
+    "image_alt": "DevDiversify の GitHub ページ",
+    "header_2": "プログラミング言語？",
+    "paragraph_2": "このコードベースには主にこれらの言語が含まれていますが、将来的に拡張される可能性があります。",
+    "code_header": "コード",
+    "link_name": "DevDiversify"
+  },
+  "es": {
+    "title": "DevDiversify",
+    "header_1": "¿Qué es esto?",
+    "paragraph_1": "Esta es una base de código que contiene muchos códigos diferentes, incluidos fragmentos de código, código de proyectos, etc.",
+    "image_alt": "Página de GitHub de DevDiversify",
+    "header_2": "¿Lenguajes de programación?",
+    "paragraph_2": "La base de código contiene principalmente estos lenguajes, pero podría expandirse en el futuro.",
+    "code_header": "Código",
+    "link_name": "DevDiversify"
+  },
+  "ko": {
+    "title": "DevDiversify",
+    "header_1": "이것은 무엇인가요?",
+    "paragraph_1": "이 코드는 코드 스니펫, 프로젝트 코드 등 다양한 코드를 포함하는 코드베이스입니다.",
+    "image_alt": "DevDiversify GitHub 페이지",
+    "header_2": "프로그래밍 언어?",
+    "paragraph_2": "코드베이스에는 주로 이 언어들이 포함되어 있지만, 앞으로 확장될 수도 있습니다.",
+    "code_header": "코드",
+    "link_name": "DevDiversify"
+  }
+}

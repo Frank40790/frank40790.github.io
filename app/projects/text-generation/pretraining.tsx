@@ -1,214 +1,125 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { FetchCode, MarkdownBlock } from "@/app/components/blocks/CodeBlocks";
+import { IconListStatic } from "@/app/components/blocks/IconBlocks";
 import {
-  RightPicLeftText,
-  FullTextHeaders,
-  IconListStatic,
   FullImage,
-  MarkdownBlock,
+  FullTextHeaders,
   LeftRightImage,
-  FetchCode,
-} from "../../components/blocks/PageBlock";
+  RightPicLeftText,
+} from "@/app/components/blocks/TextImageBlocks";
+import { usePathname } from "next/navigation";
+import { useTranslation } from "@/app/components/language/LocalisationHooks";
+import lang from "./lang.json";
 
+const translations = lang;
 export default function Pretraining() {
+  const pathname = usePathname();
+  const t = useTranslation(translations);
+
   const icons = [
     { icon: "devicon:python", name: "Python" },
     { icon: "devicon:pytorch", name: "PyTorch" },
   ];
-  const pathname = usePathname();
+
   return (
     <>
       <FullTextHeaders
-        headers="What does this do?"
-        textComponent={
-          <>
-            <div>
-              Language model had gain lots of attraction in the past few years
-              due to the launch of GPT models from OpenAI. Language modelling is
-              a interesting field to explore, it could unlock possibilities that
-              is hard to achieve in the past. While I personally had been using
-              the language model from GPT-2 and GPT-3 era, I have never tried to
-              build one myself, so I decided to create one while I learn the
-              underlying archetecture that powers this technology.
-            </div>
-          </>
-        }
+        headers={t("pre_what_header")}
+        textComponent={<div>{t("pre_what_text")}</div>}
       />
 
-      <FullTextHeaders headers="The Archetecture" textComponent="" />
-
+      <FullTextHeaders headers={t("pre_arch_header")} textComponent="" />
       <RightPicLeftText
         imageSrc={`${pathname}/transformer.png`}
         altText=""
         textComponent={
           <>
-            <div>
-              I started by looking at the full encoder-decoder transformer
-              archetecture. Not understanding anything about it, the
-              architecture looks very intimidating. But soon I realised that I
-              am going to build a decoder only transformer, so I started to
-              search up the function of each block on the decoder side, starting
-              from the text encoding, embedding, multihead attention and the
-              masking mechanism.
-            </div>
-            <div>image: (Vaswani, 2023)</div>
-          </>
-        }
-      />
-      <FullTextHeaders
-        headers="Learning Journey"
-        textComponent={
-          <>
-            <div>This is a brief summary of what I gathered</div>
-            <br />
-            <strong>Text Encoding</strong>
-            <div>
-              Starting from text encoding, after reading some resource, I found
-              out that the text sequence is encoded using a tokenizer where the
-              text tokens is converted into number representation. The
-              positional encoding is for reserving the token&apos;s position in
-              a sentence, retaining it&apos;s contextual meaning.
-            </div>
-            <br />
-            <strong>Text Embedding</strong>
-            <div>
-              The numeric data for the text encoding and position encoding is
-              converted into a embedding vector. The embedding model has to be
-              trained while the position encoding embedding can be calculated
-              using the formula below.
-            </div>
-            <br />
-            <MarkdownBlock content="$$\text{Odd:  } PE_{\text{(position, 2i)}} = \sin{\frac{\text{position}}{10000^{\frac{2i}{\text{model dimension}}}}} $$" />
-            <MarkdownBlock content="$$\text{Even: } PE_{\text{(position, 2i)}} = \cos{\frac{\text{position}}{10000^{\frac{2i}{\text{model dimension}}}}} $$" />
-            <br />
-            <div>
-              The embedded vector of the text and positional encoding is added
-              together into a joint vector, which allows for further processing
-            </div>
-            <FullImage
-              imageSrc={`${pathname}/encoding.png`}
-              altText="Encoder"
-            />
-            <strong>QKV</strong>
-            <div>
-              The vector from the embedding are duplicated into Query (Q), Key
-              (K) and Value (V). The Q,K and V is passed into trainable linear
-              layer, labeled as Q&apos;, K&apos;, V&apos;
-            </div>
-            <FullImage
-              imageSrc={`${pathname}/attention.png`}
-              altText="Encoder"
-            />
-            <strong>Multihead attention</strong>
-            <div>
-              Here, the Q&apos;,K&apos; and V&apos; are passed into a Multihead
-              attention where they are passed into the formula, where the d
-              <sub>k</sub> means (model dimension / number of attention head)
-            </div>
-            <MarkdownBlock content="$$ \text{softmax}(\frac{QK^T}{\sqrt{d_k}}) V $$" />
-
-            <div>
-              Then the matrix is masked so tokens will not be able to access
-              future tokens
-            </div>
-            <LeftRightImage
-              leftImageSrc={`${pathname}/masked.png`}
-              leftAltText="Masked attention"
-              rightImageSrc={`${pathname}/qkv_operation.png`}
-              rightAltText="QKV"
-            />
+            <div>{t("pre_arch_text_1")}</div>
+            <div>{t("pre_arch_citation")}</div>
           </>
         }
       />
 
-      <FullTextHeaders
-        headers="The Code"
-        textComponent={
-          <>
-            <strong>Text Encoding</strong>
-            <div>
-              The text encoding I used is the tiktoken from OpenAI, using the
-              same encoding method as GPT-2
-            </div>
-            <br />
-            <FetchCode url={`${pathname}/encoding.py`} />
-            <br />
-            <strong>Data Processing</strong>
-            <div>The data is splitted into training and validation set</div>
-            <br />
-            <FetchCode url={`${pathname}/data_processing.py`} />
-            <br />
-            <strong>Multihead Attention</strong>
-            <div>The multihead attention using query key and value</div>
-            <br />
-            <FetchCode url={`${pathname}/multihead_attention.py`} />
-            <br />
-            <strong>Loading Dataset</strong>
-            <div>
-              The dataset used in this is fineweb-edu (and some openwebtext),
-              concatenating all the text together, because this is going to be a
-              pretrained model
-            </div>
-            <br />
-            <FetchCode url={`${pathname}/load_dataset.py`} />
-            <br />
-            <strong>Training Code</strong>
-            <br />
-            <br />
-            <FetchCode url={`${pathname}/hyperparameter.py`} />
-            <br />
-            <FetchCode url={`${pathname}/training.py`} />
-            <br />
-          </>
-        }
-      />
-      <FullTextHeaders
-        headers="Training"
-        textComponent={
-          <>
-            <div>
-              After all those code writing, I started to train the model. I do
-              not have high computational resource to train this model :( , so I
-              only trained it for a few epoch on my computer&apos;s GPU, which
-              took quite some time to train.
-            </div>
-            <div>
-              These are the result of the models, where model_0003.model is
-              trained for the longest
-            </div>
-            <br />
-            <FetchCode url={`${pathname}/output.txt`} />
-            <br />
-            <div>
-              The output doesn&apos;t always make sense... but given the
-              computational resource, it is a ok result
-            </div>
-          </>
-        }
-      />
-      <FullTextHeaders headers="What is used?" textComponent={<></>} />
+      <FullTextHeaders headers={t("pre_learn_header")} textComponent={
+        <>
+          <div>{t("pre_learn_summary")}</div>
+          <br />
+          <strong>{t("pre_encoding_title")}</strong>
+          <div>{t("pre_encoding_text")}</div>
+          <br />
+          <strong>{t("pre_embedding_title")}</strong>
+          <div>{t("pre_embedding_text")}</div>
+          <br />
+          <MarkdownBlock content="$$\text{Odd:  } PE_{\text{(position, 2i)}} = \sin{\frac{\text{position}}{10000^{\frac{2i}{\text{model dimension}}}}} $$" />
+          <MarkdownBlock content="$$\text{Even: } PE_{\text{(position, 2i)}} = \cos{\frac{\text{position}}{10000^{\frac{2i}{\text{model dimension}}}}} $$" />
+          <br />
+          <div>{t("pre_embedding_add_text")}</div>
+          <FullImage imageSrc={`${pathname}/encoding.png`} altText="Encoder" />
+          <strong>{t("pre_qkv_title")}</strong>
+          <div>{t("pre_qkv_text")}</div>
+          <FullImage imageSrc={`${pathname}/attention.png`} altText="QKV" />
+          <strong>{t("pre_mha_title")}</strong>
+          <div>{t("pre_mha_text")}</div>
+          <MarkdownBlock content="$$ \text{softmax}(\frac{QK^T}{\sqrt{d_k}}) V $$" />
+          <div>{t("pre_masking_text")}</div>
+          <LeftRightImage
+            leftImageSrc={`${pathname}/masked.png`}
+            leftAltText={t("pre_masked_alt")}
+            rightImageSrc={`${pathname}/qkv_operation.png`}
+            rightAltText={t("pre_qkv_alt")}
+          />
+        </>
+      } />
+
+      <FullTextHeaders headers={t("pre_code_header")} textComponent={
+        <>
+          <strong>{t("pre_code_encoding")}</strong>
+          <div>{t("pre_code_encoding_text")}</div>
+          <FetchCode url={`${pathname}/encoding.py`} />
+          <br />
+          <strong>{t("pre_code_data")}</strong>
+          <div>{t("pre_code_data_text")}</div>
+          <FetchCode url={`${pathname}/data_processing.py`} />
+          <br />
+          <strong>{t("pre_code_attention")}</strong>
+          <div>{t("pre_code_attention_text")}</div>
+          <FetchCode url={`${pathname}/multihead_attention.py`} />
+          <br />
+          <strong>{t("pre_code_dataset")}</strong>
+          <div>{t("pre_code_dataset_text")}</div>
+          <FetchCode url={`${pathname}/load_dataset.py`} />
+          <br />
+          <strong>{t("pre_code_training")}</strong>
+          <FetchCode url={`${pathname}/hyperparameter.py`} />
+          <FetchCode url={`${pathname}/training.py`} />
+        </>
+      } />
+
+      <FullTextHeaders headers={t("pre_train_header")} textComponent={
+        <>
+          <div>{t("pre_train_text_1")}</div>
+          <div>{t("pre_train_text_2")}</div>
+          <FetchCode url={`${pathname}/output.txt`} />
+          <div>{t("pre_train_text_3")}</div>
+        </>
+      } />
+
+      <FullTextHeaders headers={t("pre_tech_header")} textComponent={<></>} />
       <IconListStatic icons={icons} />
-      <FullTextHeaders
-        headers="References"
-        textComponent={
-          <>
-            <div className="relative before:content-['>'] before:absolute before:left-[-1em]">
-              Vaswani, Ashish. Figure 1: The Transformer - model architecture. 2
-              Aug. 2023. Attention Is All You Need,
-              https://arxiv.org/pdf/1706.03762. Accessed 5 Dec 2024.
-            </div>
-            <div className="relative before:content-['>'] before:absolute before:left-[-1em]">
-              Karpathy, Andrej. “Let&apos;s Build GPT: From Scratch, in Code,
-              Spelled Out.” YouTube, YouTube, 17 Jan. 2023,
-              www.youtube.com/watch?v=kCc8FmEb1nY.
-            </div>
-            <div className="relative before:content-['>'] before:absolute before:left-[-1em]">
-              Karpathy, Andrej. nanoGPT, 2023,
-              https://github.com/karpathy/nanoGPT.git. Accessed 2024.
-            </div>
-          </>
-        }
-      />
+
+      <FullTextHeaders headers={t("pre_ref_header")} textComponent={
+        <>
+          <div className="relative before:content-['>'] before:absolute before:left-[-1em]">
+            Vaswani, Ashish. Figure 1: The Transformer - model architecture. 2 Aug. 2023. Attention Is All You Need, https://arxiv.org/pdf/1706.03762. Accessed 5 Dec 2024.
+          </div>
+          <div className="relative before:content-['>'] before:absolute before:left-[-1em]">
+            Karpathy, Andrej. “Let&apos;s Build GPT: From Scratch, in Code, Spelled Out.” YouTube, 17 Jan. 2023, www.youtube.com/watch?v=kCc8FmEb1nY.
+          </div>
+          <div className="relative before:content-['>'] before:absolute before:left-[-1em]">
+            Karpathy, Andrej. nanoGPT, 2023, https://github.com/karpathy/nanoGPT.git. Accessed 2024.
+          </div>
+        </>
+      } />
     </>
   );
 }

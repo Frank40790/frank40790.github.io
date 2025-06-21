@@ -1,0 +1,321 @@
+{
+  "en": {
+    "codebrew_title": "CISSA Codebrew Hackathon 2024",
+    "codebrew_desc": "A Hackathon event hosted by CISSA at UniMelb",
+    "codebrew_searchtag": "",
+
+    "foc1_title": "Foundation of Computing Project 1",
+    "foc1_desc": "Vaccumator: Exploring about path-finding algorithm",
+    "foc1_searchtag": "",
+
+    "foc2_title": "Foundation of Computing Project 2",
+    "foc2_desc": "Zoomerbinies: Grouping objects by different constraints",
+    "foc2_searchtag": "",
+
+    "vichack_title": "VICHACK 2024",
+    "vichack_desc": "Hackathon",
+    "vichack_searchtag": "",
+
+    "foa1_title": "Foundation of Algorithm Project 1",
+    "foa1_desc": "Forging the basics of C",
+    "foa1_searchtag": "algorithms, csv",
+
+    "foa2_title": "Foundation of Algorithm Project 2",
+    "foa2_desc": "Game of Life",
+    "foa2_searchtag": "algorithms, celleur automaton, eca",
+
+    "emd_title": "Engineering Modelling and Design : Autonomous Robot Project",
+    "emd_desc": "Implementing line following algorithm and PID control",
+    "emd_searchtag": "arduino, pid, differential control, robotics, matlab",
+
+    "idx_title": "Interaction Design Project",
+    "idx_desc": "Creating prototypes about tabletop game using Figma",
+    "idx_searchtag": "interaction design, human computer interaction, HCI",
+
+    "opengl_title": "OpenGL Projection",
+    "opengl_desc": "Using linear algebra projection to project a shape",
+    "opengl_searchtag": "linear algebra, la, math, 2d projection, draw",
+
+    "textgen_title": "Text Generation",
+    "textgen_desc": "Writing a small decoder only transformer language model",
+    "textgen_searchtag": "genai, generative, artificial intelligence, machine learning, attention, large language model, nlp, natural language processing, neural network, qkv, query key value",
+
+    "imggen_title": "Image Generation UNet",
+    "imggen_desc": "Writing a small UNet diffusion model (DDPM)",
+    "imggen_searchtag": "ddpm, unet, cnn, convolution, neural network, image processing",
+
+    "tag_hackathon": "hackathon",
+    "tag_uniproject": "university project",
+    "tag_linear_algebra": "linear algebra",
+    "tag_ai_ml": "ai/ml",
+    "tag_llm": "llm",
+    "tag_image_generation": "image generation"
+  },
+  "zh": {
+    "hackathon": "黑客松",
+    "uniproject": "大學專案",
+
+    "codebrew_title": "CISSA Codebrew 黑客松 2024",
+    "codebrew_desc": "由墨爾本大學 CISSA 舉辦的黑客松活動",
+    "codebrew_searchtag": "",
+
+    "foc1_title": "計算基礎專案 1",
+    "foc1_desc": "Vaccumator：探索路徑尋找演算法",
+    "foc1_searchtag": "",
+
+    "foc2_title": "計算基礎專案 2",
+    "foc2_desc": "Zoomerbinies：依據限制條件進行物件分類",
+    "foc2_searchtag": "",
+
+    "vichack_title": "VICHACK 2024",
+    "vichack_desc": "黑客松活動",
+    "vichack_searchtag": "",
+
+    "foa1_title": "演算法基礎專案 1",
+    "foa1_desc": "打好 C 語言基礎",
+    "foa1_searchtag": "演算法, csv",
+
+    "foa2_title": "演算法基礎專案 2",
+    "foa2_desc": "生命遊戲",
+    "foa2_searchtag": "演算法, 元胞自動機, eca",
+
+    "emd_title": "工程建模與設計：自動機器人專案",
+    "emd_desc": "實作循線演算法與 PID 控制",
+    "emd_searchtag": "arduino, pid, 差速控制, 機器人, matlab",
+
+    "idx_title": "互動設計專案",
+    "idx_desc": "使用 Figma 設計桌遊原型",
+    "idx_searchtag": "互動設計, 人機互動, HCI",
+
+    "opengl_title": "OpenGL 投影",
+    "opengl_desc": "使用線性代數投影形狀",
+    "opengl_searchtag": "線性代數, la, 數學, 二維投影, 繪圖",
+
+    "textgen_title": "文字生成",
+    "textgen_desc": "撰寫簡單的 Transformer 語言模型（Decoder-only）",
+    "textgen_searchtag": "genai, 生成式AI, 人工智慧, 機器學習, 注意力機制, 大型語言模型, 自然語言處理, 神經網路, qkv",
+
+    "imggen_title": "影像生成 UNet",
+    "imggen_desc": "撰寫簡單的 UNet 擴散模型（DDPM）",
+    "imggen_searchtag": "ddpm, unet, cnn, 卷積, 神經網路, 影像處理",
+    
+    "tag_hackathon": "黑客松",
+    "tag_uniproject": "大學專題",
+    "tag_linear_algebra": "線性代數",
+    "tag_ai_ml": "人工智慧／機器學習",
+    "tag_llm": "大型語言模型",
+    "tag_image_generation": "圖像生成"
+  },
+  "de": {
+    "hackathon": "Hackathon",
+    "uniproject": "Universitätsprojekt",
+
+    "codebrew_title": "CISSA Codebrew Hackathon 2024",
+    "codebrew_desc": "Ein Hackathon veranstaltet von CISSA an der UniMelb",
+    "codebrew_searchtag": "",
+
+    "foc1_title": "Grundlagen der Informatik Projekt 1",
+    "foc1_desc": "Vaccumator: Erkundung von Pfadfindungsalgorithmen",
+    "foc1_searchtag": "",
+
+    "foc2_title": "Grundlagen der Informatik Projekt 2",
+    "foc2_desc": "Zoomerbinies: Gruppieren von Objekten anhand von Kriterien",
+    "foc2_searchtag": "",
+
+    "vichack_title": "VICHACK 2024",
+    "vichack_desc": "Hackathon",
+    "vichack_searchtag": "",
+
+    "foa1_title": "Grundlagen der Algorithmen Projekt 1",
+    "foa1_desc": "Grundlagen von C erlernen",
+    "foa1_searchtag": "algorithmen, csv",
+
+    "foa2_title": "Grundlagen der Algorithmen Projekt 2",
+    "foa2_desc": "Game of Life",
+    "foa2_searchtag": "algorithmen, zellulärer Automat, eca",
+
+    "emd_title": "Technisches Modellieren & Design: Autonomes Roboterprojekt",
+    "emd_desc": "Implementierung von Linienverfolgung und PID-Steuerung",
+    "emd_searchtag": "arduino, pid, differenzielle Steuerung, Robotik, matlab",
+
+    "idx_title": "Interaktionsdesign-Projekt",
+    "idx_desc": "Prototypen eines Brettspiels mit Figma entwerfen",
+    "idx_searchtag": "interaktionsdesign, mensch-computer-interaktion, HCI",
+
+    "opengl_title": "OpenGL-Projektion",
+    "opengl_desc": "Verwendung linearer Algebra zur Projektion einer Form",
+    "opengl_searchtag": "lineare algebra, la, mathematik, 2d projektion, zeichnen",
+
+    "textgen_title": "Textgenerierung",
+    "textgen_desc": "Implementierung eines einfachen Decoder-Only-Transformers",
+    "textgen_searchtag": "genai, generativ, künstliche intelligenz, maschinelles lernen, aufmerksamkeit, großes sprachmodell, nlp, natürliche sprachverarbeitung, neuronales netzwerk, qkv",
+
+    "imggen_title": "Bildgenerierung UNet",
+    "imggen_desc": "Ein einfacher UNet-Diffusionsmodell (DDPM)",
+    "imggen_searchtag": "ddpm, unet, cnn, faltung, neuronales netz, bildverarbeitung",
+
+    "tag_hackathon": "Hackathon",
+    "tag_uniproject": "Universitätsprojekt",
+    "tag_linear_algebra": "Lineare Algebra",
+    "tag_ai_ml": "KI/ML",
+    "tag_llm": "Großes Sprachmodell",
+    "tag_image_generation": "Bildgenerierung"
+  },
+  "ja": {
+    "codebrew_title": "CISSA Codebrew ハッカソン 2024",
+    "codebrew_desc": "UniMelbでCISSAが主催するハッカソンイベント",
+    "codebrew_searchtag": "",
+
+    "foc1_title": "コンピューティング基礎プロジェクト 1",
+    "foc1_desc": "Vaccumator：経路探索アルゴリズムの探求",
+    "foc1_searchtag": "",
+
+    "foc2_title": "コンピューティング基礎プロジェクト 2",
+    "foc2_desc": "Zoomerbinies：異なる制約条件でのオブジェクト分類",
+    "foc2_searchtag": "",
+
+    "vichack_title": "VICHACK 2024",
+    "vichack_desc": "ハッカソン",
+    "vichack_searchtag": "",
+
+    "foa1_title": "アルゴリズム基礎プロジェクト 1",
+    "foa1_desc": "C言語の基礎を鍛える",
+    "foa1_searchtag": "アルゴリズム, csv",
+
+    "foa2_title": "アルゴリズム基礎プロジェクト 2",
+    "foa2_desc": "ライフゲーム",
+    "foa2_searchtag": "アルゴリズム, セル・オートマトン, ECA",
+
+    "emd_title": "工学モデリングと設計：自律ロボットプロジェクト",
+    "emd_desc": "ラインフォローアルゴリズムとPID制御の実装",
+    "emd_searchtag": "Arduino, PID, 差動制御, ロボティクス, MATLAB",
+
+    "idx_title": "インタラクションデザインプロジェクト",
+    "idx_desc": "Figmaを使ってテーブルトップゲームのプロトタイプを作成",
+    "idx_searchtag": "インタラクションデザイン, HCI, ヒューマンコンピュータインタラクション",
+
+    "opengl_title": "OpenGL 投影",
+    "opengl_desc": "線形代数による図形の投影",
+    "opengl_searchtag": "線形代数, 数学, 2D投影, 描画",
+
+    "textgen_title": "テキスト生成",
+    "textgen_desc": "デコーダのみのトランスフォーマー言語モデルを構築",
+    "textgen_searchtag": "生成AI, 人工知能, 機械学習, アテンション, LLM, 自然言語処理, ニューラルネットワーク, QKV",
+
+    "imggen_title": "画像生成 UNet",
+    "imggen_desc": "シンプルなUNet拡散モデル (DDPM) の実装",
+    "imggen_searchtag": "DDPM, UNet, CNN, 畳み込み, ニューラルネットワーク, 画像処理",
+
+    "tag_hackathon": "ハッカソン",
+    "tag_uniproject": "大学プロジェクト",
+    "tag_linear_algebra": "線形代数",
+    "tag_ai_ml": "AI/ML",
+    "tag_llm": "LLM",
+    "tag_image_generation": "画像生成"
+  },
+  "es": {
+    "codebrew_title": "Hackathon Codebrew de CISSA 2024",
+    "codebrew_desc": "Un evento de hackathon organizado por CISSA en UniMelb",
+    "codebrew_searchtag": "",
+
+    "foc1_title": "Proyecto 1 de Fundamentos de la Computación",
+    "foc1_desc": "Vaccumator: Exploración de algoritmos de búsqueda de caminos",
+    "foc1_searchtag": "",
+
+    "foc2_title": "Proyecto 2 de Fundamentos de la Computación",
+    "foc2_desc": "Zoomerbinies: Agrupar objetos con diferentes restricciones",
+    "foc2_searchtag": "",
+
+    "vichack_title": "VICHACK 2024",
+    "vichack_desc": "Hackathon",
+    "vichack_searchtag": "",
+
+    "foa1_title": "Proyecto 1 de Fundamentos de Algoritmos",
+    "foa1_desc": "Formando las bases de C",
+    "foa1_searchtag": "algoritmos, csv",
+
+    "foa2_title": "Proyecto 2 de Fundamentos de Algoritmos",
+    "foa2_desc": "Juego de la Vida",
+    "foa2_searchtag": "algoritmos, autómata celular, ECA",
+
+    "emd_title": "Modelado y Diseño en Ingeniería: Proyecto de Robot Autónomo",
+    "emd_desc": "Implementación de algoritmo de seguimiento de línea y control PID",
+    "emd_searchtag": "arduino, pid, control diferencial, robótica, matlab",
+
+    "idx_title": "Proyecto de Diseño de Interacción",
+    "idx_desc": "Creación de prototipos de un juego de mesa usando Figma",
+    "idx_searchtag": "diseño de interacción, interacción humano-computadora, HCI",
+
+    "opengl_title": "Proyección en OpenGL",
+    "opengl_desc": "Usando álgebra lineal para proyectar una forma",
+    "opengl_searchtag": "álgebra lineal, matemáticas, proyección 2D, dibujo",
+
+    "textgen_title": "Generación de Texto",
+    "textgen_desc": "Creación de un pequeño modelo de lenguaje basado en transformer (solo decodificador)",
+    "textgen_searchtag": "genai, generación, inteligencia artificial, aprendizaje automático, atención, LLM, PLN, redes neuronales, QKV",
+
+    "imggen_title": "Generación de Imágenes UNet",
+    "imggen_desc": "Escritura de un modelo de difusión UNet simple (DDPM)",
+    "imggen_searchtag": "ddpm, unet, cnn, convolución, redes neuronales, procesamiento de imágenes",
+
+    "tag_hackathon": "hackathon",
+    "tag_uniproject": "proyecto universitario",
+    "tag_linear_algebra": "álgebra lineal",
+    "tag_ai_ml": "IA/ML",
+    "tag_llm": "LLM",
+    "tag_image_generation": "generación de imágenes"
+  },
+  "ko": {
+    "codebrew_title": "CISSA 코드브루 해커톤 2024",
+    "codebrew_desc": "UniMelb의 CISSA가 주최한 해커톤 이벤트",
+    "codebrew_searchtag": "",
+
+    "foc1_title": "컴퓨팅 기초 프로젝트 1",
+    "foc1_desc": "Vaccumator: 경로 탐색 알고리즘 탐색",
+    "foc1_searchtag": "",
+
+    "foc2_title": "컴퓨팅 기초 프로젝트 2",
+    "foc2_desc": "Zoomerbinies: 다양한 제약 조건으로 객체 분류",
+    "foc2_searchtag": "",
+
+    "vichack_title": "VICHACK 2024",
+    "vichack_desc": "해커톤",
+    "vichack_searchtag": "",
+
+    "foa1_title": "알고리즘 기초 프로젝트 1",
+    "foa1_desc": "C 언어 기초 다지기",
+    "foa1_searchtag": "알고리즘, csv",
+
+    "foa2_title": "알고리즘 기초 프로젝트 2",
+    "foa2_desc": "생명의 게임",
+    "foa2_searchtag": "알고리즘, 셀룰러 오토마톤, ECA",
+
+    "emd_title": "공학 모델링 및 설계: 자율 로봇 프로젝트",
+    "emd_desc": "라인 추적 알고리즘과 PID 제어 구현",
+    "emd_searchtag": "아두이노, PID, 차동 제어, 로보틱스, MATLAB",
+
+    "idx_title": "인터랙션 디자인 프로젝트",
+    "idx_desc": "Figma를 활용한 테이블탑 게임 프로토타입 제작",
+    "idx_searchtag": "인터랙션 디자인, 인간-컴퓨터 상호작용, HCI",
+
+    "opengl_title": "OpenGL 투영",
+    "opengl_desc": "선형대수를 이용한 도형 투영",
+    "opengl_searchtag": "선형대수, 수학, 2D 투영, 드로잉",
+
+    "textgen_title": "텍스트 생성",
+    "textgen_desc": "디코더 전용 트랜스포머 언어 모델 구현",
+    "textgen_searchtag": "생성 AI, 인공지능, 머신러닝, 어텐션, LLM, 자연어 처리, 신경망, QKV",
+
+    "imggen_title": "이미지 생성 UNet",
+    "imggen_desc": "간단한 UNet 기반 확산 모델 (DDPM) 구현",
+    "imggen_searchtag": "DDPM, UNet, CNN, 컨볼루션, 신경망, 이미지 처리",
+
+    "tag_hackathon": "해커톤",
+    "tag_uniproject": "대학교 프로젝트",
+    "tag_linear_algebra": "선형대수",
+    "tag_ai_ml": "AI/ML",
+    "tag_llm": "LLM",
+    "tag_image_generation": "이미지 생성"
+  }
+
+}

@@ -1,12 +1,8 @@
+import { URLLinkBlock } from "@/app/components/blocks/LinkBlocks";
 import {
-  LeftPicRightText,
-  RightPicLeftText,
-  FullText,
-  FullTextHeaders,
   Banner,
-  IconList,
-  URLLinkBlock,
-} from "../../components/blocks/PageBlock";
+  FullTextHeaders,
+} from "@/app/components/blocks/TextImageBlocks";
 
 export default function Event() {
   return (

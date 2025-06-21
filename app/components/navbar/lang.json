@@ -1,0 +1,38 @@
+{
+  "en": {
+    "home": "Home",
+    "timeline": "Timeline",
+    "projects": "Projects",
+    "blog": "Blog"
+  },
+  "zh": {
+    "home": "首頁",
+    "timeline": "時間軸",
+    "projects": "專案",
+    "blog": "部落格"
+  },
+  "de": {
+    "home": "Startseite",
+    "timeline": "Zeitachse",
+    "projects": "Projekte",
+    "blog": "Blog"
+  },
+  "ja": {
+    "home": "ホーム",
+    "timeline": "タイムライン",
+    "projects": "プロジェクト",
+    "blog": "ブログ"
+  },
+  "es": {
+    "home": "Inicio",
+    "timeline": "Cronología",
+    "projects": "Proyectos",
+    "blog": "Blog"
+  },
+  "ko": {
+    "home": "홈",
+    "timeline": "타임라인",
+    "projects": "프로젝트",
+    "blog": "블로그"
+  }
+}

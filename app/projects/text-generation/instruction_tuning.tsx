@@ -1,89 +1,63 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { FetchCode } from "@/app/components/blocks/CodeBlocks";
 import {
-  RightPicLeftText,
-  FullTextHeaders,
-  IconListStatic,
   FullImage,
-  MarkdownBlock,
+  FullTextHeaders,
   LeftRightImage,
-  FetchCode,
-} from "../../components/blocks/PageBlock";
+} from "@/app/components/blocks/TextImageBlocks";
+import { usePathname } from "next/navigation";
+import { useTranslation } from "@/app/components/language/LocalisationHooks";
+import lang from "./lang.json";
+
+const translations = lang;
 
 export default function InstructionTuning() {
   const pathname = usePathname();
+  const t = useTranslation(translations);
+
   return (
     <>
       <FullTextHeaders
-        headers="What does this do?"
+        headers={t("section_what_header")}
         textComponent={
           <>
-            <div>
-              This is the stage after pretraining the language model, mainly to
-              make multi turn conversation possible, rather than being an
-              &quot;autocompletion&quot; bot.
-            </div>
+            <div>{t("section_what_text_1")}</div>
           </>
         }
       />
       <FullTextHeaders
-        headers="Training"
+        headers={t("section_training_header")}
         textComponent={
           <>
-            <div>
-              For instruction tuning, I only swapped out the dataset and embed
-              the prompt template into the training tokens, which is relatively
-              simple. However, this is not without any challenges. First of all,
-              the prompt template is hard to manage, especially for the new
-              line. Second, I have to manually adjust the padding for the
-              instruction tuning dataset so the batch fits into the context
-              window.
-            </div>
-            <div>
-              I decided to use the instruction template below, simply because
-              triple hashtag is 1 token in GPT-2 tokenizer, which makes
-              terminating the generation easier.
-            </div>
+            <div>{t("section_training_text_1")}</div>
+            <div>{t("section_training_text_2")}</div>
             <br />
             <FetchCode url={`${pathname}/instruction_template.txt`} />
           </>
         }
       />
-
       <FullTextHeaders
-        headers="By the way..."
+        headers={t("section_bytheway_header")}
         textComponent={
           <>
-            <div>
-              When I am writing code to do instruction tuning, I want a easier
-              way to run, train and test the model. Command line argument is
-              getting pretty long at this point. So I decided to use curses for
-              selecting the function I want to run, while also adding some tqdm
-              progress bar to visualise the progress.
-            </div>
+            <div>{t("section_bytheway_text")}</div>
             <LeftRightImage
               leftImageSrc={`${pathname}/curses_run_type.png`}
-              leftAltText="Curses run type"
+              leftAltText={t("curses_left_alt")}
               rightImageSrc={`${pathname}/curses_model_type.png`}
-              rightAltText="Curses model type"
+              rightAltText={t("curses_right_alt")}
             />
           </>
         }
       />
-
       <FullTextHeaders
-        headers="OpenAI compatiable API"
+        headers={t("section_api_header")}
         textComponent={
           <>
-            <div>
-              Just for fun, I coded up a API endpoint that process the request
-              sent by OpenAI library so that I can connect a webui to my model.
-              It can explain something to an extent, but my model still says
-              1+1=1
-            </div>
+            <div>{t("section_api_text")}</div>
             <FullImage
               imageSrc={`${pathname}/webui.png`}
-              altText="Running on WebUI"
+              altText={t("webui_alt")}
             />
           </>
         }

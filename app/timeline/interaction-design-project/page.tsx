@@ -1,11 +1,11 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { IconListStatic } from "@/app/components/blocks/IconBlocks";
 import {
-  FullTextHeaders,
   Banner,
+  FullTextHeaders,
   LeftRightImage,
-  IconListStatic,
-} from "../../components/blocks/PageBlock";
+} from "@/app/components/blocks/TextImageBlocks";
+import { usePathname } from "next/navigation";
 
 export default function Event() {
   const icons = [{ icon: "devicon:figma", name: "Figma" }];

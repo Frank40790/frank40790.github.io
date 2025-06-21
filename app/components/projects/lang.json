@@ -1,0 +1,238 @@
+{
+  "en": {
+    "external_brain_title": "External Brain",
+    "external_brain_desc": "An app that transforms note taking",
+    "external_brain_searchtag": "projects, notetaking, note taking, llm, large language model, text to speech",
+
+    "dev_diversify_title": "Dev Diversify",
+    "dev_diversify_desc": "A toolbox for programmers",
+    "dev_diversify_searchtag": "projects, tools, toolbox, toolkit, development tools",
+
+    "semantic_spotlight_title": "Semantic Spotlight",
+    "semantic_spotlight_desc": "Semantic search",
+    "semantic_spotlight_searchtag": "projects, semantic search, automatic highlighting",
+
+    "text_generation_title": "Text Generation",
+    "text_generation_desc": "Writing a small decoder only transformer language model",
+    "text_generation_searchtag": "genai, generative, artificial intelligence, machine learning, attention, large language model, nlp, natural language processing, neural network, qkv, query key value",
+
+    "simple_chat_app_title": "Simple Chat App",
+    "simple_chat_app_desc": "A really simple NextJS app for chatbot",
+    "simple_chat_app_searchtag": "ai/ml, webapp, interface, ui/ux, language model",
+
+    "raytracing_title": "Raytracing",
+    "raytracing_desc": "A ray tracer implemented in Java",
+    "raytracing_searchtag": "raytracing",
+
+    "musicplayer_title": "Focal: Music Player",
+    "musicplayer_desc": "Project done in Hackiethon 2025 that won the Best Design award",
+    "musicplayer_searchtag": "focal, best design, hackiethon, musicplayer", 
+
+    "tag_hackathon": "hackathon",
+    "tag_music": "music",
+    "tag_tts": "tts",
+    "tag_llm": "llm",
+    "tag_ai": "ai",
+    "tag_ai_ml": "ai/ml",
+    "tag_semantic_search": "semantic search",
+    "tag_web": "web",
+    "tag_graphics": "graphics",
+    "tag_ray_tracing": "ray tracing"
+  },
+  "zh": {
+    "external_brain_title": "External Brain",
+    "external_brain_desc": "一個改變筆記方式的應用程式",
+    "external_brain_searchtag": "專案, 筆記, 筆記應用, llm, 大型語言模型, 語音合成",
+
+    "dev_diversify_title": "Dev Diversify",
+    "dev_diversify_desc": "為程式員打造的工具箱",
+    "dev_diversify_searchtag": "專案, 工具, 工具箱, 開發工具",
+
+    "semantic_spotlight_title": "Semantic Spotlight",
+    "semantic_spotlight_desc": "語義搜尋",
+    "semantic_spotlight_searchtag": "專案, 語義搜尋, 自動高亮",
+
+    "text_generation_title": "文字生成",
+    "text_generation_desc": "編寫小型 Transformer 解碼器語言模型",
+    "text_generation_searchtag": "生成式AI, 人工智慧, 機器學習, 注意力機制, 大型語言模型, 自然語言處理, 神經網絡",
+
+    "simple_chat_app_title": "簡易聊天應用",
+    "simple_chat_app_desc": "一個非常簡單的 NextJS 聊天機器人應用",
+    "simple_chat_app_searchtag": "AI, 網頁應用, 介面設計, 語言模型",
+
+    "raytracing_title": "光線追蹤",
+    "raytracing_desc": "用 Java 實現的光線追蹤器",
+    "raytracing_searchtag": "光線追蹤",
+
+    "musicplayer_title": "Focal：音樂播放器",
+    "musicplayer_desc": "在 Hackiethon 2025 中完成的專案，榮獲最佳設計獎",
+    "musicplayer_searchtag": "focal, 最佳設計, hackiethon, 音樂播放器",
+
+    "tag_hackathon": "黑客松",
+    "tag_music": "音樂",
+    "tag_tts": "文字轉語音",
+    "tag_llm": "大型語言模型",
+    "tag_ai": "人工智慧",
+    "tag_ai_ml": "人工智慧／機器學習",
+    "tag_semantic_search": "語意搜尋",
+    "tag_web": "網路",
+    "tag_graphics": "圖形",
+    "tag_ray_tracing": "光線追蹤"
+  },
+  "de": {
+    "external_brain_title": "External Brain",
+    "external_brain_desc": "Eine App, die Notizen neu definiert",
+    "external_brain_searchtag": "projekte, notizen, notiz-app, llm, großes sprachmodell, text-zu-sprache",
+
+    "dev_diversify_title": "Dev Diversify",
+    "dev_diversify_desc": "Ein Werkzeugkasten für Programmierer",
+    "dev_diversify_searchtag": "projekte, werkzeuge, toolkit, entwicklungswerkzeuge",
+
+    "semantic_spotlight_title": "Semantic Spotlight",
+    "semantic_spotlight_desc": "Semantische Suche",
+    "semantic_spotlight_searchtag": "projekte, semantische suche, automatische hervorhebung",
+
+    "text_generation_title": "Textgenerierung",
+    "text_generation_desc": "Ein kleiner Transformer-Sprachmodell-Decoder",
+    "text_generation_searchtag": "genai, generativ, künstliche intelligenz, maschinelles lernen, aufmerksamkeit, großes sprachmodell, nlp, natürliche sprachverarbeitung, neuronales netz",
+
+    "simple_chat_app_title": "Einfache Chat-App",
+    "simple_chat_app_desc": "Eine einfache NextJS Chatbot-App",
+    "simple_chat_app_searchtag": "ai/ml, webanwendung, schnittstelle, ui/ux, sprachmodell",
+
+    "raytracing_title": "Raytracing",
+    "raytracing_desc": "Ein Raytracer in Java implementiert",
+    "raytracing_searchtag": "raytracing",
+    "musicplayer_title": "Focal: Musikplayer",
+    "musicplayer_desc": "Projekt aus dem Hackiethon 2025, das den Preis für das beste Design gewann",
+    "musicplayer_searchtag": "focal, bestes design, hackiethon, musikplayer",
+    
+    "tag_hackathon": "Hackathon",
+    "tag_music": "Musik",
+    "tag_tts": "Text-zu-Sprache",
+    "tag_llm": "Großes Sprachmodell",
+    "tag_ai": "Künstliche Intelligenz",
+    "tag_ai_ml": "KI/ML",
+    "tag_semantic_search": "Semantische Suche",
+    "tag_web": "Web",
+    "tag_graphics": "Grafik",
+    "tag_ray_tracing": "Raytracing"
+  },
+  "ja": {
+    "external_brain_title": "External Brain",
+    "external_brain_desc": "ノートテイキングを変えるアプリ",
+    "external_brain_searchtag": "プロジェクト, ノート, LLM, 大規模言語モデル, 音声合成",
+
+    "dev_diversify_title": "Dev Diversify",
+    "dev_diversify_desc": "プログラマー向けのツールボックス",
+    "dev_diversify_searchtag": "プロジェクト, ツール, ツールキット, 開発ツール",
+
+    "semantic_spotlight_title": "Semantic Spotlight",
+    "semantic_spotlight_desc": "セマンティック検索",
+    "semantic_spotlight_searchtag": "プロジェクト, セマンティック検索, 自動ハイライト",
+
+    "text_generation_title": "テキスト生成",
+    "text_generation_desc": "デコーダ専用のトランスフォーマー言語モデルを作成",
+    "text_generation_searchtag": "生成AI, 人工知能, 機械学習, アテンション, LLM, 自然言語処理, ニューラルネットワーク, QKV",
+
+    "simple_chat_app_title": "シンプルチャットアプリ",
+    "simple_chat_app_desc": "NextJSを使ったシンプルなチャットボットアプリ",
+    "simple_chat_app_searchtag": "AI/ML, ウェブアプリ, インターフェース, UI/UX, 言語モデル",
+
+    "raytracing_title": "レイトレーシング",
+    "raytracing_desc": "Javaで実装したレイトレーサー",
+    "raytracing_searchtag": "レイトレーシング",
+    "musicplayer_title": "Focal：音楽プレーヤー",
+    "musicplayer_desc": "Hackiethon 2025で制作され、最優秀デザイン賞を受賞したプロジェクト",
+    "musicplayer_searchtag": "focal, 最優秀デザイン, hackiethon, 音楽プレーヤー",
+    
+    "tag_hackathon": "ハッカソン",
+    "tag_music": "音楽",
+    "tag_tts": "TTS",
+    "tag_llm": "LLM",
+    "tag_ai": "AI",
+    "tag_ai_ml": "AI/ML",
+    "tag_semantic_search": "セマンティック検索",
+    "tag_web": "ウェブ",
+    "tag_graphics": "グラフィックス",
+    "tag_ray_tracing": "レイトレーシング"
+  },
+  "es": {
+    "external_brain_title": "External Brain",
+    "external_brain_desc": "Una app que transforma la toma de notas",
+    "external_brain_searchtag": "proyectos, notas, toma de notas, llm, modelo de lenguaje grande, texto a voz",
+
+    "dev_diversify_title": "Dev Diversify",
+    "dev_diversify_desc": "Un conjunto de herramientas para programadores",
+    "dev_diversify_searchtag": "proyectos, herramientas, conjunto de herramientas, herramientas de desarrollo",
+
+    "semantic_spotlight_title": "Semantic Spotlight",
+    "semantic_spotlight_desc": "Búsqueda semántica",
+    "semantic_spotlight_searchtag": "proyectos, búsqueda semántica, resaltado automático",
+
+    "text_generation_title": "Generación de Texto",
+    "text_generation_desc": "Modelo de lenguaje transformer (solo decodificador)",
+    "text_generation_searchtag": "genai, generación, inteligencia artificial, aprendizaje automático, atención, LLM, PLN, redes neuronales, QKV",
+
+    "simple_chat_app_title": "Aplicación de Chat Simple",
+    "simple_chat_app_desc": "Una app NextJS muy simple para chatbot",
+    "simple_chat_app_searchtag": "AI/ML, app web, interfaz, UI/UX, modelo de lenguaje",
+
+    "raytracing_title": "Trazado de Rayos",
+    "raytracing_desc": "Un trazador de rayos implementado en Java",
+    "raytracing_searchtag": "trazado de rayos",
+    "musicplayer_title": "Focal: Reproductor de Música",
+    "musicplayer_desc": "Proyecto realizado en Hackiethon 2025 que ganó el premio al Mejor Diseño",
+    "musicplayer_searchtag": "focal, mejor diseño, hackiethon, reproductor de música",
+    
+    "tag_hackathon": "hackathon",
+    "tag_music": "música",
+    "tag_tts": "TTS",
+    "tag_llm": "LLM",
+    "tag_ai": "IA",
+    "tag_ai_ml": "IA/ML",
+    "tag_semantic_search": "búsqueda semántica",
+    "tag_web": "web",
+    "tag_graphics": "gráficos",
+    "tag_ray_tracing": "trazado de rayos"
+  },
+  "ko": {
+    "external_brain_title": "External Brain",
+    "external_brain_desc": "노트 필기를 혁신하는 앱",
+    "external_brain_searchtag": "프로젝트, 노트필기, LLM, 대형 언어 모델, 음성 합성",
+
+    "dev_diversify_title": "Dev Diversify",
+    "dev_diversify_desc": "프로그래머를 위한 도구 모음",
+    "dev_diversify_searchtag": "프로젝트, 도구, 툴박스, 개발 도구",
+
+    "semantic_spotlight_title": "Semantic Spotlight",
+    "semantic_spotlight_desc": "의미 기반 검색",
+    "semantic_spotlight_searchtag": "프로젝트, 의미 기반 검색, 자동 하이라이팅",
+
+    "text_generation_title": "텍스트 생성",
+    "text_generation_desc": "디코더 전용 트랜스포머 언어 모델 작성",
+    "text_generation_searchtag": "생성 AI, 인공지능, 머신러닝, 어텐션, LLM, 자연어 처리, 신경망, QKV",
+
+    "simple_chat_app_title": "간단한 채팅 앱",
+    "simple_chat_app_desc": "챗봇을 위한 간단한 NextJS 앱",
+    "simple_chat_app_searchtag": "AI/ML, 웹앱, 인터페이스, UI/UX, 언어 모델",
+
+    "raytracing_title": "레이 트레이싱",
+    "raytracing_desc": "Java로 구현한 레이 트레이서",
+    "raytracing_searchtag": "레이 트레이싱",
+    "musicplayer_title": "Focal: 음악 플레이어",
+    "musicplayer_desc": "Hackiethon 2025에서 제작되어 최우수 디자인상을 수상한 프로젝트",
+    "musicplayer_searchtag": "focal, 최우수 디자인, hackiethon, 음악 플레이어",
+    
+    "tag_hackathon": "해커톤",
+    "tag_music": "음악",
+    "tag_tts": "TTS",
+    "tag_llm": "LLM",
+    "tag_ai": "AI",
+    "tag_ai_ml": "AI/ML",
+    "tag_semantic_search": "의미 기반 검색",
+    "tag_web": "웹",
+    "tag_graphics": "그래픽",
+    "tag_ray_tracing": "레이 트레이싱"
+  }
+}

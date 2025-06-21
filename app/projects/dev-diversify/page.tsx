@@ -1,13 +1,19 @@
 "use client";
-import {
-  FullTextHeaders,
-  FullImage,
-  Banner,
-  IconListStatic,
-  CodeLinkBlock,
-} from "../../components/blocks/PageBlock";
+
 import { usePathname } from "next/navigation";
 import { github } from "@/app/components/Detail";
+import {
+  Banner,
+  FullImage,
+  FullTextHeaders,
+} from "@/app/components/blocks/TextImageBlocks";
+import { IconListStatic } from "@/app/components/blocks/IconBlocks";
+import { CodeLinkBlock } from "@/app/components/blocks/LinkBlocks";
+
+import { useTranslation } from "@/app/components/language/LocalisationHooks";
+import lang from "./lang.json";
+
+const translations = lang;
 
 export default function Event() {
   const icons = [
@@ -16,42 +22,30 @@ export default function Event() {
     { icon: "devicon:html5", name: "HTML" },
   ];
   const pathname = usePathname();
+  const t = useTranslation(translations);
+
   return (
     <>
-      <title>Dev Diversify</title>
-      <Banner textComponent="Dev Diversify" />
+      <title>{t("title")}</title>
+      <Banner textComponent={t("title")} />
       <FullTextHeaders
-        headers="What does this do?"
-        textComponent={
-          <>
-            <div>
-              This is a codebase that contains lots of different code, including
-              code snippits, project&quot;s code etc...
-            </div>
-          </>
-        }
+        headers={t("header_1")}
+        textComponent={<div>{t("paragraph_1")}</div>}
       />
       <FullImage
         imageSrc={`${pathname}/dev-diversify-github.png`}
-        altText="DevDiversify GitHub Page"
+        altText={t("image_alt")}
       />
       <FullTextHeaders
-        headers="Programming Languages?"
-        textComponent={
-          <>
-            <div>
-              The codebase mainly has these languages, but could expand in the
-              future
-            </div>
-          </>
-        }
+        headers={t("header_2")}
+        textComponent={<div>{t("paragraph_2")}</div>}
       />
       <IconListStatic icons={icons} />
       <CodeLinkBlock
-        header="Code"
+        header={t("code_header")}
         links={[
           {
-            name: "DevDiversify",
+            name: t("link_name"),
             url: `${github}/DevDiversify/`,
           },
         ]}

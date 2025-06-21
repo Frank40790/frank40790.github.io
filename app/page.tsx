@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState, Suspense, lazy } from "react";
+import lang from "./lang.json";
+import { useTranslation } from "./components/language/LocalisationHooks";
+
+const translations = lang;
 
 function Text({ text }: { text: string }) {
   return (
@@ -52,11 +56,12 @@ function Text({ text }: { text: string }) {
   );
 }
 
-const PageA = lazy(() => import("./home/page_a"));
-const PageB = lazy(() => import("./home/page_b"));
+const PageA = lazy(() => import("./home/page_a/page"));
+const PageB = lazy(() => import("./home/page_b/page"));
 
 export default function Page() {
   const [variant, setVariant] = useState<"a" | "b" | null>(null);
+  const t = useTranslation(translations);
 
   useEffect(() => {
     let variantAssigned = localStorage.getItem("variant");
@@ -73,7 +78,7 @@ export default function Page() {
   const VariantComponent = variant === "a" ? PageA : PageB;
 
   return (
-    <Suspense fallback={<Text text="Page is loading" />}>
+    <Suspense fallback={<Text text={t("loading")} />}>
       <VariantComponent />
     </Suspense>
   );

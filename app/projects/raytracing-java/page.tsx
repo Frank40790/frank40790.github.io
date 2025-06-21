@@ -1,16 +1,10 @@
 "use client";
+import { FetchCode } from "@/app/components/blocks/CodeBlocks";
+import { IconListStatic } from "@/app/components/blocks/IconBlocks";
 import {
-  LeftPicRightText,
-  RightPicLeftText,
-  FullText,
-  FullTextHeaders,
   Banner,
-  IconList,
-  IconListStatic,
-  VideoLoopBlock,
-  CodeBlock,
-  FetchCode,
-} from "../../components/blocks/PageBlock";
+  FullTextHeaders,
+} from "@/app/components/blocks/TextImageBlocks";
 import { usePathname } from "next/navigation";
 
 export default function Event() {

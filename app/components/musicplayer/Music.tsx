@@ -9,6 +9,7 @@ import React, {
   KeyboardEvent,
 } from "react";
 import "./Music.css";
+import { useTheme } from "next-themes";
 
 const formatTime = (timeMs: number): string => {
   const validTimeMs = Math.max(0, timeMs);
@@ -56,7 +57,7 @@ const Stopwatch: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-3 text-white">
+    <div className="flex flex-col items-center justify-center space-y-3 text-black dark:text-white">
       <div className="font-mono text-4xl tracking-tight">
         {formatTime(time)}
       </div>
@@ -151,9 +152,12 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-3 text-white">
+    <div className="flex flex-col items-center justify-center space-y-3 text-black dark:text-white">
       <div className="flex items-center space-x-1">
-        <label htmlFor="minutesInput" className="text-xs text-white/80">
+        <label
+          htmlFor="minutesInput"
+          className="text-xs text-black dark:text-white/80"
+        >
           Minutes:
         </label>
         <input
@@ -162,7 +166,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
           value={customMinutes}
           onChange={handleMinutesChange}
           disabled={isRunning}
-          className="w-16 text-center bg-transparent border border-white/20 rounded px-1 py-0.5 text-white focus:outline-none"
+          className="w-16 text-center bg-transparent border border-white/20 rounded px-1 py-0.5 text-black dark:text-white focus:outline-none"
         />
       </div>
       <div
@@ -205,7 +209,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({
   audioSrc,
 }) => {
   return (
-    <div className="mt-4 pt-3 text-white text-center w-full max-w-xs mx-auto">
+    <div className="mt-4 pt-3 text-black dark:text-white text-center w-full max-w-xs mx-auto">
       <p className="text-xs truncate mb-2 px-2" title={trackName}>
         {trackName.replace(/\.(mp3|wav)$/, "") || "Drop a MP3 file"}
       </p>
@@ -424,7 +428,18 @@ interface PlaylistItem {
   url: string;
 }
 
-const MusicWidget: React.FC = () => {
+interface MusicWidgetProps {
+  defaultBackgroundImage?: string;
+  defaultTrack?: {
+    url: string;
+    name: string;
+  };
+}
+
+const MusicWidget: React.FC<MusicWidgetProps> = ({
+  defaultBackgroundImage = null,
+  defaultTrack = null,
+}) => {
   const [shape, setShape] = useState<number>(0);
   const [mode, setMode] = useState<"stopwatch" | "countdown">("stopwatch");
   const [audioSrc, setAudioSrc] = useState<string | null>(null);
@@ -445,6 +460,26 @@ const MusicWidget: React.FC = () => {
   const analyserRef = useRef<AnalyserNode | null>(null);
   const sourceNodeRef = useRef<MediaElementAudioSourceNode | null>(null);
   const playlistBlobUrlsRef = useRef<Set<string>>(new Set());
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    if (defaultBackgroundImage) {
+      setBackgroundImage(defaultBackgroundImage);
+    }
+
+    // run default
+    if (defaultTrack) {
+      const initialItem: PlaylistItem = {
+        id: Date.now(),
+        file: null as any,
+        name: defaultTrack.name,
+        url: defaultTrack.url,
+      };
+      setPlaylist([initialItem]);
+      setTrackName(defaultTrack.name);
+      setAudioSrc(defaultTrack.url);
+    }
+  }, []);
 
   useEffect(() => {
     const previousUrls = playlistBlobUrlsRef.current;
@@ -712,8 +747,16 @@ const MusicWidget: React.FC = () => {
       isDraggingProgressBarRef.current = true;
       document.body.style.userSelect = "none";
       updateAudioTime(e.clientX);
-      window.addEventListener("mousemove", handleProgressMouseMove  as unknown as EventListener, true);
-      window.addEventListener("mouseup", handleProgressMouseUp  as unknown as EventListener, true);
+      window.addEventListener(
+        "mousemove",
+        handleProgressMouseMove as unknown as EventListener,
+        true
+      );
+      window.addEventListener(
+        "mouseup",
+        handleProgressMouseUp as unknown as EventListener,
+        true
+      );
     },
     [updateAudioTime]
   );
@@ -731,8 +774,16 @@ const MusicWidget: React.FC = () => {
       if (isDraggingProgressBarRef.current) {
         isDraggingProgressBarRef.current = false;
         document.body.style.userSelect = "";
-        window.removeEventListener("mousemove", handleProgressMouseMove  as unknown as EventListener, true);
-        window.removeEventListener("mouseup", handleProgressMouseUp  as unknown as EventListener, true);
+        window.removeEventListener(
+          "mousemove",
+          handleProgressMouseMove as unknown as EventListener,
+          true
+        );
+        window.removeEventListener(
+          "mouseup",
+          handleProgressMouseUp as unknown as EventListener,
+          true
+        );
       }
     },
     [handleProgressMouseMove]
@@ -744,9 +795,13 @@ const MusicWidget: React.FC = () => {
       if (e.touches.length > 0) {
         isDraggingProgressBarRef.current = true;
         updateAudioTime(e.touches[0].clientX);
-        window.addEventListener("touchmove", handleProgressTouchMove  as unknown as EventListener, {
-          passive: false,
-        });
+        window.addEventListener(
+          "touchmove",
+          handleProgressTouchMove as unknown as EventListener,
+          {
+            passive: false,
+          }
+        );
         window.addEventListener("touchend", handleProgressTouchEnd);
         window.addEventListener("touchcancel", handleProgressTouchEnd);
       }
@@ -768,7 +823,10 @@ const MusicWidget: React.FC = () => {
   const handleProgressTouchEnd = useCallback(() => {
     if (isDraggingProgressBarRef.current) {
       isDraggingProgressBarRef.current = false;
-      window.removeEventListener("touchmove", handleProgressTouchMove as unknown as EventListener);
+      window.removeEventListener(
+        "touchmove",
+        handleProgressTouchMove as unknown as EventListener
+      );
       window.removeEventListener("touchend", handleProgressTouchEnd);
       window.removeEventListener("touchcancel", handleProgressTouchEnd);
     }
@@ -810,7 +868,7 @@ const MusicWidget: React.FC = () => {
           <h3 className="text-lg font-semibold mb-2">Playlist</h3>
           <div className="p-2 min-h-[150px] overflow-y-auto">
             {playlist.length === 0 ? (
-              <div className="flex items-center space-x-2 text-sm text-white/60">
+              <div className="flex items-center space-x-2 text-sm text-black dark:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="16px"
@@ -872,7 +930,7 @@ const MusicWidget: React.FC = () => {
         >
           <button
             onClick={toggleMenu}
-            className="absolute top-2 left-2 text-white w-8 h-8 rounded-full flex items-center justify-center focus:outline-none transition-all duration-300 active:scale-90 hover:bg-white/10 z-10"
+            className="absolute top-2 left-2 text-black dark:text-white w-8 h-8 rounded-full flex items-center justify-center focus:outline-none transition-all duration-300 active:scale-90 hover:bg-white/10 z-10"
             aria-label="Toggle playlist menu"
           >
             <svg
@@ -887,7 +945,7 @@ const MusicWidget: React.FC = () => {
           </button>
           <button
             onClick={cycleShape}
-            className="absolute top-2 right-2 text-white w-8 h-8 rounded-full flex items-center justify-center focus:outline-none transition-all duration-300 active:scale-90 hover:bg-white/10 z-10"
+            className="absolute top-2 right-2 text-black dark:text-white w-8 h-8 rounded-full flex items-center justify-center focus:outline-none transition-all duration-300 active:scale-90 z-10"
             aria-label="Change container shape"
           >
             {shape === 0 ? (
@@ -896,7 +954,7 @@ const MusicWidget: React.FC = () => {
                 height="20px"
                 viewBox="0 -960 960 960"
                 width="20px"
-                fill="#e3e3e3"
+                fill={theme === "light" ? "#000000" : "#ffffff"}
               >
                 <path d="M120-120v-200h80v120h120v80H120Zm520 0v-80h120v-120h80v200H640ZM120-640v-200h200v80H200v120h-80Zm640 0v-120H640v-80h200v200h-80Z" />
               </svg>
@@ -906,7 +964,7 @@ const MusicWidget: React.FC = () => {
                 height="20px"
                 viewBox="0 -960 960 960"
                 width="20px"
-                fill="#e3e3e3"
+                fill={theme === "light" ? "#000000" : "#ffffff"}
               >
                 <path d="M240-120v-120H120v-80h200v200h-80Zm400 0v-200h200v80H720v120h-80ZM120-640v-80h120v-120h80v200H120Zm520 0v-200h80v120h120v80H640Z" />
               </svg>
@@ -915,7 +973,7 @@ const MusicWidget: React.FC = () => {
           <div className="text-center space-y-1 w-full mb-4 flex-shrink-0">
             <h2
               onClick={toggleMode}
-              className="inline-block px-2 py-0.5 text-sm text-white/80 font-semibold mb-2 capitalize cursor-pointer select-none border border-transparent rounded hover:bg-white/10 focus:outline-none focus:ring-1 focus:ring-white/50 transition-all duration-300"
+              className="inline-block px-2 py-0.5 text-sm text-black dark:text-white/80 font-semibold mb-2 capitalize cursor-pointer select-none border border-transparent rounded hover:bg-white/10 focus:outline-none focus:ring-1 focus:ring-white/50 transition-all duration-300"
               aria-label="Toggle Timer Mode"
               role="button"
               tabIndex={0}

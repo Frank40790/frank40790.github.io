@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { timelines } from "@/app/components/timeline/TimelineDB";
+import GetTimelines from "@/app/components/timeline/TimelineDB";
 import { TimelineProps } from "@/app/components/timeline/TimelineInterface";
 import {
   DisabledTimelineItem,
@@ -15,14 +15,20 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { Icon } from "@iconify/react";
 import { useTheme } from "next-themes";
+import { useTranslation } from "@/app/components/language/LocalisationHooks";
+import lang from "@/app/components/navbar/lang.json";
+
+const translations = lang;
 
 export default function Page() {
   const { theme, resolvedTheme, setTheme } = useTheme();
+  const timelines = GetTimelines();
+  const t = useTranslation(translations);
   return (
     <>
-      <title>Timeline</title>
+      <title>{t("timeline")}</title>
       <div className="max-w-2xl mx-auto min-h-screen pt-20">
-        <h1 className="text-3xl font-bold mb-4">Timeline</h1>
+        <h1 className="text-3xl font-bold mb-4">{t("timeline")}</h1>
         <VerticalTimeline
           lineColor={resolvedTheme === "light" ? "black" : "white"}
           layout={"1-column-left"}

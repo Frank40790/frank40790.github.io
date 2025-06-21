@@ -9,4 +9,6 @@
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+    overflow-x: scroll;
+  overflow-y: auto;
 }
