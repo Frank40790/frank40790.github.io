@@ -24,6 +24,12 @@
     "raytracing_desc": "A ray tracer implemented in Java",
     "raytracing_searchtag": "raytracing",
 
+    "musicplayer_title": "Focal: Music Player",
+    "musicplayer_desc": "Project done in Hackiethon 2025 that won the Best Design award",
+    "musicplayer_searchtag": "focal, best design, hackiethon, musicplayer", 
+
+    "tag_hackathon": "hackathon",
+    "tag_music": "music",
     "tag_tts": "tts",
     "tag_llm": "llm",
     "tag_ai": "ai",
@@ -58,6 +64,12 @@
     "raytracing_desc": "用 Java 實現的光線追蹤器",
     "raytracing_searchtag": "光線追蹤",
 
+    "musicplayer_title": "Focal：音樂播放器",
+    "musicplayer_desc": "在 Hackiethon 2025 中完成的專案，榮獲最佳設計獎",
+    "musicplayer_searchtag": "focal, 最佳設計, hackiethon, 音樂播放器",
+
+    "tag_hackathon": "黑客松",
+    "tag_music": "音樂",
     "tag_tts": "文字轉語音",
     "tag_llm": "大型語言模型",
     "tag_ai": "人工智慧",
@@ -91,7 +103,12 @@
     "raytracing_title": "Raytracing",
     "raytracing_desc": "Ein Raytracer in Java implementiert",
     "raytracing_searchtag": "raytracing",
-
+    "musicplayer_title": "Focal: Musikplayer",
+    "musicplayer_desc": "Projekt aus dem Hackiethon 2025, das den Preis für das beste Design gewann",
+    "musicplayer_searchtag": "focal, bestes design, hackiethon, musikplayer",
+    
+    "tag_hackathon": "Hackathon",
+    "tag_music": "Musik",
     "tag_tts": "Text-zu-Sprache",
     "tag_llm": "Großes Sprachmodell",
     "tag_ai": "Künstliche Intelligenz",
@@ -125,7 +142,12 @@
     "raytracing_title": "レイトレーシング",
     "raytracing_desc": "Javaで実装したレイトレーサー",
     "raytracing_searchtag": "レイトレーシング",
-
+    "musicplayer_title": "Focal：音楽プレーヤー",
+    "musicplayer_desc": "Hackiethon 2025で制作され、最優秀デザイン賞を受賞したプロジェクト",
+    "musicplayer_searchtag": "focal, 最優秀デザイン, hackiethon, 音楽プレーヤー",
+    
+    "tag_hackathon": "ハッカソン",
+    "tag_music": "音楽",
     "tag_tts": "TTS",
     "tag_llm": "LLM",
     "tag_ai": "AI",
@@ -159,7 +181,12 @@
     "raytracing_title": "Trazado de Rayos",
     "raytracing_desc": "Un trazador de rayos implementado en Java",
     "raytracing_searchtag": "trazado de rayos",
-
+    "musicplayer_title": "Focal: Reproductor de Música",
+    "musicplayer_desc": "Proyecto realizado en Hackiethon 2025 que ganó el premio al Mejor Diseño",
+    "musicplayer_searchtag": "focal, mejor diseño, hackiethon, reproductor de música",
+    
+    "tag_hackathon": "hackathon",
+    "tag_music": "música",
     "tag_tts": "TTS",
     "tag_llm": "LLM",
     "tag_ai": "IA",
@@ -193,7 +220,12 @@
     "raytracing_title": "레이 트레이싱",
     "raytracing_desc": "Java로 구현한 레이 트레이서",
     "raytracing_searchtag": "레이 트레이싱",
-
+    "musicplayer_title": "Focal: 음악 플레이어",
+    "musicplayer_desc": "Hackiethon 2025에서 제작되어 최우수 디자인상을 수상한 프로젝트",
+    "musicplayer_searchtag": "focal, 최우수 디자인, hackiethon, 음악 플레이어",
+    
+    "tag_hackathon": "해커톤",
+    "tag_music": "음악",
     "tag_tts": "TTS",
     "tag_llm": "LLM",
     "tag_ai": "AI",

@@ -8,7 +8,6 @@ import {
   RightPicLeftText,
 } from "@/app/components/blocks/TextImageBlocks";
 import { usePathname } from "next/navigation";
-
 import { useTranslation } from "@/app/components/language/LocalisationHooks";
 import lang from "./lang.json";
 

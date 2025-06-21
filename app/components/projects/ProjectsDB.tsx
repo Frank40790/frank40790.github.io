@@ -64,6 +64,16 @@ export default function GetProjects() {
       tags: [t("tag_graphics"), t("tag_ray_tracing"), "java"],
       searchtag: t("raytracing_searchtag"),
     },
+    {
+      title: t("musicplayer_title"),
+      description: t("musicplayer_desc"),
+      date: "28 Mar 2025 ~ 29 Mar 2025",
+      url: "musicplayer",
+      icon: "icon.png",
+      type: "enabled",
+      tags: [t("hackathon"), t("tag_music"), "nextjs"],
+      searchtag: t("musicplayer_searchtag"),
+    },
   ];
   return projects;
 }

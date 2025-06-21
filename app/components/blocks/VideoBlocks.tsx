@@ -261,7 +261,7 @@ export function VideoPlayer({ videoSrc }: { videoSrc: string }) {
 
   return (
     <div className="flex items-center justify-center p-4 select-none">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-3xl">
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-3xl border border-black dark:border-white">
         <div className="relative group">
           <video
             ref={videoRef}
