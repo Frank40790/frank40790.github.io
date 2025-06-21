@@ -29,11 +29,9 @@ export default function MenuButton() {
   const menuItems = [
     {
       component: <ThemeSwitcher iconColor="" />,
-      color: "bg-black dark:bg-white",
     },
     {
       component: <Icon icon="material-symbols:search" width={24} height={24} />,
-      color: "bg-black dark:bg-white",
       function: handleOpenSearch,
     },
     // {
@@ -43,12 +41,10 @@ export default function MenuButton() {
     // },
     {
       component: <Icon icon="eva:arrow-up-fill" width="25" />,
-      color: "bg-black dark:bg-white",
       function: handleToTop,
     },
     {
       component: <MobileLanguageSwitcher />,
-      color: "bg-black dark:bg-white",
     },
   ];
 
@@ -78,9 +74,9 @@ export default function MenuButton() {
             return (
               <motion.div
                 key={index}
-                className={`absolute text-white dark:text-black rounded-full p-4 hover:bg-opacity-75 focus:outline-none ${item.color} w-14 h-14 flex items-center justify-center`}
+                className={`absolute text-white bg-black/40 dark:bg-white/40 backdrop-blur-md rounded-full p-4 focus:outline-none w-14 h-14 flex items-center justify-center`}
                 initial={{ opacity: 0, x: 0, y: 0 }}
-                animate={{ opacity: 1, x: x, y: y }}
+                animate={{ opacity: 0.8, x: x, y: y }}
                 exit={{ opacity: 0, x: 0, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 onClick={item.function}
@@ -98,7 +94,7 @@ export default function MenuButton() {
       {/* Menu Button */}
       <motion.div
         ref={menuButtonRef}
-        className="relative z-10 w-14 h-14 bg-black dark:bg-white text-white dark:text-black rounded-full focus:outline-none flex items-center justify-center"
+        className="relative z-10 w-14 h-14 bg-black/40 dark:bg-white/40 backdrop-blur-md text-white rounded-full focus:outline-none flex items-center justify-center"
         onClick={toggleMenu}
         initial={{ rotate: 0 }}
         animate={{ rotate: isOpen ? 180 : 0 }}

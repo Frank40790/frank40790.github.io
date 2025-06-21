@@ -37,26 +37,44 @@ export default function Navbar() {
     { href: "/blog", label: t("blog") },
   ];
 
-  const renderLink = ({ href, label }: LinkItem) => (
-    <motion.div
-      key={href}
-      initial={{ scale: 1 }}
-      animate={{
-        scale: pathname === href ? magnify_max : magnify_min,
-        transition: { duration: magnify_duration },
-      }}
-    >
-      <Link
-        href={href}
-        className={`flex justify-center p-3 text-black dark:text-white ${
-          pathname === href ? selected_item_css : ""
-        }`}
-        onClick={() => setMenuOpen(false)}
+  const renderLink = ({ href, label }: LinkItem) => {
+    const isCurrent = pathname === href;
+
+    return (
+      <motion.div
+        key={href}
+        initial={{ scale: 1 }}
+        animate={{
+          scale: isCurrent ? magnify_max : magnify_min,
+          transition: { duration: magnify_duration },
+        }}
+        className="relative flex items-center"
       >
-        {label}
-      </Link>
-    </motion.div>
-  );
+        {isCurrent && (
+          <motion.div
+            layoutId="nav-highlight"
+            className="absolute inset-0 m-1 rounded-full border border-gray-300 dark:border-white"
+            transition={{ type: "spring", stiffness: 500, damping: 30 }}
+          />
+        )}
+
+        <Link
+          href={href}
+          className={`relative z-10 px-4 py-2 text-sm font-medium
+            ${
+              isCurrent
+                ? "text-black dark:text-white"
+                : "text-gray-600 dark:text-gray-300"
+            }
+            hover:text-black dark:hover:text-white`}
+          onClick={() => setMenuOpen(false)}
+        >
+          {label}
+        </Link>
+      </motion.div>
+    );
+  };
+
   const { openSearch } = useSearch();
   const handleOpenSearch = () => {
     openSearch("");
@@ -95,7 +113,7 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
           >
             {/* Desktop Menu */}
-            <div className="hidden md:flex centered flex-row space-x-4 z-10 border rounded-full bg-white dark:bg-black opacity-90">
+            <div className="hidden md:flex relative centered flex-row space-x-4 z-10 border rounded-full bg-white dark:bg-black opacity-90 px-2 py-1">
               {links.map(renderLink)}
 
               {/* Search Button */}
@@ -120,16 +138,28 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="flex md:hidden ">
+            <div className="flex md:hidden">
               <button
-                className="text-white focus:outline-none"
+                className={`relative w-10 h-10 text-black dark:text-white focus:outline-none`}
                 onClick={() => setMenuOpen(!menuOpen)}
               >
-                {menuOpen ? (
-                  <Icon icon="mdi:close" width="28" />
-                ) : (
+                {/* Menu Icon */}
+                <span
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 transform ${
+                    menuOpen ? "opacity-0 scale-90" : "opacity-100 scale-100"
+                  }`}
+                >
                   <Icon icon="mdi:menu" width="28" />
-                )}
+                </span>
+
+                {/* Close Icon */}
+                <span
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 transform ${
+                    menuOpen ? "opacity-100 scale-100" : "opacity-0 scale-90"
+                  }`}
+                >
+                  <Icon icon="mdi:close" width="28" />
+                </span>
               </button>
             </div>
 
@@ -140,7 +170,7 @@ export default function Navbar() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  className="absolute top-16 left-0 right-0 bg-gray-200 bg-opacity-50 backdrop-blur-md dark:bg-zinc-900 dark:bg-opacity-50 z-50 md:hidden rounded-b-xl "
+                  className="absolute top-16 left-1/2 transform -translate-x-1/2 w-1/2 bg-gray-200 bg-opacity-50 backdrop-blur-md dark:bg-zinc-900 dark:bg-opacity-80 z-50 md:hidden rounded-xl border border-gray-300 dark:border-white"
                 >
                   <div className="flex flex-col items-center space-y-2">
                     {links.map(renderLink)}

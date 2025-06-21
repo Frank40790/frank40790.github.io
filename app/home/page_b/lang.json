@@ -34,7 +34,9 @@
     "link_1_title": "Projects",
     "link_1_description": "Explore various projects I've worked on",
     "link_2_title": "Timeline",
-    "link_2_description": "Check out the timeline of my journey!"
+    "link_2_description": "Check out the timeline of my journey!",
+    "link_3_title": "Blog",
+    "link_3_description": "Explore some new development of the site!"
   },
   "zh": {
     "intro": "我是",
@@ -71,7 +73,9 @@
     "link_1_title": "專案",
     "link_1_description": "探索我參與過的各種專案",
     "link_2_title": "時間軸",
-    "link_2_description": "查看我的成長旅程時間線！"
+    "link_2_description": "查看我的成長旅程時間線！",
+    "link_3_title": "部落格",
+    "link_3_description": "探索最新動態！"
   },
   "de": {
     "intro": "Ich bin",
@@ -108,7 +112,9 @@
     "link_1_title": "Projekte",
     "link_1_description": "Erkunde verschiedene Projekte, an denen ich gearbeitet habe",
     "link_2_title": "Zeitstrahl",
-    "link_2_description": "Sieh dir den Zeitverlauf meiner Reise an!"
+    "link_2_description": "Sieh dir den Zeitverlauf meiner Reise an!",
+    "link_3_title": "Blog",
+    "link_3_description": "Entdecke neue Entwicklungen!"
   },
   "ja": {
     "intro": "私は",
@@ -145,7 +151,9 @@
     "link_1_title": "プロジェクト",
     "link_1_description": "私が取り組んださまざまなプロジェクトを探検",
     "link_2_title": "タイムライン",
-    "link_2_description": "私の旅のタイムラインをチェック！"
+    "link_2_description": "私の旅のタイムラインをチェック！",
+    "link_3_title": "ブログ",
+    "link_3_description": "新しい展開を探検しましょう！"
   },
   "es": {
     "intro": "Soy",
@@ -182,7 +190,9 @@
     "link_1_title": "Proyectos",
     "link_1_description": "Explora varios proyectos en los que he trabajado",
     "link_2_title": "Cronología",
-    "link_2_description": "¡Consulta la cronología de mi viaje!"
+    "link_2_description": "¡Consulta la cronología de mi viaje!",
+    "link_3_title": "Blog",
+    "link_3_description": "¡Explora nuevos desarrollos!"
   },
   "ko": {
     "intro": "저는",
@@ -219,6 +229,8 @@
     "link_1_title": "프로젝트",
     "link_1_description": "제가 작업한 다양한 프로젝트 탐색",
     "link_2_title": "타임라인",
-    "link_2_description": "제 여정의 타임라인을 확인해 보세요!"
+    "link_2_description": "제 여정의 타임라인을 확인해 보세요!",
+    "link_3_title": "블로그",
+    "link_3_description": "새로운 발전을 탐험해 보세요!"
   }
 }

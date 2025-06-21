@@ -11,6 +11,10 @@ import GetTimelines from "@/app/components/timeline/TimelineDB";
 import GetProjects from "@/app/components/projects/ProjectsDB";
 import GetPosts from "@/app/components/blog/BlogDB";
 import searchFunction from "@/app/components/search/SearchAlgorithm";
+import lang from "./lang.json";
+import { useTranslation } from "../language/LocalisationHooks";
+
+const translations = lang;
 
 interface SearchProps {
   text: string;
@@ -21,6 +25,9 @@ export default function Search({ text }: SearchProps) {
   const [searchQuery, setSearchQuery] = useState(text);
   const [searchResults, setSearchResults] = useState<MasterProps[]>([]);
   const [viewportHeight, setViewportHeight] = useState(0);
+
+  const t = useTranslation(translations);
+
   const timelines = GetTimelines();
   const projects = GetProjects();
   const posts = GetPosts();
@@ -103,7 +110,9 @@ export default function Search({ text }: SearchProps) {
         transition={{ duration: 0.3 }}
         style={{ zIndex: 20 }}
       >
-        <h2 className="text-2xl font-bold mb-4 text-gray-800 hidden">Search</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-800 hidden">
+          {t("search")}
+        </h2>
 
         <div
           className="relative transition-all"
@@ -114,8 +123,8 @@ export default function Search({ text }: SearchProps) {
         >
           <input
             type="text"
-            className="w-full p-4 pl-12 rounded-full border border-white shadow-lg focus:outline-none text-lg"
-            placeholder="Search"
+            className="w-full p-4 pl-12 rounded-full border border-white shadow-lg focus:outline-none text-lg bg-white dark:bg-black text-white"
+            placeholder={t("search")}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             autoFocus
@@ -125,7 +134,7 @@ export default function Search({ text }: SearchProps) {
             icon="material-symbols:search"
             width={24}
             height={24}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black dark:text-white"
           />
 
           {searchQuery && searchResults.length > 0 && (

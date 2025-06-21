@@ -220,6 +220,12 @@ export default function Page() {
       link: "/timeline",
       image: "/icon_timeline.png",
     },
+    {
+      title: t("link_3_title"),
+      description: t("link_3_description"),
+      link: "/blog",
+      image: "/icon_blog.png",
+    },
   ];
 
   const subtitles = [t("subtitle_1"), t("subtitle_2"), t("subtitle_3")];
@@ -539,14 +545,14 @@ export default function Page() {
             </motion.h2>
             <motion.div
               variants={fadeInUp}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
             >
               {links.map((page, index) => (
                 <Link key={index} href={page.link}>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     transition={{ type: "tween" }}
-                    className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10"
+                    className="bg-black backdrop-blur-xl p-6 rounded-xl border border-white"
                   >
                     <Image
                       src={page.image}
