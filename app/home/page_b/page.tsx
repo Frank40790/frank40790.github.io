@@ -211,15 +211,16 @@ export default function Page() {
     {
       title: t("link_1_title"),
       description: t("link_1_description"),
-      link: "/projects",
-      image: "/icon_project.png",
+      link: "/timeline",
+      image: "/icon_timeline.png",
     },
     {
       title: t("link_2_title"),
       description: t("link_2_description"),
-      link: "/timeline",
-      image: "/icon_timeline.png",
+      link: "/projects",
+      image: "/icon_project.png",
     },
+    
     {
       title: t("link_3_title"),
       description: t("link_3_description"),

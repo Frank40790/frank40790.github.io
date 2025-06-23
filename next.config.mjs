@@ -1,6 +1,12 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
+
+import createMDX from "@next/mdx";
+import rehypeHighlight from "rehype-highlight";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 
 const nextConfig = {
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   poweredByHeader: false,
 
   async headers() {
@@ -29,5 +35,13 @@ const nextConfig = {
     ];
   }
 };
-export default nextConfig;
+
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeHighlight, rehypeKatex],
+  },
+});
+
+export default withMDX(nextConfig);
 

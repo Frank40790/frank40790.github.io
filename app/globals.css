@@ -8,22 +8,41 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+/* Applying MDX style */
+p {
+  @apply mb-4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold
+    mb-1;
+}
+
+h1 {
+  @apply text-3xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+/* Apply theme */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-  .svg-item {
-    stroke: #000;
-  }
 }
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+/* Apply scrollbar hiding */
 
 @layer utilities {
   .scrollbar-hide::-webkit-scrollbar {
