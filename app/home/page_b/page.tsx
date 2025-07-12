@@ -152,6 +152,46 @@ function IconGridPopup() {
   );
 }
 
+function MoveBanner() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const bannerDismissed = localStorage.getItem("bannerDismissed");
+    if (!bannerDismissed) {
+      setVisible(true);
+    }
+  }, []);
+
+  const handleClose = () => {
+    localStorage.setItem("bannerDismissed", "true");
+    setVisible(false);
+  };
+
+  if (!visible) return null;
+
+  return (
+    <>
+      <div className="fixed bottom-0 left-0 w-full bg-red-500 h-10 z-30 flex justify-between items-center px-4">
+        <span className="text-sm font-semibold text-white truncate">
+          We are planning to move our website! At the moment, the website are
+          still the same, but backed with a robust content management system.
+          Check it out at{" "}
+          <a className="text-blue-300" href="https://frankinsite.com">
+            frankinsite.com
+          </a>
+        </span>
+        <button
+          onClick={handleClose}
+          className="text-xs font-semibold text-white hover:font-bold focus:outline-none"
+          aria-label="Close banner"
+        >
+          Close
+        </button>
+      </div>
+    </>
+  );
+}
+
 export default function Page() {
   const t = useTranslation(translations);
 
@@ -259,6 +299,7 @@ export default function Page() {
 
   return (
     <main className="relative min-h-screen bg-gray-900 select-none">
+      <MoveBanner />
       {/* Three.js Background */}
       <div className="fixed inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 1] }}>
